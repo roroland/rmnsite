@@ -1,0 +1,25 @@
+{
+  "name": "rmn",
+  "version": "1.0.0",
+  "description": "My personal site",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2"
+  },
+  "scripts": {
+    "watch:sass": "node-sass scss/style.scss css/style.css -w",
+    "devserver": "live-server",
+    "compile:sass": "node-sass scss/style.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "build": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Rodrigo Noales",
+  "license": "ISC"
+}

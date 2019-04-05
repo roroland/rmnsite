@@ -1,0 +1,17 @@
+$colorsmap: (
+   gray: (
+     lighter: #F7F9F9,
+     light: #F5F5F5,
+     normal: #E5E5E5,
+     dark: #505050
+   ),
+   brand: (
+     red: #EA507C,
+     blue: #AEC4D5,
+     dark: #4E5962
+   )
+);
+
+@function setcolor($scheme, $swatch: dark) {
+  @return map-get(map-get($colorsmap, $scheme), $swatch);
+};

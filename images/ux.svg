@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="89px" viewBox="0 0 82 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Feature Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,43.8012422 C10.9813665,48.8695652 25.0881988,48.8695652 42.3204969,43.8012422 C59.552795,38.7329193 72.6459627,38.7329193 81.6,43.8012422 L81.6,89.4161491 L0,89.4161491 L0,43.8012422 Z" id="path-1"></path>
+        <filter x="-4.3%" y="-13.2%" width="108.6%" height="116.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="-3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129755435 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-opened" transform="translate(-352.000000, -1051.000000)">
+            <g id="Icon-Menu" transform="translate(184.000000, 830.000000)">
+                <g id="Feature" transform="translate(128.000000, 208.000000)">
+                    <g transform="translate(40.000000, 4.800000)">
+                        <g id="toggle-icon" transform="translate(11.200000, 9.600000)" stroke="#4E5962">
+                            <g id="toggle-left">
+                                <path d="M39.2554455,0 L19.6277228,0 C8.83247525,0 0,9.02686567 0,20.0597015 C0,31.0925373 8.83247525,40.119403 19.6277228,40.119403 L39.2554455,40.119403 C50.0506931,40.119403 58.8831683,31.0925373 58.8831683,20.0597015 C58.8831683,9.02686567 50.0506931,0 39.2554455,0 Z M39.2554455,35.1044776 L19.6277228,35.1044776 C11.5312871,35.1044776 4.90693069,28.3343284 4.90693069,20.0597015 C4.90693069,11.7850746 11.5312871,5.01492537 19.6277228,5.01492537 L39.2554455,5.01492537 C47.3518812,5.01492537 53.9762376,11.7850746 53.9762376,20.0597015 C53.9762376,28.3343284 47.3518812,35.1044776 39.2554455,35.1044776 Z" id="Shape" stroke-width="1.6"></path>
+                                <path d="M19.6277228,10.0298507 C14.230099,10.0298507 9.81386139,14.5432836 9.81386139,20.0597015 C9.81386139,25.5761194 14.230099,30.0895522 19.6277228,30.0895522 C25.0253465,30.0895522 29.4415842,25.5761194 29.4415842,20.0597015 C29.4415842,14.5432836 25.0253465,10.0298507 19.6277228,10.0298507 Z M19.6277228,25.0746269 C16.9289109,25.0746269 14.7207921,22.8179104 14.7207921,20.0597015 C14.7207921,17.3014925 16.9289109,15.0447761 19.6277228,15.0447761 C22.3265347,15.0447761 24.5346535,17.3014925 24.5346535,20.0597015 C24.5346535,22.8179104 22.3265347,25.0746269 19.6277228,25.0746269 Z" id="Shape" stroke-width="1.6"></path>
+                            </g>
+                        </g>
+                        <g id="submask">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#F7F9F9" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <text id="Label" font-family="OpenSans-Light, Open Sans" font-size="22.4" font-weight="300" fill="#505050">
+                            <tspan x="12.0234375" y="96">UX/UI</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

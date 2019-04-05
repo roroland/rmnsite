@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="192px" viewBox="0 0 1024 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Deco btm group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-opened" transform="translate(0.000000, -1315.000000)">
+            <g id="Deco-btm-group" transform="translate(513.000000, 1495.500000) scale(1, -1) translate(-513.000000, -1495.500000) translate(-44.000000, 1315.000000)">
+                <path d="M1104,15 L0,15 L0,282 C398,193 766,166.333333 1104,202 C1104,202 1104,139.666667 1104,15 Z" id="Deco-2" fill="#E5E5E5"></path>
+                <path d="M1114,2.27373675e-13 L10,2.27373675e-13 L10,267 C233.333333,178 417.333333,160.666667 562,215 C779,296.5 1003.70645,175.361529 1114,187 C1114,187 1114,124.666667 1114,2.27373675e-13 Z" id="Deco-1" fill="#EA507C" style="mix-blend-mode: multiply;"></path>
+                <path d="M1104,94 C810,94 607.666667,128.666667 497,198 C386.333333,267.333333 220.666667,232.666667 0,94 L0,361 C398,272 766,245.333333 1104,281 C1104,281 1104,218.666667 1104,94 Z" id="Deco-2-Copy" fill="#AEC4D5" style="mix-blend-mode: multiply;" transform="translate(552.000000, 227.500000) scale(1, -1) translate(-552.000000, -227.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

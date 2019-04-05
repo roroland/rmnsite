@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5; }
+
+body {
+  background: #F7F9F9; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Nunito', sans-serif; }
+
+h1,
+.h1 {
+  font-size: 2.441rem; }
+
+h2,
+.h2 {
+  font-size: 1.953rem; }
+
+h3,
+.h3 {
+  font-size: 1.563rem; }
+
+h4,
+.h4 {
+  font-size: 1.25rem; }
+
+p,
+h5,
+.h5 {
+  font-size: 1rem; }
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem; }
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  background: url("../images/deco-btm.svg") no-repeat;
+  background-size: 100%;
+  min-height: 15rem; }
+  footer p {
+    margin: auto 0 1.5rem;
+    flex: 0 50%;
+    outline: 1px solid green; }
+
+.intro {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.avatar {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  position: relative;
+  transition: all .3s ease-out; }
+  .avatar:hover {
+    cursor: pointer;
+    height: 400px;
+    transition: all .3s ease-out; }
+  .avatar h3 {
+    background: #4E5962;
+    color: #F7F9F9;
+    font-weight: 300;
+    padding: 0 1.5rem;
+    position: relative;
+    top: 1rem;
+    z-index: 10;
+    pointer-events: none; }
+    .avatar h3::before {
+      content: '';
+      background: url("../images/path-right.svg") no-repeat;
+      width: 200px;
+      height: 200px;
+      right: -70%;
+      top: 1rem;
+      position: absolute;
+      display: block; }
+  .avatar h4 {
+    position: relative;
+    top: -3rem;
+    z-index: 10;
+    pointer-events: none; }
+    .avatar h4::after {
+      content: '';
+      background: url("../images/path-left.svg") no-repeat;
+      width: 200px;
+      height: 200px;
+      left: -120%;
+      top: -7rem;
+      position: absolute;
+      display: block; }
+  .avatar .avatar-img {
+    position: relative;
+    backface-visibility: hidden;
+    z-index: 0; }
+  .avatar .submask {
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5; }
+    .avatar .submask-top {
+      top: 0; }
+    .avatar .submask-bottom {
+      bottom: 0;
+      transform: translateY(-40px) rotate(180deg); }
+
+.home {
+  background: url("../images/deco-top.svg") no-repeat;
+  background-size: 100%;
+  display: grid;
+  grid-template-areas: 'header header header' 'main   main   main' 'nav    nav    nav';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content; }
+  .home header {
+    grid-area: header;
+    outline: 1px solid red;
+    align-self: flex-start; }
+    .home header h3 {
+      color: white; }
+  .home main {
+    grid-area: main;
+    outline: 1px solid blue; }
+  .home nav {
+    grid-area: nav;
+    outline: 1px solid orange; }

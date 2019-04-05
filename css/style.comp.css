@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5; }
+
+body {
+  background: #F7F9F9; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Nunito', sans-serif; }
+
+h1,
+.h1 {
+  font-size: 2.441rem; }
+
+h2,
+.h2 {
+  font-size: 1.953rem; }
+
+h3,
+.h3 {
+  font-size: 1.563rem; }
+
+h4,
+.h4 {
+  font-size: 1.25rem; }
+
+p,
+h5,
+.h5 {
+  font-size: 1rem; }
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.avatar {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  position: relative;
+  transition: all .3s ease-out; }
+  .avatar:hover {
+    cursor: pointer;
+    height: 400px;
+    transition: all .3s ease-out; }
+  .avatar h3 {
+    background: #4E5962;
+    color: #F7F9F9;
+    font-weight: 300;
+    padding: 0 1.5rem;
+    position: relative;
+    top: 1rem;
+    z-index: 10; }
+  .avatar h4 {
+    position: relative;
+    top: -3rem;
+    z-index: 10; }
+  .avatar .avatar-img {
+    position: relative;
+    backface-visibility: hidden;
+    z-index: 0; }
+  .avatar .submask {
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5; }
+    .avatar .submask-top {
+      top: 0; }
+    .avatar .submask-bottom {
+      bottom: 0;
+      transform: translateY(-40px) rotate(180deg); }

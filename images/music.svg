@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="94px" viewBox="0 0 82 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Feature Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,43.8012422 C10.9813665,48.8695652 25.0881988,48.8695652 42.3204969,43.8012422 C59.552795,38.7329193 72.6459627,38.7329193 81.6,43.8012422 L81.6,89.4161491 L0,89.4161491 L0,43.8012422 Z" id="path-1"></path>
+        <filter x="-4.3%" y="-13.2%" width="108.6%" height="116.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="-3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129755435 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-opened" transform="translate(-590.000000, -1046.000000)">
+            <g id="Icon-Menu" transform="translate(184.000000, 830.000000)">
+                <g id="Feature" transform="translate(366.000000, 208.000000)">
+                    <g transform="translate(40.000000, 4.800000)">
+                        <g id="Music-icon" transform="translate(16.000000, 4.800000)" fill-rule="nonzero" stroke="#4E5962" stroke-width="1.6">
+                            <path d="M45.2145672,0.481432836 C44.753194,0 44.0611343,0 43.3690746,0 L15.6866866,4.81432836 C14.7639403,5.05504478 13.841194,6.01791045 13.841194,7.22149254 L13.841194,33.7002985 L6.92059701,33.7002985 C2.99892537,33.7002985 0,36.8296119 0,40.921791 C0,45.0139701 2.99892537,48.1432836 6.92059701,48.1432836 L11.5343284,48.1432836 C15.456,48.1432836 18.4549254,45.0139701 18.4549254,40.921791 L18.4549254,9.14722388 L41.5235821,5.05504478 L41.5235821,28.8859701 L34.6029851,28.8859701 C30.6813134,28.8859701 27.6823881,32.0152836 27.6823881,36.1074627 C27.6823881,40.1996418 30.6813134,43.3289552 34.6029851,43.3289552 L39.2167164,43.3289552 C43.1383881,43.3289552 46.1373134,40.1996418 46.1373134,36.1074627 L46.1373134,2.40716418 C46.1373134,1.68501493 45.9066269,0.962865672 45.2145672,0.481432836 Z M13.841194,40.921791 C13.841194,42.3660896 12.9184478,43.3289552 11.5343284,43.3289552 L6.92059701,43.3289552 C5.53647761,43.3289552 4.61373134,42.3660896 4.61373134,40.921791 C4.61373134,39.4774925 5.53647761,38.5146269 6.92059701,38.5146269 L13.841194,38.5146269 L13.841194,40.921791 Z M41.5235821,36.1074627 C41.5235821,37.5517612 40.6008358,38.5146269 39.2167164,38.5146269 L34.6029851,38.5146269 C33.2188657,38.5146269 32.2961194,37.5517612 32.2961194,36.1074627 C32.2961194,34.6631642 33.2188657,33.7002985 34.6029851,33.7002985 L41.5235821,33.7002985 L41.5235821,36.1074627 Z" id="Shape"></path>
+                        </g>
+                        <g id="submask">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#F7F9F9" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <text id="Label" font-family="OpenSans-Light, Open Sans" font-size="22.4" font-weight="300" fill="#505050">
+                            <tspan x="11.4601563" y="96">Music</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

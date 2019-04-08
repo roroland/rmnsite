@@ -42,14 +42,15 @@ h4,
 }
 p,
 h5,
-.h5{
+.h5,
+a{
   font-size: 1rem;
 }
 
 .container{
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 footer{
   display: flex;
@@ -70,7 +71,7 @@ footer{
   justify-content: center;
   align-items: center;
 }
-.avatar{
+.avatar{  
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -78,11 +79,17 @@ footer{
   height: 350px;
   position: relative;
   transition: all .3s ease-out;
+  img{
+    transition: transform 1s ease-out;
+    transform: scale(.9);
+  }
   &:hover{
     cursor: pointer;
     height: 400px;
-    transition: all .3s ease-out;
-    
+    img{
+      transition: transform 1s ease-out;
+      transform: scale(1);
+    }
   }
   h3{
     background: setcolor(brand);
@@ -149,28 +156,82 @@ footer{
   background-size: 100%;
   display: grid;
   grid-template-areas:
-  'header header header'
-  'main   main   main'
-  'nav    nav    nav'
+  'header header header header'
+  'main   main   main   main'
+  '. me me .'
+  'nav    nav    nav  nav'
   ; 
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content min-content min-content min-content;
   header{
     grid-area: header;
-    outline: 1px solid red;
     align-self: flex-start;
+    padding: 0 $component-space;
     h3{
       color: white;
     }
   }
   main{
-    grid-area: main;
-
-    outline: 1px solid blue;
+    grid-column: span 2;
+    padding: $component-space $component-space $component-space 0;
+    p,
+    a{
+      @extend .h4;
+    }
+    p{
+      font-weight: 300;
+      color: white;
+      display: inline-block;
+      padding: .25em .5em 0 $component-space;
+      background: rgba(setcolor(brand, dark), .75);
+      margin-bottom: $component-space-tiny;
+      > span{
+        @extend .h3;
+        font-weight: 600;
+      }
+    }
   }
-  nav{
+  .me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    span{
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  .nav{
     grid-area: nav;
-
-    outline: 1px solid orange;
+    
+    h2{
+      text-align: center;
+    }
+    ul{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 50%;
+      outline: 1px solid red;
+    }
+    .item-layout{
+      grid-column: 1 / 2;
+    }
+    .item-responsive{
+      grid-column: 3 / 4;
+    }
+    .item-css{
+      grid-column: 5 / 6;
+    }
+    .item-ux{
+      grid-column: 2 / 3;
+    }
+    .item-music{
+      grid-column: 4 / 5;
+    }
   }
 }

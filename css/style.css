@@ -25,22 +25,26 @@ h2,
   font-size: 1.953rem; }
 
 h3,
-.h3 {
+.h3,
+.home main p > span {
   font-size: 1.563rem; }
 
 h4,
-.h4 {
+.h4,
+.home main p,
+.home main a {
   font-size: 1.25rem; }
 
 p,
 h5,
-.h5 {
+.h5,
+a {
   font-size: 1rem; }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 1rem; }
+  padding: 1rem 0; }
 
 footer {
   display: flex;
@@ -67,10 +71,15 @@ footer {
   height: 350px;
   position: relative;
   transition: all .3s ease-out; }
+  .avatar img {
+    transition: transform 1s ease-out;
+    transform: scale(0.9); }
   .avatar:hover {
     cursor: pointer;
-    height: 400px;
-    transition: all .3s ease-out; }
+    height: 400px; }
+    .avatar:hover img {
+      transition: transform 1s ease-out;
+      transform: scale(1); }
   .avatar h3 {
     background: #4E5962;
     color: #F7F9F9;
@@ -122,18 +131,56 @@ footer {
   background: url("../images/deco-top.svg") no-repeat;
   background-size: 100%;
   display: grid;
-  grid-template-areas: 'header header header' 'main   main   main' 'nav    nav    nav';
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content; }
+  grid-template-areas: 'header header header header' 'main   main   main   main' '. me me .' 'nav    nav    nav  nav';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content min-content min-content min-content; }
   .home header {
     grid-area: header;
-    outline: 1px solid red;
-    align-self: flex-start; }
+    align-self: flex-start;
+    padding: 0 1.5rem; }
     .home header h3 {
       color: white; }
   .home main {
+    grid-column: span 2;
+    padding: 1.5rem 1.5rem 1.5rem 0; }
+    .home main p {
+      font-weight: 300;
+      color: white;
+      display: inline-block;
+      padding: 0.25em 0.5em 0 1.5rem;
+      background: rgba(78, 89, 98, 0.75);
+      margin-bottom: 0.5rem; }
+      .home main p > span {
+        font-weight: 600; }
+  .home .me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: main;
-    outline: 1px solid blue; }
-  .home nav {
-    grid-area: nav;
-    outline: 1px solid orange; }
+    grid-column: 2 / 4;
+    grid-row: 3 / 4; }
+    .home .me span {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%; }
+  .home .nav {
+    grid-area: nav; }
+    .home .nav h2 {
+      text-align: center; }
+    .home .nav ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 50%;
+      outline: 1px solid red; }
+    .home .nav .item-layout {
+      grid-column: 1 / 2; }
+    .home .nav .item-responsive {
+      grid-column: 3 / 4; }
+    .home .nav .item-css {
+      grid-column: 5 / 6; }
+    .home .nav .item-ux {
+      grid-column: 2 / 3; }
+    .home .nav .item-music {
+      grid-column: 4 / 5; }

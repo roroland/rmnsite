@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="82px" height="103px" viewBox="0 0 82 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="82px" height="91px" viewBox="0 0 82 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>Feature</title>
     <desc>Created with Sketch.</desc>
@@ -24,9 +24,6 @@
                             <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
                             <use fill="#F7F9F9" fill-rule="evenodd" xlink:href="#path-1"></use>
                         </g>
-                        <text id="Label" font-family="OpenSans-Light, Open Sans" font-size="22.4" font-weight="300" fill="#505050">
-                            <tspan x="7.0578125" y="96">Layout</tspan>
-                        </text>
                     </g>
                 </g>
             </g>

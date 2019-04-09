@@ -52,18 +52,14 @@ a{
   margin: 0 auto;
   padding: 1rem 0;
 }
-footer{
-  display: flex;
-  justify-content: flex-end;
-  background: url('../images/deco-btm.svg') no-repeat;
-  background-size: 100%;
-  min-height: 15rem;
-  p{
-    margin: auto 0 $component-space;
-    flex: 0 50%;
-    outline: 1px solid green;
+.line{
+  margin: $component-space 0;
+  position: relative;
+  &.line-over{
+    top: -7rem;
   }
 }
+
 // Avatar
 .intro{
   display: flex;
@@ -154,25 +150,27 @@ footer{
 .home{
   background: url('../images/deco-top.svg') no-repeat;
   background-size: 100%;
-  display: grid;
-  grid-template-areas:
-  'header header header header'
-  'main   main   main   main'
-  '. me me .'
-  'nav    nav    nav  nav'
-  ; 
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: min-content min-content min-content min-content;
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    grid-template-rows: min-content min-content min-content min-content;
+    @media only screen and (min-width: 87em){
+      max-width: 80vw;
+    }
+  }
   header{
-    grid-area: header;
+    max-width: 80vw;
+    grid-column: 1 / -1;
     align-self: flex-start;
     padding: 0 $component-space;
-    h3{
+    margin-bottom: $component-space;
+    h1{
       color: white;
     }
   }
   main{
-    grid-column: span 2;
+    grid-column: 1 / 3;
     padding: $component-space $component-space $component-space 0;
     p,
     a{
@@ -193,30 +191,52 @@ footer{
   }
   .me{
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    grid-area: main;
     grid-column: 2 / 4;
     grid-row: 3 / 4;
     span{
       display: block;
       margin: 0 auto;
+      text-align: center;
       max-width: 100%;
+    }
+    img{
+      max-width: 85%;
     }
   }
   .nav{
-    grid-area: nav;
-    
+    align-items: center;
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
+    display: flex;
+    flex-flow: column nowrap;
     h2{
       text-align: center;
     }
     ul{
       display: grid;
       grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 250px min-content;
       justify-content: center;
-      margin: 0 auto;
-      max-width: 50%;
-      outline: 1px solid red;
+      list-style: none;
+      margin: $component-space auto;
+    }
+    [class^='item-']{
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      position: relative;
+      a{
+        text-decoration: none;
+      }
+      p{
+        color: setcolor(gray, dark);
+        @extend .h4;
+        margin-top: -$component-space;
+      }
     }
     .item-layout{
       grid-column: 1 / 2;
@@ -233,5 +253,23 @@ footer{
     .item-music{
       grid-column: 4 / 5;
     }
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: flex-end;
+  background: url('../images/deco-btm.svg') no-repeat;
+  background-size: 100%;
+  min-height: 15rem;
+  p{
+    @extend .h4;
+    margin: auto 0 $component-space;
+    flex: 0 50%;
+    font-weight: 300;
+    color: white;
+    display: inline-block;
+    padding: .25em .5em 0 $component-space;
+    background: rgba(setcolor(brand, dark), .75);
   }
 }

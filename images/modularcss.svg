@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="126px" height="98px" viewBox="0 0 126 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="82px" height="91px" viewBox="0 0 82 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>Feature Copy 2</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M24,43.8012422 C34.9813665,48.8695652 49.0881988,48.8695652 66.3204969,43.8012422 C83.552795,38.7329193 96.6459627,38.7329193 105.6,43.8012422 L105.6,89.4161491 L24,89.4161491 L24,43.8012422 Z" id="path-1"></path>
+        <path d="M0,43.8012422 C10.9813665,48.8695652 25.0881988,48.8695652 42.3204969,43.8012422 C59.552795,38.7329193 72.6459627,38.7329193 81.6,43.8012422 L81.6,89.4161491 L0,89.4161491 L0,43.8012422 Z" id="path-1"></path>
         <filter x="-4.3%" y="-13.2%" width="108.6%" height="116.2%" filterUnits="objectBoundingBox" id="filter-2">
             <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
             <feOffset dx="0" dy="-3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
@@ -13,11 +13,11 @@
         </filter>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home-opened" transform="translate(-698.000000, -834.000000)">
+        <g id="Home-opened" transform="translate(-720.000000, -834.000000)">
             <g id="Icon-Menu" transform="translate(184.000000, 830.000000)">
                 <g id="Feature" transform="translate(496.000000, 0.000000)">
-                    <g transform="translate(16.000000, 4.800000)">
-                        <g id="grid-icon" transform="translate(35.200000, 0.000000)" stroke="#4E5962">
+                    <g transform="translate(40.000000, 4.800000)">
+                        <g id="grid-icon" transform="translate(11.200000, 0.000000)" stroke="#4E5962">
                             <g id="grid">
                                 <path d="M22.4668657,0 L2.80835821,0 C1.12334328,0 0,1.16346269 0,2.90865672 L0,23.2692537 C0,25.0144478 1.12334328,26.1779104 2.80835821,26.1779104 L22.4668657,26.1779104 C24.1518806,26.1779104 25.2752239,25.0144478 25.2752239,23.2692537 L25.2752239,2.90865672 C25.2752239,1.16346269 24.1518806,0 22.4668657,0 Z M19.6585075,20.360597 L5.61671642,20.360597 L5.61671642,5.81731343 L19.6585075,5.81731343 L19.6585075,20.360597 Z" id="Shape" stroke-width="1.6"></path>
                                 <path d="M53.358806,0 L33.7002985,0 C32.0152836,0 30.8919403,1.16346269 30.8919403,2.90865672 L30.8919403,23.2692537 C30.8919403,25.0144478 32.0152836,26.1779104 33.7002985,26.1779104 L53.358806,26.1779104 C55.0438209,26.1779104 56.1671642,25.0144478 56.1671642,23.2692537 L56.1671642,2.90865672 C56.1671642,1.16346269 55.0438209,0 53.358806,0 Z M50.5504478,20.360597 L36.5086567,20.360597 L36.5086567,5.81731343 L50.5504478,5.81731343 L50.5504478,20.360597 Z" id="Shape" stroke-width="1.6"></path>
@@ -29,9 +29,6 @@
                             <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
                             <use fill="#F7F9F9" fill-rule="evenodd" xlink:href="#path-1"></use>
                         </g>
-                        <text id="Label" font-family="OpenSans-Light, Open Sans" font-size="22.4" font-weight="300" fill="#505050">
-                            <tspan x="0.40546875" y="96">Modular CSS</tspan>
-                        </text>
                     </g>
                 </g>
             </g>

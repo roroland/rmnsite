@@ -56,7 +56,8 @@ a{
   margin: $component-space 0;
   position: relative;
   &.line-over{
-    top: -7rem;
+    margin: $component-space 0 0;
+    top: -2rem;
   }
 }
 
@@ -284,7 +285,62 @@ a{
   }
   
 }
-
+.feature{
+  background: url('../images/deco-topsml.svg') no-repeat;
+  background-size: 100%;
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    grid-template-rows: min-content min-content min-content min-content;
+    @media only screen and (min-width: 87em){
+      max-width: 80vw;
+    }
+    header{
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: $component-space-tiny $component-space;
+      grid-column: 1 / -1;
+      img{
+        align-self: top;
+        margin-right: $component-space-small;
+        max-height: 70px;
+        height: auto;
+      }
+    }
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 2 / 4;
+      margin: 6rem 0 0;
+      flex-flow: column nowrap;
+      h2{
+        color: setcolor(brand, red);
+        text-align: center;
+        a{
+          color: setcolor(gray, dark);
+          @extend .h2;
+        }
+      }
+    }
+    .feature-text{
+      grid-column: 2 / 4;
+      margin-bottom: $component-space-small;
+    }
+    .feature-sample{
+      display: flex;
+      grid-column: 1 / -1;
+      justify-content: center;
+      img{
+        align-self: center;
+        max-width: 100%;
+      }
+    }
+    
+  }
+}
 footer{
   display: flex;
   justify-content: flex-end;

@@ -21,7 +21,8 @@ h1,
   font-size: 2.441rem; }
 
 h2,
-.h2 {
+.h2,
+.feature .wrapper .nav h2 a {
   font-size: 1.953rem; }
 
 h3,
@@ -52,7 +53,8 @@ a {
   margin: 1.5rem 0;
   position: relative; }
   .line.line-over {
-    top: -7rem; }
+    margin: 1.5rem 0 0;
+    top: -2rem; }
 
 .intro {
   display: flex;
@@ -227,6 +229,51 @@ a {
         height: 55px; }
     .home .nav .item-music {
       grid-column: 4 / 5; }
+
+.feature {
+  background: url("../images/deco-topsml.svg") no-repeat;
+  background-size: 100%; }
+  .feature .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    grid-template-rows: min-content min-content min-content min-content; }
+    @media only screen and (min-width: 87em) {
+      .feature .wrapper {
+        max-width: 80vw; } }
+    .feature .wrapper header {
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1.5rem;
+      grid-column: 1 / -1; }
+      .feature .wrapper header img {
+        align-self: top;
+        margin-right: 1rem;
+        max-height: 70px;
+        height: auto; }
+    .feature .wrapper .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 2 / 4;
+      margin: 6rem 0 0;
+      flex-flow: column nowrap; }
+      .feature .wrapper .nav h2 {
+        color: #EA507C;
+        text-align: center; }
+        .feature .wrapper .nav h2 a {
+          color: #505050; }
+    .feature .wrapper .feature-text {
+      grid-column: 2 / 4;
+      margin-bottom: 1rem; }
+    .feature .wrapper .feature-sample {
+      display: flex;
+      grid-column: 1 / -1;
+      justify-content: center; }
+      .feature .wrapper .feature-sample img {
+        align-self: center;
+        max-width: 100%; }
 
 footer {
   display: flex;

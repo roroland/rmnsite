@@ -8,7 +8,8 @@
 
 html {
   font-size: 100%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  scroll-behavior: smooth; }
 
 body {
   background: #F7F9F9; }
@@ -35,7 +36,12 @@ h4,
 .home main p,
 .home main a,
 .home .nav [class^='item-'] p,
-footer p {
+footer p,
+.h4 a,
+.home main p a,
+.home main a a,
+.home .nav [class^='item-'] p a,
+footer p a {
   font-size: 1.25rem; }
 
 p,

@@ -17,6 +17,7 @@ $component-space-tiny: .5rem;
 html{
   font-size: 100%;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 body{
   background: setcolor(gray, lighter);
@@ -37,7 +38,8 @@ h3,
   font-size: 1.563rem;
 }
 h4,
-.h4{
+.h4,
+.h4 a{
   font-size: 1.25rem;
 }
 p,

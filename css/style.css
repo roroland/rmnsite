@@ -50,6 +50,9 @@ h5,
 a {
   font-size: 1rem; }
 
+a {
+  color: #505050; }
+
 .container {
   min-height: 100vh;
   margin: 0 auto;

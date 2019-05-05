@@ -56,7 +56,18 @@ a {
 .container {
   min-height: 100vh;
   margin: 0 auto;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  position: relative; }
+  .container::after {
+    content: '';
+    background: url("../images/deco-invertsml.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 30px;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
 
 .line {
   margin: 1.5rem 0;
@@ -283,6 +294,9 @@ a {
       .feature .wrapper .feature-sample img {
         align-self: center;
         max-width: 100%; }
+
+[class~='feature']:last-of-type::after {
+  display: none; }
 
 footer {
   display: flex;

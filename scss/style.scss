@@ -55,6 +55,18 @@ a{
   min-height: 100vh;
   margin: 0 auto;
   padding: 1rem 0;
+  position: relative;
+  &::after{
+    content: '';
+    background: url('../images/deco-invertsml.svg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 30px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 .line{
   margin: $component-space 0;
@@ -155,6 +167,7 @@ a{
 .home{
   background: url('../images/deco-top.svg') no-repeat;
   background-size: 100%;
+  
   .wrapper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -344,6 +357,11 @@ a{
     }
     
   }
+}
+[class~='feature']:last-of-type{
+    &::after{
+      display: none;
+    }
 }
 footer{
   display: flex;

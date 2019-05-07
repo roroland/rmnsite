@@ -62,10 +62,10 @@ a{
     background-size: cover;
     position: absolute;
     width: 100%;
-    min-height: 30px;
+    min-height: 50px;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
   }
 }
 .line{
@@ -167,6 +167,7 @@ a{
 .home{
   background: url('../images/deco-top.svg') no-repeat;
   background-size: 100%;
+  background-position-y: -1px;
   
   .wrapper{
     display: grid;

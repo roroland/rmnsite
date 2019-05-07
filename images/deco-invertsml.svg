@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1024px" height="40px" viewBox="0 0 1024 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1024px" height="38px" viewBox="0 0 1024 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>Deco btm group Copy</title>
+    <title>TOP</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="What-I-do" transform="translate(0.000000, -1017.000000)">
-            <g id="Deco-btm-group-Copy" transform="translate(509.000000, 1027.000000) scale(1, -1) translate(-509.000000, -1027.000000) translate(-85.000000, 996.000000)">
-                <path d="M1114,1 L72,1 L72,20 C447.648551,13.6666667 794.981884,11.7690387 1114,14.3071161 C1114,14.3071161 1114,9.87141074 1114,1 Z" id="Deco-2" fill="#E5E5E5"></path>
-                <path d="M1186,2 L15,2 L15,26 C45.8655973,33.7945789 69.1989306,37.4612455 85,37 C289.519849,31.0299063 462.98968,16.9491573 600.5,21.3258427 C830.669384,28.6516854 1097,62 1186,18.8089888 C1188,32.2696629 1188,26.6666667 1186,2 Z" id="Deco-1" fill="#EA507C" style="mix-blend-mode: multiply;"></path>
+        <g id="Home-opened" transform="translate(0.000000, -1196.000000)" fill="#DD4470">
+            <g id="TOP" transform="translate(401.000000, 1215.000000) scale(1, -1) translate(-401.000000, -1215.000000) translate(-259.000000, 1196.000000)">
+                <path d="M1267.63756,-2.27373675e-13 L771.367522,-2.27373675e-13 L0,-2.27373675e-13 L0,24.1024183 C10.6282753,30.5163455 50.279918,33.7233091 118.954928,33.7233091 C221.967443,33.7233091 484.960327,15.0129518 633.818778,19.4083144 C882.983044,26.7654196 995.797471,58.5262919 1269.26134,15.8697925 C1337.08711,5.28993084 1336.54585,-2.27373675e-13 1267.63756,-2.27373675e-13 Z" id="Deco-1" style="mix-blend-mode: multiply;"></path>
             </g>
         </g>
     </g>

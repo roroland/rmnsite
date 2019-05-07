@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1024px" height="241px" viewBox="0 0 1024 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1024px" height="267px" viewBox="0 0 1024 267" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>Deco group</title>
+    <title>Deco btm group</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home-opened">
-            <g id="Header" transform="translate(-38.000000, -120.000000)">
-                <g id="Deco-group" transform="translate(557.000000, 180.500000) scale(-1, 1) translate(-557.000000, -180.500000) ">
-                    <path d="M1104,15 L0,15 L0,282 C398,193 766,166.333333 1104,202 C1104,202 1104,139.666667 1104,15 Z" id="Deco-2" fill="#E5E5E5"></path>
-                    <path d="M1114,2.27373675e-13 L10,2.27373675e-13 L10,267 C233.333333,178 417.333333,160.666667 562,215 C779,296.5 1003.70645,175.361529 1114,187 C1114,187 1114,124.666667 1114,2.27373675e-13 Z" id="Deco-1" fill="#EA507C" style="mix-blend-mode: multiply;"></path>
-                    <path d="M1104,94 C810,94 607.666667,128.666667 497,198 C386.333333,267.333333 220.666667,232.666667 0,94 L0,361 C398,272 766,245.333333 1104,281 C1104,281 1104,218.666667 1104,94 Z" id="Deco-2-Copy" fill="#AEC4D5" style="mix-blend-mode: multiply;" transform="translate(552.000000, 227.500000) scale(1, -1) translate(-552.000000, -227.500000) "></path>
-                </g>
+        <g id="Home-opened" transform="translate(0.000000, -1234.000000)">
+            <g id="Deco-btm-group" transform="translate(488.000000, 1367.500000) scale(-1, 1) translate(-488.000000, -1367.500000) translate(-57.000000, 1234.000000)">
+                <path d="M1080,2.27373675e-13 L0,2.27373675e-13 L0,188 C389.347826,125.333333 749.347826,106.556804 1080,131.670412 C1080,131.670412 1080,87.7802747 1080,2.27373675e-13 Z" id="Deco-2" fill="#E5E5E5"></path>
+                <path d="M1090,0 L496.621377,0 L0,0 L0,173 C220.501208,115.333333 402.167874,104.102372 545,139.307116 C759.248188,192.114232 981.105098,113.623762 1090,121.164794 C1090,121.164794 1090,80.7765293 1090,0 Z" id="Deco-1" fill="#EA507C" style="mix-blend-mode: multiply;"></path>
+                <path d="M1080,5.68434189e-13 C792.391304,5.68434189e-13 594.456522,34.6666667 486.195652,104 C377.934783,173.333333 215.869565,138.666667 0,5.68434189e-13 L0,267 C389.347826,178 749.347826,151.333333 1080,187 C1080,187 1080,124.666667 1080,5.68434189e-13 Z" id="Deco-2-Copy" fill="#AEC4D5" style="mix-blend-mode: multiply;" transform="translate(540.000000, 133.500000) scale(1, -1) translate(-540.000000, -133.500000) "></path>
             </g>
         </g>
     </g>

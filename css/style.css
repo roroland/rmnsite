@@ -227,8 +227,16 @@ a {
         top: 1.5rem; }
       .home .nav [class^='item-']:hover .img-mask {
         top: 0; }
+      .home .nav [class^='item-']:hover .img-item {
+        filter: blur(4px);
+        opacity: .25;
+        transform: translateY(-1rem); }
       .home .nav [class^='item-'] .img-item {
-        height: 60px; }
+        height: 60px;
+        filter: blur(0);
+        transform: translateY(0);
+        transition: 5s all ease-out;
+        position: relative; }
       .home .nav [class^='item-'] .img-mask {
         display: block;
         width: 100%;

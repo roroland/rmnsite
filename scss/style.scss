@@ -173,7 +173,6 @@ a{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
-    grid-template-rows: min-content min-content min-content min-content;
     @media only screen and (min-width: 87em){
       max-width: 80vw;
     }
@@ -189,8 +188,11 @@ a{
     }
   }
   main{
-    grid-column: 1 / 3;
-    padding: $component-space $component-space $component-space 0;
+    grid-column: 1 / -1;
+    @media only screen and (min-width: 48em){
+      grid-column: 1 / 3;
+      padding: $component-space $component-space $component-space 0;
+    }
     p,
     a{
       @extend .h4;
@@ -226,21 +228,31 @@ a{
     }
   }
   .nav{
+    align-self: normal;
     align-items: center;
-    grid-column: 2 / 4;
+    grid-column: 1 / -1;
     grid-row: 4 / 6;
     display: flex;
     flex-flow: column nowrap;
+    @media only screen and (min-width: 48em){
+      align-self: initial;
+      grid-column: 2 / 4;
+    }
     h2{
       text-align: center;
     }
     ul{
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: 200px min-content;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 150px min-content;
       justify-content: center;
       list-style: none;
       margin: $component-space auto;
+      @media only screen and (min-width: 48em){
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 200px min-content;
+        
+      }
     }
     [class^='item-']{
       align-items: center;
@@ -292,22 +304,33 @@ a{
       }
     }
     .item-layout{
-      grid-column: 1 / 2;
+      @media only screen and (min-width: 48em){
+        grid-column: 1 / 2;
+      }
     }
     .item-responsive{
-      grid-column: 3 / 4;
+      @media only screen and (min-width: 48em){
+        grid-column: 3 / 4;
+      }
     }
     .item-css{
-      grid-column: 5 / 6;
+      @media only screen and (min-width: 48em){
+        grid-column: 5 / 6;
+      }
     }
     .item-ux{
-      grid-column: 2 / 3;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / 3;
+      }
       .img-item{
         height: 55px;
       }
     }
     .item-music{
-      grid-column: 4 / 5;
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 4 / 5;
+      }
     }
   }
   
@@ -317,8 +340,11 @@ a{
   background-size: 100%;
   .wrapper{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1;
     margin: 0 auto;
+    @media only screen and (min-width: 48em){
+      grid-template-columns: repeat(4, 1fr);
+    }
     @media only screen and (min-width: 87em){
       max-width: 80vw;
     }
@@ -339,9 +365,12 @@ a{
       display: flex;
       align-items: center;
       justify-content: center;
-      grid-column: 2 / 4;
+      grid-column: 1 / -1;
       margin: 6rem 0 0;
       flex-flow: column nowrap;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / 4;
+      }
       h2{
         color: setcolor(brand, red);
         text-align: center;
@@ -352,13 +381,19 @@ a{
       }
     }
     .feature-text{
-      grid-column: 2 / 4;
       margin-bottom: $component-space-small;
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / 4;
+      }
     }
     .feature-sample{
       display: flex;
-      grid-column: 2 / span 2;
       justify-content: center;
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / span 2;
+      }
       img,
       video{
         align-self: center;
@@ -366,7 +401,10 @@ a{
       }
     }
     .is-video{
-      grid-column: 2 / span 2;
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / span 2;
+      }
     }
     .is-music{
       display: flex;

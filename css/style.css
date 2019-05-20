@@ -265,8 +265,7 @@ a {
   .feature .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-    grid-template-rows: min-content min-content min-content min-content; }
+    margin: 0 auto; }
     @media only screen and (min-width: 87em) {
       .feature .wrapper {
         max-width: 80vw; } }
@@ -298,11 +297,17 @@ a {
       margin-bottom: 1rem; }
     .feature .wrapper .feature-sample {
       display: flex;
-      grid-column: 1 / -1;
+      grid-column: 2 / span 2;
       justify-content: center; }
-      .feature .wrapper .feature-sample img {
+      .feature .wrapper .feature-sample img,
+      .feature .wrapper .feature-sample video {
         align-self: center;
         max-width: 100%; }
+    .feature .wrapper .is-video {
+      grid-column: 2 / span 2; }
+    .feature .wrapper .is-music {
+      display: flex;
+      flex-flow: row wrap; }
 
 [class~='feature']:last-of-type::after {
   display: none; }

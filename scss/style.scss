@@ -319,7 +319,6 @@ a{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
-    grid-template-rows: min-content min-content min-content min-content;
     @media only screen and (min-width: 87em){
       max-width: 80vw;
     }
@@ -358,14 +357,21 @@ a{
     }
     .feature-sample{
       display: flex;
-      grid-column: 1 / -1;
+      grid-column: 2 / span 2;
       justify-content: center;
-      img{
+      img,
+      video{
         align-self: center;
         max-width: 100%;
       }
     }
-    
+    .is-video{
+      grid-column: 2 / span 2;
+    }
+    .is-music{
+      display: flex;
+      flex-flow: row wrap;
+    }
   }
 }
 [class~='feature']:last-of-type{

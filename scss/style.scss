@@ -63,9 +63,35 @@ a{
     position: absolute;
     width: 100%;
     min-height: 50px;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     z-index: 1;
+  }
+  &.featurebtm--two{
+    &::after{
+      content: '';
+      background: url('../images/deco-invertsml-2.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      min-height: 50px;
+      bottom: -1px;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  &.featurebtm--three{
+    &::after{
+      content: '';
+      background: url('../images/deco-invertsml-3.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      min-height: 50px;
+      bottom: -1px;
+      left: 0;
+      z-index: 1;
+    }
   }
 }
 .line{
@@ -79,66 +105,84 @@ a{
 
 // Avatar
 .intro{
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  padding: 0;
+  @media only screen and (min-width: 48em){
+    padding: inherit;
+  }
 }
-.avatar{  
+.avatar--wrapper{  
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 350px;
   position: relative;
   transition: all .3s ease-out;
+  height: 100vh;
+  width: 100%;
+  @media only screen and (min-width: 48em){
+    height: 350px;
+    width: auto;
+  }
+  .avatar{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 350px;
+    width: 100%;
+  }
   img{
     transition: transform 1s ease-out;
     transform: scale(.9);
   }
-  &:hover{
-    cursor: pointer;
-    height: 400px;
-    img{
-      transition: transform 1s ease-out;
-      transform: scale(1);
-    }
-  }
+  
   h3{
     background: setcolor(brand);
     color: setcolor(gray, lighter);
     font-weight: 300;
     padding: 0 $component-space;
     position: relative;
-    top: $component-space-small;
     z-index: 10;
-    
-    pointer-events: none;
-    &::before{
-      content: '';
-      background: url('../images/path-right.svg') no-repeat;
-      width: 200px;
-      height: 200px;
-      right: -70%;
-      top: 1rem;
-      position: absolute;
-      display: block;
+    text-align: center;
+    align-self: flex-start;
+    width: 100%;
+    @media only screen and (min-width: 48em){
+      width: auto;
+      top: $component-space-small;
+      &::before{
+        content: '';
+        background: url('../images/path-right.svg') no-repeat;
+        width: 200px;
+        height: 200px;
+        right: -70%;
+        pointer-events: none;
+        top: 1rem;
+        position: absolute;
+        display: block;
+      }
     }
   }
   h4{
     position: relative;
     top: -$component-space*2;
     z-index: 10;
-    pointer-events: none;
     &::after{
-      content: '';
-      background: url('../images/path-left.svg') no-repeat;
-      width: 200px;
-      height: 200px;
-      left: -120%;
-      top: -7rem;
-      position: absolute;
-      display: block;
+      @media only screen and (min-width: 48em){
+        content: '';
+        background: url('../images/path-left.svg') no-repeat;
+        width: 200px;
+        height: 200px;
+        left: -120%;
+        top: -7rem;
+        position: absolute;
+        pointer-events: none;
+        display: block;
+      }
     }
     
   }
@@ -152,12 +196,30 @@ a{
     width: 100%;
     position: absolute;
     z-index: 5;
+    transition: bottom .25s ease-out, top .25s ease-out;
+    
     &-top{
-      top: 0;
+      top: -$component-space;
     }
     &-bottom{
-      bottom: 0;
       transform: translateY(-40px) rotate(180deg);
+      bottom: -$component-space;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    @media only screen and (min-width: 48em){
+      height: 450px;
+    }
+    img{
+      transition: transform 1s ease-out .25s;
+      transform: scale(1);
+    }
+    .submask-top{
+      top: -3rem;
+    }
+    .submask-bottom{
+      bottom: -3rem;
     }
   }
 }
@@ -237,9 +299,13 @@ a{
     @media only screen and (min-width: 48em){
       align-self: initial;
       grid-column: 2 / 4;
+      width: auto;
     }
     h2{
       text-align: center;
+    }
+    nav{
+      width: 100%;
     }
     ul{
       display: grid;
@@ -338,9 +404,17 @@ a{
 .feature{
   background: url('../images/deco-topsml.svg') no-repeat;
   background-size: 100%;
+  &.feature--two{
+    background: url('../images/deco-topsml-2.svg') no-repeat;
+    background-size: 100%;
+  }
+  &.feature--three{
+    background: url('../images/deco-topsml-3.svg') no-repeat;
+    background-size: 100%;
+  }
   .wrapper{
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     margin: 0 auto;
     @media only screen and (min-width: 48em){
       grid-template-columns: repeat(4, 1fr);
@@ -366,7 +440,7 @@ a{
       align-items: center;
       justify-content: center;
       grid-column: 1 / -1;
-      margin: 6rem 0 0;
+      margin: 7.5rem 0 0;
       flex-flow: column nowrap;
       @media only screen and (min-width: 48em){
         grid-column: 2 / 4;

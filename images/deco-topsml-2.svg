@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="144px" viewBox="0 0 1024 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Deco group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="What-I-do">
+            <g id="Deco-group" transform="translate(507.000000, 11.000000) scale(-1, 1) translate(-507.000000, -11.000000) translate(-50.000000, -130.000000)">
+                <path d="M1104,15 L0,15 L0,282 C398,193 766,166.333333 1104,202 C1104,202 1104,139.666667 1104,15 Z" id="Deco-2" fill="#E5E5E5"></path>
+                <path d="M1114,2.27373675e-13 L10,2.27373675e-13 L10,267 C233.333333,178 417.333333,160.666667 562,215 C779,296.5 1003.70645,175.361529 1114,187 C1114,187 1114,124.666667 1114,2.27373675e-13 Z" id="Deco-1" fill="#AEC4D5" style="mix-blend-mode: multiply;"></path>
+            </g>
+        </g>
+    </g>
+</svg>

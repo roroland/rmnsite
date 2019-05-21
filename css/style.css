@@ -65,7 +65,27 @@ a {
     position: absolute;
     width: 100%;
     min-height: 50px;
-    bottom: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 1; }
+  .container.featurebtm--two::after {
+    content: '';
+    background: url("../images/deco-invertsml-2.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    bottom: -1px;
+    left: 0;
+    z-index: 1; }
+  .container.featurebtm--three::after {
+    content: '';
+    background: url("../images/deco-invertsml-3.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    bottom: -1px;
     left: 0;
     z-index: 1; }
 
@@ -77,74 +97,105 @@ a {
     top: -2rem; }
 
 .intro {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center; }
+  padding: 0; }
+  @media only screen and (min-width: 48em) {
+    .intro {
+      padding: inherit; } }
 
-.avatar {
+.avatar--wrapper {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 350px;
   position: relative;
-  transition: all .3s ease-out; }
-  .avatar img {
+  transition: all .3s ease-out;
+  height: 100vh;
+  width: 100%; }
+  @media only screen and (min-width: 48em) {
+    .avatar--wrapper {
+      height: 350px;
+      width: auto; } }
+  .avatar--wrapper .avatar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 350px;
+    width: 100%; }
+  .avatar--wrapper img {
     transition: transform 1s ease-out;
     transform: scale(0.9); }
-  .avatar:hover {
-    cursor: pointer;
-    height: 400px; }
-    .avatar:hover img {
-      transition: transform 1s ease-out;
-      transform: scale(1); }
-  .avatar h3 {
+  .avatar--wrapper h3 {
     background: #4E5962;
     color: #F7F9F9;
     font-weight: 300;
     padding: 0 1.5rem;
     position: relative;
-    top: 1rem;
     z-index: 10;
-    pointer-events: none; }
-    .avatar h3::before {
-      content: '';
-      background: url("../images/path-right.svg") no-repeat;
-      width: 200px;
-      height: 200px;
-      right: -70%;
-      top: 1rem;
-      position: absolute;
-      display: block; }
-  .avatar h4 {
+    text-align: center;
+    align-self: flex-start;
+    width: 100%; }
+    @media only screen and (min-width: 48em) {
+      .avatar--wrapper h3 {
+        width: auto;
+        top: 1rem; }
+        .avatar--wrapper h3::before {
+          content: '';
+          background: url("../images/path-right.svg") no-repeat;
+          width: 200px;
+          height: 200px;
+          right: -70%;
+          pointer-events: none;
+          top: 1rem;
+          position: absolute;
+          display: block; } }
+  .avatar--wrapper h4 {
     position: relative;
     top: -3rem;
-    z-index: 10;
-    pointer-events: none; }
-    .avatar h4::after {
-      content: '';
-      background: url("../images/path-left.svg") no-repeat;
-      width: 200px;
-      height: 200px;
-      left: -120%;
-      top: -7rem;
-      position: absolute;
-      display: block; }
-  .avatar .avatar-img {
+    z-index: 10; }
+    @media only screen and (min-width: 48em) {
+      .avatar--wrapper h4::after {
+        content: '';
+        background: url("../images/path-left.svg") no-repeat;
+        width: 200px;
+        height: 200px;
+        left: -120%;
+        top: -7rem;
+        position: absolute;
+        pointer-events: none;
+        display: block; } }
+  .avatar--wrapper .avatar-img {
     position: relative;
     backface-visibility: hidden;
     z-index: 0; }
-  .avatar .submask {
+  .avatar--wrapper .submask {
     max-width: 100%;
     width: 100%;
     position: absolute;
-    z-index: 5; }
-    .avatar .submask-top {
-      top: 0; }
-    .avatar .submask-bottom {
-      bottom: 0;
-      transform: translateY(-40px) rotate(180deg); }
+    z-index: 5;
+    transition: bottom .25s ease-out, top .25s ease-out; }
+    .avatar--wrapper .submask-top {
+      top: -1.5rem; }
+    .avatar--wrapper .submask-bottom {
+      transform: translateY(-40px) rotate(180deg);
+      bottom: -1.5rem; }
+  .avatar--wrapper:hover {
+    cursor: pointer; }
+    @media only screen and (min-width: 48em) {
+      .avatar--wrapper:hover {
+        height: 450px; } }
+    .avatar--wrapper:hover img {
+      transition: transform 1s ease-out .25s;
+      transform: scale(1); }
+    .avatar--wrapper:hover .submask-top {
+      top: -3rem; }
+    .avatar--wrapper:hover .submask-bottom {
+      bottom: -3rem; }
 
 .home {
   background: url("../images/deco-top.svg") no-repeat;
@@ -204,9 +255,12 @@ a {
     @media only screen and (min-width: 48em) {
       .home .nav {
         align-self: initial;
-        grid-column: 2 / 4; } }
+        grid-column: 2 / 4;
+        width: auto; } }
     .home .nav h2 {
       text-align: center; }
+    .home .nav nav {
+      width: 100%; }
     .home .nav ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -280,9 +334,15 @@ a {
 .feature {
   background: url("../images/deco-topsml.svg") no-repeat;
   background-size: 100%; }
+  .feature.feature--two {
+    background: url("../images/deco-topsml-2.svg") no-repeat;
+    background-size: 100%; }
+  .feature.feature--three {
+    background: url("../images/deco-topsml-3.svg") no-repeat;
+    background-size: 100%; }
   .feature .wrapper {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     margin: 0 auto; }
     @media only screen and (min-width: 48em) {
       .feature .wrapper {
@@ -306,7 +366,7 @@ a {
       align-items: center;
       justify-content: center;
       grid-column: 1 / -1;
-      margin: 6rem 0 0;
+      margin: 7.5rem 0 0;
       flex-flow: column nowrap; }
       @media only screen and (min-width: 48em) {
         .feature .wrapper .nav {

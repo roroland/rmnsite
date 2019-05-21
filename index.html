@@ -12,17 +12,19 @@
 
 <body>
   <section class="container intro">
-    <a href="#homeIntro" class="avatar">
+    <a href="#homeIntro" class="avatar--wrapper">
       <h3 class="h5">I build the foundations of your product</h3>
-      <object class="submask submask-top" data="images/submask.svg" type="image/svg+xml"></object>
-      <div class="avatar-img">
-        <img src="images/me-clear.png" alt="Rodrigo M Noales">
+      <div class="avatar">
+        <object class="submask submask-top" data="images/submask.svg" type="image/svg+xml"></object>
+        <div class="avatar-img">
+          <img src="images/me-clear.png" alt="Rodrigo M Noales">
+        </div>
+        <object class="submask submask-bottom" data="images/submask.svg" type="image/svg+xml"></object>
       </div>
-      <object class="submask submask-bottom" data="images/submask.svg" type="image/svg+xml"></object>
       <h4>Rodrigo M. Noales</h4>
     </a>
   </section>
-  <section class="container home" id="homeIntro">
+  <section class="container home featurebtm--two" id="homeIntro">
     <div class="wrapper">
       <header>
         <h1>Rodrigo M. Noales</h1>
@@ -109,12 +111,8 @@
       </a>
     </div>
   </section>
-  <section class="container feature" id="layout">
+  <section class="container feature feature--two featurebtm--three" id="layout">
     <div class="wrapper">
-      <header>
-        <img src="images/me.png" alt="Rmn">
-        <h4>Rodrigo M. Noales</h4>
-      </header>
       <div class="nav">
         <h2><a href="#home">What I do</a> / Layout</h2>
         <svg class="line" width="2px" height="75px" viewBox="0 0 2 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -134,12 +132,8 @@
       </div>
     </div>
   </section>
-  <section class="container feature" id="rwd">
+  <section class="container feature feature--three" id="rwd">
     <div class="wrapper">
-      <header>
-        <img src="images/me.png" alt="Rmn">
-        <h4>Rodrigo M. Noales</h4>
-      </header>
       <div class="nav">
         <h2><a href="#home">What I do</a> / Responsive</h2>
         <svg class="line" width="2px" height="75px" viewBox="0 0 2 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -162,10 +156,6 @@
   </section>
   <section class="container feature" id="css">
     <div class="wrapper">
-      <header>
-        <img src="images/me.png" alt="Rmn">
-        <h4>Rodrigo M. Noales</h4>
-      </header>
       <div class="nav">
         <h2><a href="#home">What I do</a> / Modular CSS</h2>
         <svg class="line" width="2px" height="75px" viewBox="0 0 2 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -188,10 +178,6 @@
   </section>
   <section class="container feature" id="ux">
     <div class="wrapper">
-      <header>
-        <img src="images/me.png" alt="Rmn">
-        <h4>Rodrigo M. Noales</h4>
-      </header>
       <div class="nav">
         <h2><a href="#home">What I do</a> / UI - UX</h2>
         <svg class="line" width="2px" height="75px" viewBox="0 0 2 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -212,32 +198,28 @@
     </div>
   </section>
   <section class="container feature" id="music">
-      <div class="wrapper">
-        <header>
-          <img src="images/me.png" alt="Rmn">
-          <h4>Rodrigo M. Noales</h4>
-        </header>
-        <div class="nav">
-          <h2><a href="#home">What I do</a> / Music</h2>
-          <svg class="line" width="2px" height="75px" viewBox="0 0 2 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Home-opened" transform="translate(-512.000000, -1042.000000)" stroke="#979797">
-                <path d="M513,1042.5 L513,1277.5" id="Path-2-Copy"></path>
-              </g>
+    <div class="wrapper">
+      <div class="nav">
+        <h2><a href="#home">What I do</a> / Music</h2>
+        <svg class="line" width="2px" height="75px" viewBox="0 0 2 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs></defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Home-opened" transform="translate(-512.000000, -1042.000000)" stroke="#979797">
+              <path d="M513,1042.5 L513,1277.5" id="Path-2-Copy"></path>
             </g>
-          </svg>
-        </div>
-        <div class="feature-text">
-          <p class="h4">I'm a classic trained musician, I play piano since the age of 5 and I compose and publish my music for commercial licensing (with my alias 'SonicByte') in different stock markets around the globe, like <a href="">AudioJungle</a>, <a href="">Pond5</a>, <a href="">V-fine</a> and others. Also some of my music is available for casual listen in Spotify, ITunes, etc.</p>
-        </div>
-        <div class="feature-sample is-music">
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/619064223&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351193621&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298186273&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-        </div>
+          </g>
+        </svg>
       </div>
-    </section> 
+      <div class="feature-text">
+        <p class="h4">I'm a classic trained musician, I play piano since the age of 5 and I compose and publish my music for commercial licensing (with my alias 'SonicByte') in different stock markets around the globe, like <a href="">AudioJungle</a>, <a href="">Pond5</a>, <a href="">V-fine</a> and others. Also some of my music is available for casual listen in Spotify, ITunes, etc.</p>
+      </div>
+      <div class="feature-sample is-music">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/619064223&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351193621&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298186273&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      </div>
+    </div>
+  </section> 
   <footer>
     <p>I work remotely for teams all over the world, if you need me for your next project, <a href="">write me</a>.</p>
   </footer>

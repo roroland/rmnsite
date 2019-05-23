@@ -1,0 +1,177 @@
+// Home
+
+.home{
+  background: url('../images/deco-top.svg') no-repeat;
+  background-size: 100%;
+  background-position-y: -1px;
+  
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    @media only screen and (min-width: 87em){
+      max-width: 80vw;
+    }
+  }
+  header{
+    max-width: 80vw;
+    grid-column: 1 / -1;
+    align-self: flex-start;
+    padding: 0 $component-space;
+    margin-bottom: $component-space;
+    h1{
+      color: white;
+    }
+  }
+  main{
+    grid-column: 1 / -1;
+    @media only screen and (min-width: 48em){
+      grid-column: 1 / 3;
+      padding: $component-space $component-space $component-space 0;
+    }
+    p,
+    a{
+      @extend .h4;
+    }
+    p{
+      font-weight: 300;
+      color: white;
+      display: inline-block;
+      padding: .25em .5em 0 $component-space;
+      background: rgba(setcolor(brand, dark), .75);
+      margin-bottom: $component-space-tiny;
+      > span{
+        @extend .h3;
+        font-weight: 600;
+      }
+    }
+  }
+  .me{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    span{
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 100%;
+    }
+    img{
+      max-width: 85%;
+    }
+  }
+  .nav{
+    align-self: normal;
+    align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 4 / 6;
+    display: flex;
+    flex-flow: column nowrap;
+    @media only screen and (min-width: 48em){
+      align-self: initial;
+      grid-column: 2 / 4;
+      width: auto;
+    }
+    h2{
+      text-align: center;
+    }
+    nav{
+      width: 100%;
+    }
+    ul{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 150px min-content;
+      justify-content: center;
+      list-style: none;
+      margin: $component-space auto;
+      @media only screen and (min-width: 48em){
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 200px min-content;
+        
+      }
+    }
+    [class^='item-']{
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      position: relative;
+      a{
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        min-height: 60px;
+        text-decoration: none;
+        position: relative;
+        width: 100%;
+      }
+      p{
+        @extend .h4;
+        color: setcolor(gray, dark);
+        position: relative;
+        top: $component-space;
+      }
+      &:hover{
+        .img-mask{
+          top: 0;
+        }
+        .img-item{
+          filter: blur(4px);
+          opacity: .25;
+          transform: translateY(-$component-space-small);
+        }
+      }
+      .img-item{
+        height: 60px;
+        filter: blur(0);
+        transform: translateY(0);
+        transition: 5s all ease-out;
+        position: relative;
+      }
+      .img-mask{
+        display: block;
+        width: 100%;
+        height: 60px;
+        background: url('../images/feature-mask.png') no-repeat center;
+        background-size: contain;
+        position: relative;
+        top: -$component-space;
+        transition: .5s all ease-out;
+      }
+    }
+    .item-layout{
+      @media only screen and (min-width: 48em){
+        grid-column: 1 / 2;
+      }
+    }
+    .item-responsive{
+      @media only screen and (min-width: 48em){
+        grid-column: 3 / 4;
+      }
+    }
+    .item-css{
+      @media only screen and (min-width: 48em){
+        grid-column: 5 / 6;
+      }
+    }
+    .item-ux{
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / 3;
+      }
+      .img-item{
+        height: 55px;
+      }
+    }
+    .item-music{
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 4 / 5;
+      }
+    }
+  }
+  
+}

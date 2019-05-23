@@ -1,0 +1,90 @@
+.feature{
+  background: url('../images/deco-topsml.svg') no-repeat;
+  background-size: 100%;
+  &.feature--two{
+    background: url('../images/deco-topsml-2.svg') no-repeat;
+    background-size: 100%;
+  }
+  &.feature--three{
+    background: url('../images/deco-topsml-3.svg') no-repeat;
+    background-size: 100%;
+  }
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    @media only screen and (min-width: 48em){
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media only screen and (min-width: 87em){
+      max-width: 80vw;
+    }
+    header{
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: $component-space-tiny $component-space;
+      grid-column: 1 / -1;
+      img{
+        align-self: top;
+        margin-right: $component-space-small;
+        max-height: 70px;
+        height: auto;
+      }
+    }
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 1 / -1;
+      margin: 7.5rem 0 0;
+      flex-flow: column nowrap;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / 4;
+      }
+      h2{
+        color: setcolor(brand, red);
+        text-align: center;
+        a{
+          color: setcolor(gray, dark);
+          @extend .h2;
+        }
+      }
+    }
+    .feature-text{
+      margin-bottom: $component-space-small;
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / 4;
+      }
+    }
+    .feature-sample{
+      display: flex;
+      justify-content: center;
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / span 2;
+      }
+      img,
+      video{
+        align-self: center;
+        max-width: 100%;
+      }
+    }
+    .is-video{
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 2 / span 2;
+      }
+    }
+    .is-music{
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
+}
+[class~='feature']:last-of-type{
+  &::after{
+    display: none;
+  }
+}

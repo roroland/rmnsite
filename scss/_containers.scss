@@ -1,0 +1,53 @@
+
+// Containers
+.container{
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+  &::after{
+    content: '';
+    background: url('../images/deco-invertsml.svg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    bottom: -1px;
+    left: 0;
+    z-index: 1;
+  }
+  &.featurebtm--two{
+    &::after{
+      content: '';
+      background: url('../images/deco-invertsml-2.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      min-height: 50px;
+      bottom: -1px;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  &.featurebtm--three{
+    &::after{
+      content: '';
+      background: url('../images/deco-invertsml-3.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      min-height: 50px;
+      bottom: -1px;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+.line{
+  margin: $component-space 0;
+  position: relative;
+  &.line-over{
+    margin: $component-space 0 0;
+    top: -2rem;
+  }
+}

@@ -1,0 +1,121 @@
+// Avatar
+
+.intro{
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 0;
+  @media only screen and (min-width: 48em){
+    padding: inherit;
+  }
+}
+.avatar--wrapper{  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all .3s ease-out;
+  height: 100vh;
+  width: 100%;
+  @media only screen and (min-width: 48em){
+    height: 350px;
+    width: auto;
+  }
+  .avatar{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 350px;
+    width: 100%;
+  }
+  img{
+    transition: transform 1s ease-out;
+    transform: scale(.9);
+  }
+  
+  h3{
+    background: setcolor(brand);
+    color: setcolor(gray, lighter);
+    font-weight: 300;
+    padding: 0 $component-space;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    align-self: flex-start;
+    width: 100%;
+    @media only screen and (min-width: 48em){
+      width: auto;
+      top: $component-space-small;
+      &::before{
+        content: '';
+        background: url('../images/path-right.svg') no-repeat;
+        width: 200px;
+        height: 200px;
+        right: -70%;
+        pointer-events: none;
+        top: 1rem;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+  h4{
+    position: relative;
+    top: -$component-space*2;
+    z-index: 10;
+    &::after{
+      @media only screen and (min-width: 48em){
+        content: '';
+        background: url('../images/path-left.svg') no-repeat;
+        width: 200px;
+        height: 200px;
+        left: -120%;
+        top: -7rem;
+        position: absolute;
+        pointer-events: none;
+        display: block;
+      }
+    }
+    
+  }
+  .avatar-img{
+    position: relative;
+    backface-visibility: hidden;
+    z-index: 0;
+  }
+  .submask{
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    transition: bottom .25s ease-out, top .25s ease-out;
+    
+    &-top{
+      top: -$component-space;
+    }
+    &-bottom{
+      transform: translateY(-40px) rotate(180deg);
+      bottom: -$component-space;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    @media only screen and (min-width: 48em){
+      height: 450px;
+    }
+    img{
+      transition: transform 1s ease-out .25s;
+      transform: scale(1);
+    }
+    .submask-top{
+      top: -3rem;
+    }
+    .submask-bottom{
+      bottom: -3rem;
+    }
+  }
+}

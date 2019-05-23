@@ -1,58 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600");
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0; }
-
-html {
-  font-size: 100%;
-  line-height: 1.5;
-  scroll-behavior: smooth; }
-
-body {
-  background: #F7F9F9; }
-
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Nunito', sans-serif; }
-
-h1,
-.h1 {
-  font-size: 2.441rem; }
-
-h2,
-.h2,
-.feature .wrapper .nav h2 a {
-  font-size: 1.953rem; }
-
-h3,
-.h3,
-.home main p > span {
-  font-size: 1.563rem; }
-
-h4,
-.h4,
-.home main p,
-.home main a,
-.home .nav [class^='item-'] p,
-footer p,
-.h4 a,
-.home main p a,
-.home main a a,
-.home .nav [class^='item-'] p a,
-footer p a {
-  font-size: 1.25rem; }
-
-p,
-h5,
-.h5,
-a {
-  font-size: 1rem; }
-
-a {
-  color: #505050; }
-
 .container {
   min-height: 100vh;
   margin: 0 auto;
@@ -404,6 +350,60 @@ a {
 
 [class~='feature']:last-of-type::after {
   display: none; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  scroll-behavior: smooth; }
+
+body {
+  background: #F7F9F9; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Nunito', sans-serif; }
+
+h1,
+.h1 {
+  font-size: 2.441rem; }
+
+h2,
+.h2,
+.feature .wrapper .nav h2 a {
+  font-size: 1.953rem; }
+
+h3,
+.h3,
+.home main p > span {
+  font-size: 1.563rem; }
+
+h4,
+.h4,
+.home main p,
+.home main a,
+.home .nav [class^='item-'] p,
+footer p,
+.h4 a,
+.home main p a,
+.home main a a,
+.home .nav [class^='item-'] p a,
+footer p a {
+  font-size: 1.25rem; }
+
+p,
+h5,
+.h5,
+a {
+  font-size: 1rem; }
+
+a {
+  color: #505050; }
 
 footer {
   display: flex;

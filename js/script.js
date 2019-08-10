@@ -6,8 +6,7 @@ let itemNavId = '';
 closeFeature.onclick = close;
 function getFeature() {
   showFeature.classList.add('show', 'show-' + itemNavId);
-  alert(itemNavId);
-  }
+}
 itemNav.forEach(function (item) {
   item.onclick = function (e) {
     e.preventDefault();

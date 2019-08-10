@@ -86,7 +86,7 @@
     nav{
       width: 100%;
     }
-    ul{
+    .itemNav{
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 150px min-content;

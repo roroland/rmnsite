@@ -19,7 +19,6 @@
     align-self: flex-start;
     padding: 0 $component-space;
     margin-bottom: $component-space;
-    outline: 1px solid blue !important;
     h1{
       color: white;
       @media only screen and (max-width: 48em){
@@ -75,6 +74,7 @@
     grid-row: 4 / 6;
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
     @media only screen and (min-width: 48em){
       align-self: initial;
       grid-column: 2 / 4;

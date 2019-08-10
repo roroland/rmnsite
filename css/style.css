@@ -81,6 +81,21 @@ a {
     margin: 1.5rem 0 0;
     top: -2rem; }
 
+.showFeature {
+  display: none;
+  background: white;
+  width: calc(100vw - $component-space-small);
+  height: 100vh;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; }
+  .showFeature.show {
+    display: block; }
+
 .intro {
   align-items: center;
   display: flex;
@@ -198,8 +213,7 @@ a {
     grid-column: 1 / -1;
     align-self: flex-start;
     padding: 0 1.5rem;
-    margin-bottom: 1.5rem;
-    outline: 1px solid blue !important; }
+    margin-bottom: 1.5rem; }
     .home header h1 {
       color: white;
       font-size: 2.441rem; }
@@ -241,7 +255,8 @@ a {
     grid-column: 1 / -1;
     grid-row: 4 / 6;
     display: flex;
-    flex-flow: column nowrap; }
+    flex-flow: column nowrap;
+    position: relative; }
     @media only screen and (min-width: 48em) {
       .home .nav {
         align-self: initial;
@@ -328,6 +343,12 @@ a {
     background: url("../images/deco-topsml-2.svg") no-repeat;
     background-size: 100%; }
   .feature.feature--three {
+    background: url("../images/deco-topsml-3.svg") no-repeat;
+    background-size: 100%; }
+  .feature.feature--four {
+    background: url("../images/deco-topsml-2.svg") no-repeat;
+    background-size: 100%; }
+  .feature.feature--five {
     background: url("../images/deco-topsml-3.svg") no-repeat;
     background-size: 100%; }
   .feature .wrapper {

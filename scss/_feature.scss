@@ -9,6 +9,14 @@
     background: url('../images/deco-topsml-3.svg') no-repeat;
     background-size: 100%;
   }
+  &.feature--four{
+    background: url('../images/deco-topsml-2.svg') no-repeat;
+    background-size: 100%;
+  }
+  &.feature--five{
+    background: url('../images/deco-topsml-3.svg') no-repeat;
+    background-size: 100%;
+  }
   .wrapper{
     display: grid;
     grid-template-columns: 1fr;

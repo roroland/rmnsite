@@ -1,13 +1,23 @@
-const itemNav = document.querySelector('.itemNav');
+const itemNav = document.querySelectorAll('.itemNav li a');
 const showFeature = document.querySelector('.showFeature');
 const closeFeature = document.getElementById('close');
-itemNav.onclick = showAlert;
+let itemNavId = '';
+
 closeFeature.onclick = close;
-function showAlert(e) {
-  e.preventDefault();
-  showFeature.classList.add('show');
-}
+function getFeature() {
+  showFeature.classList.add('show', 'show-' + itemNavId);
+  alert(itemNavId);
+  }
+itemNav.forEach(function (item) {
+  item.onclick = function (e) {
+    e.preventDefault();
+    itemNavId = this.getAttribute('id');
+    getFeature();
+  }
+});
+
 function close(e) {
   e.preventDefault();
-  showFeature.classList.remove('show');
+  showFeature.classList.remove('show', 'show-' + itemNavId);
+  itemNavId = '';
 }

@@ -55,7 +55,7 @@
         background: url('../images/path-right.svg') no-repeat;
         width: 200px;
         height: 200px;
-        right: -70%;
+        right: -34%;
         pointer-events: none;
         top: 1rem;
         position: absolute;
@@ -95,11 +95,11 @@
     transition: bottom .25s ease-out, top .25s ease-out;
     
     &-top{
-      top: -$component-space;
+      top: -4.5rem;
     }
     &-bottom{
       transform: translateY(-40px) rotate(180deg);
-      bottom: -$component-space;
+      bottom: -6.5rem;
     }
   }
   &:hover{
@@ -112,10 +112,10 @@
       transform: scale(1);
     }
     .submask-top{
-      top: -3rem;
+      top: -6rem;
     }
     .submask-bottom{
-      bottom: -3rem;
+      bottom: -5rem;
     }
   }
 }

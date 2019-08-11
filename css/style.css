@@ -133,7 +133,7 @@ a {
           background: url("../images/path-right.svg") no-repeat;
           width: 200px;
           height: 200px;
-          right: -70%;
+          right: -34%;
           pointer-events: none;
           top: 1rem;
           position: absolute;
@@ -164,10 +164,10 @@ a {
     z-index: 5;
     transition: bottom .25s ease-out, top .25s ease-out; }
     .avatar--wrapper .submask-top {
-      top: -1.5rem; }
+      top: -4.5rem; }
     .avatar--wrapper .submask-bottom {
       transform: translateY(-40px) rotate(180deg);
-      bottom: -1.5rem; }
+      bottom: -6.5rem; }
   .avatar--wrapper:hover {
     cursor: pointer; }
     @media only screen and (min-width: 48em) {
@@ -177,9 +177,9 @@ a {
       transition: transform 1s ease-out .25s;
       transform: scale(1); }
     .avatar--wrapper:hover .submask-top {
-      top: -3rem; }
+      top: -6rem; }
     .avatar--wrapper:hover .submask-bottom {
-      bottom: -3rem; }
+      bottom: -5rem; }
 
 .home {
   background: url("../images/deco-top.svg") no-repeat;

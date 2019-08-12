@@ -360,10 +360,6 @@ a {
     .showFeature .showFeatureItem li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr; }
-    .showFeature .showFeatureItem h3 {
-      color: #AEC4D5;
-      text-align: right;
-      padding-bottom: 1.5rem; }
     .showFeature .showFeatureItem img,
     .showFeature .showFeatureItem video {
       max-width: 100%; }
@@ -388,12 +384,21 @@ a {
   100% {
     opacity: 1; } }
 
+.contentItem-header,
+.contentItem-footer {
+  opacity: 0;
+  writing-mode: vertical-lr; }
+  .contentItem-header h3,
+  .contentItem-footer h3 {
+    color: #bdbdbd;
+    font-weight: normal;
+    text-align: right;
+    padding-bottom: 1.5rem; }
+
 .contentItem-header {
   animation: fade .5s ease-out 2s forwards;
-  opacity: 0;
   grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  writing-mode: vertical-lr; }
+  grid-row: 1 / 2; }
 
 .contentItem-text {
   animation: fade .5s ease-out 2.5s forwards;
@@ -402,11 +407,15 @@ a {
   grid-column: 1 / span 1;
   grid-row: 1 / 2;
   padding: 1rem;
-  color: #AEC4D5;
+  color: #505050;
   background: rgba(245, 245, 245, 0.95);
   border-radius: 10px 10px 0 10px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center; }
+  .contentItem-text p {
+    flex: 1; }
+  .contentItem-text p + p {
+    padding: 0 0 0 1rem; }
 
 .contentItem-video {
   animation: fade .5s ease-out 3.5s forwards;
@@ -414,21 +423,25 @@ a {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   padding: 1rem;
+  display: flex;
+  flex-flow: column;
   background: rgba(245, 245, 245, 0.95);
   border-radius: 0 10px 10px 10px;
   transition: transform .3s ease-in-out;
   transform-origin: 150% 150%;
+  align-items: center;
+  justify-content: center;
   overflow: auto; }
   .contentItem-video:hover {
     transform: scale(1.5);
     box-shadow: 0 0 20px rgba(80, 80, 80, 0.25); }
+  .contentItem-video.is-music {
+    justify-content: flex-start; }
 
 .contentItem-footer {
   animation: fade .5s ease-out 3s forwards;
-  opacity: 0;
   grid-column: 1 / span 1;
   grid-row: 2 / 3;
-  writing-mode: vertical-lr;
   transform: rotate(180deg); }
 
 *,

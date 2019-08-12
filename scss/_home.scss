@@ -4,7 +4,9 @@
   background: url('../images/deco-top.svg') no-repeat;
   background-size: 100%;
   background-position-y: -1px;
-  
+  &::after{
+    background: none;
+  }
   .wrapper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

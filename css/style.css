@@ -52,16 +52,6 @@ a {
     bottom: -1px;
     left: 0;
     z-index: 1; }
-  .container.featurebtm--two::after {
-    content: '';
-    background: url("../images/deco-invertsml-2.svg") no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    min-height: 50px;
-    bottom: -1px;
-    left: 0;
-    z-index: 1; }
   .container.featurebtm--three::after {
     content: '';
     background: url("../images/deco-invertsml-3.svg") no-repeat;
@@ -185,6 +175,8 @@ a {
   background: url("../images/deco-top.svg") no-repeat;
   background-size: 100%;
   background-position-y: -1px; }
+  .home::after {
+    background: none; }
   .home .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -425,7 +417,8 @@ a {
   background: rgba(245, 245, 245, 0.95);
   border-radius: 0 10px 10px 10px;
   transition: transform .3s ease-in-out;
-  transform-origin: 150% 150%; }
+  transform-origin: 150% 150%;
+  overflow: auto; }
   .contentItem-video:hover {
     transform: scale(1.5);
     box-shadow: 0 0 20px rgba(80, 80, 80, 0.25); }

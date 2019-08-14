@@ -1,3 +1,14 @@
 $component-space: 1.5rem;
 $component-space-small: 1rem;
 $component-space-tiny: .5rem;
+
+@mixin color-div ($count, $baseName, $startcolor) {
+  @for $i from 0 through $count {
+      $background-color: darken($startcolor, $i * $i); 
+  .colored-div#{$i} {
+    background: $background-color;  
+    height: 30px;
+    width: 30px;
+  }
+}
+}

@@ -116,6 +116,8 @@
   animation: fade .5s ease-out 2s forwards;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  display: flex;
+  flex-flow: column;
 }
 .contentItem-text{
   animation: fade .5s ease-out 2.5s forwards;
@@ -164,4 +166,21 @@
   grid-column: 1 / span 1;
   grid-row: 2 / 3;
   transform: rotate(180deg);
+}
+.moreGrid--wrapper{
+  display: flex;
+  flex: 1;  
+  align-items: center;
+  justify-content: center;
+}
+.moreGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $component-space;
+
+  @include color-div(3, 'a', #ffd8b1);
+  .colored-div{
+    outline: 1px solid blue;
+  }
+
 }

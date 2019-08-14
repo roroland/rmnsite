@@ -50,6 +50,9 @@
         @extend .h3;
         font-weight: 600;
       }
+      a{
+        color: setcolor(brand, blue);
+      }
     }
   }
   .me{

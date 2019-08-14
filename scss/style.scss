@@ -45,5 +45,8 @@ footer{
     display: inline-block;
     padding: .25em .5em 0 $component-space;
     background: rgba(setcolor(brand, dark), .75);
+    a{
+      color: setcolor(brand, blue);
+    }
   }
 }

@@ -88,7 +88,8 @@ a {
   position: relative;
   transition: all .3s ease-out;
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  text-decoration: none; }
   @media only screen and (min-width: 48em) {
     .avatar--wrapper {
       height: 350px;
@@ -129,9 +130,15 @@ a {
           position: absolute;
           display: block; } }
   .avatar--wrapper h4 {
+    display: block;
     position: relative;
     top: -3rem;
     z-index: 10; }
+    .avatar--wrapper h4 span {
+      text-decoration: underline; }
+    .avatar--wrapper h4 small {
+      display: block;
+      text-align: center; }
     @media only screen and (min-width: 48em) {
       .avatar--wrapper h4::after {
         content: '';
@@ -211,6 +218,8 @@ a {
       margin-bottom: 0.5rem; }
       .home main p > span {
         font-weight: 600; }
+      .home main p a {
+        color: #AEC4D5; }
   .home .me {
     display: flex;
     flex-flow: column nowrap;
@@ -398,7 +407,9 @@ a {
 .contentItem-header {
   animation: fade .5s ease-out 2s forwards;
   grid-column: 2 / 3;
-  grid-row: 1 / 2; }
+  grid-row: 1 / 2;
+  display: flex;
+  flex-flow: column; }
 
 .contentItem-text {
   animation: fade .5s ease-out 2.5s forwards;
@@ -444,6 +455,35 @@ a {
   grid-row: 2 / 3;
   transform: rotate(180deg); }
 
+.moreGrid--wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center; }
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem; }
+  .moreGrid .colored-div0 {
+    background: #ffd8b1;
+    height: 30px;
+    width: 30px; }
+  .moreGrid .colored-div1 {
+    background: #ffd5ac;
+    height: 30px;
+    width: 30px; }
+  .moreGrid .colored-div2 {
+    background: #ffce9d;
+    height: 30px;
+    width: 30px; }
+  .moreGrid .colored-div3 {
+    background: #ffc183;
+    height: 30px;
+    width: 30px; }
+  .moreGrid .colored-div {
+    outline: 1px solid blue; }
+
 *,
 *::after,
 *::before {
@@ -473,3 +513,5 @@ footer {
     display: inline-block;
     padding: 0.25em 0.5em 0 1.5rem;
     background: rgba(78, 89, 98, 0.75); }
+    footer p a {
+      color: #AEC4D5; }

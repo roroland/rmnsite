@@ -48,8 +48,8 @@
     }
   }
   
-
-
+  
+  
   #close{
     position: absolute;
     right: 0;
@@ -58,12 +58,12 @@
   .showFeatureItem{
     padding: 1rem;
     opacity: 0;
-    border-radius: 20px;
+    border-radius: 8px;
     animation: frameItem .5s ease-out 1s forwards;
-    background: rgba(setcolor(gray, lighter), .95);
+    background: rgba(setcolor(gray, lighter), .35);
     border: 2px solid rgba(setcolor(gray, dark), .05);
-    width: 75%;
-    height: 90%;
+    width: 98%;
+    height: 95%;
     li{
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -99,7 +99,7 @@
       opacity: 1;
     }
   }
-
+  
 }
 .contentItem-header,
 .contentItem-footer{
@@ -173,14 +173,14 @@
   align-items: center;
   justify-content: center;
 }
-.moreGrid{
+.jobs{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: $component-space;
-
-  @include color-div(3, 'a', #ffd8b1);
-  .colored-div{
-    outline: 1px solid blue;
-  }
-
+}
+.jobsA{
+  @include job(2, #b1e9ff, 'spines', 'png');
+}
+.jobsB{
+  @include job(1, #b1e9ff, 'traginer', 'jpg');
 }

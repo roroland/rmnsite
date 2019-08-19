@@ -360,12 +360,12 @@ a {
   .showFeature .showFeatureItem {
     padding: 1rem;
     opacity: 0;
-    border-radius: 20px;
+    border-radius: 8px;
     animation: frameItem .5s ease-out 1s forwards;
-    background: rgba(247, 249, 249, 0.95);
+    background: rgba(247, 249, 249, 0.35);
     border: 2px solid rgba(80, 80, 80, 0.05);
-    width: 75%;
-    height: 90%; }
+    width: 98%;
+    height: 95%; }
     .showFeature .showFeatureItem li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr; }
@@ -461,28 +461,45 @@ a {
   align-items: center;
   justify-content: center; }
 
-.moreGrid {
+.jobs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.5rem; }
-  .moreGrid .colored-div0 {
-    background: #ffd8b1;
-    height: 30px;
-    width: 30px; }
-  .moreGrid .colored-div1 {
-    background: #ffd5ac;
-    height: 30px;
-    width: 30px; }
-  .moreGrid .colored-div2 {
-    background: #ffce9d;
-    height: 30px;
-    width: 30px; }
-  .moreGrid .colored-div3 {
-    background: #ffc183;
-    height: 30px;
-    width: 30px; }
-  .moreGrid .colored-div {
-    outline: 1px solid blue; }
+
+.jobsA .job0 {
+  border: 2px solid #007fb1;
+  background: #007fb1 url("../images/works/spines0.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px; }
+
+.jobsA .job1 {
+  border: 2px solid #007bac;
+  background: #007bac url("../images/works/spines1.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px; }
+
+.jobsA .job2 {
+  border: 2px solid #00709d;
+  background: #00709d url("../images/works/spines2.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px; }
+
+.jobsB .job0 {
+  border: 2px solid #007fb1;
+  background: #007fb1 url("../images/works/traginer0.jpg");
+  background-size: cover;
+  height: 80px;
+  width: 80px; }
+
+.jobsB .job1 {
+  border: 2px solid #007bac;
+  background: #007bac url("../images/works/traginer1.jpg");
+  background-size: cover;
+  height: 80px;
+  width: 80px; }
 
 *,
 *::after,

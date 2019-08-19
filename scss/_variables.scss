@@ -2,13 +2,16 @@ $component-space: 1.5rem;
 $component-space-small: 1rem;
 $component-space-tiny: .5rem;
 
-@mixin color-div ($count, $baseName, $startcolor) {
+@mixin job ($count, $startcolor, $bgurl, $format) {
   @for $i from 0 through $count {
-      $background-color: darken($startcolor, $i * $i); 
-  .colored-div#{$i} {
-    background: $background-color;  
-    height: 30px;
-    width: 30px;
+    $background-color: darken($startcolor, $i * $i+50); 
+    .job#{$i} {
+      @content;
+      border: 2px solid darken($startcolor, $i * $i+50);
+      background: $background-color url('../images/works/#{$bgurl}#{$i}.#{$format}');
+      background-size: cover;   
+      height: 80px;
+      width: 80px;
+    }
   }
-}
 }

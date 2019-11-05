@@ -14,8 +14,8 @@
     height: 100%;
   }
   &.show{
-    animation: frame 1s ease-out forwards;
-    background: rgba(255, 255, 255, 0.25);
+    animation: frame .5s ease-out forwards;
+    background: rgba(setcolor(brand, blue), .35);
     backdrop-filter: blur(10px);  
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -52,21 +52,21 @@
   
   #close{
     position: absolute;
-    right: 0;
-    top: 0;
+    right: $component-space;
+    top: $component-space;
   }
   .showFeatureItem{
     padding: 1rem;
     opacity: 0;
     border-radius: 8px;
     animation: frameItem .5s ease-out 1s forwards;
-    background: rgba(setcolor(gray, lighter), .35);
+    background: rgba(setcolor(gray, lighter), .5);
     border: 2px solid rgba(setcolor(gray, dark), .05);
-    width: 98%;
-    height: 95%;
+    width: 75%;
     li{
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: min-content 1fr;
+      grid-gap: 1rem;
     }
     img,
     video{
@@ -104,27 +104,23 @@
 .contentItem-header,
 .contentItem-footer{
   opacity: 0;
-  writing-mode: vertical-lr;
   h3{
-    color: setcolor(gray, pale);
+    color: setcolor(brand, dark);
     font-weight: normal;
-    text-align: right;
     padding-bottom: $component-space;
   }
 }
 .contentItem-header{
-  animation: fade .5s ease-out 2s forwards;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-column: 1;
+  animation: fade .5s ease-out 1.5s forwards;
   display: flex;
   flex-flow: column;
 }
 .contentItem-text{
-  animation: fade .5s ease-out 2.5s forwards;
+  grid-column: 1;
+  animation: fade .5s ease-out 2s forwards;
   opacity: 0;
   display: flex;
-  grid-column: 1 / span 1;
-  grid-row: 1 / 2;
   padding: 1rem;
   color: setcolor(gray, dark);
   background: rgba(setcolor(gray, light), .95);
@@ -139,10 +135,8 @@
   }
 }
 .contentItem-video{
-  animation: fade .5s ease-out 3.5s forwards;
+  animation: fade .5s ease-out 3s forwards;
   opacity: 0;
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
   padding: 1rem;
   display: flex;
   flex-flow: column;
@@ -162,16 +156,15 @@
   }
 }
 .contentItem-footer{
+  grid-column: 2;
+  grid-row: 1;
   animation: fade .5s ease-out 3s forwards;
-  grid-column: 1 / span 1;
-  grid-row: 2 / 3;
-  transform: rotate(180deg);
 }
 .moreGrid--wrapper{
+  grid-column: 2;
   display: flex;
   flex: 1;  
-  align-items: center;
-  justify-content: center;
+
 }
 .jobs{
   display: grid;

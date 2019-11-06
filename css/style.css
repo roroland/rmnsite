@@ -409,18 +409,24 @@ a {
   flex-flow: column; }
 
 .contentItem-text {
-  grid-column: 1;
+  grid-column: 1 / -1;
   animation: fade .5s ease-out 2s forwards;
   opacity: 0;
-  display: flex;
   padding: 1rem;
   color: #505050;
   background: rgba(245, 245, 245, 0.95);
   border-radius: 10px 10px 0 10px;
   align-items: flex-start;
   justify-content: center; }
-  .contentItem-text p {
-    flex: 1; }
+  .contentItem-text .placeholder {
+    border-radius: 0 50% 50% 0;
+    shape-outside: circle(50% at 50%) border-box;
+    shape-margin: 2em;
+    background-image: url("../images/works/spines1.png");
+    background-size: cover;
+    width: 40vw;
+    height: 40vw;
+    float: left; }
   .contentItem-text p + p {
     padding: 0 0 0 1rem; }
 

@@ -117,10 +117,9 @@
   flex-flow: column;
 }
 .contentItem-text{
-  grid-column: 1;
+  grid-column: 1 / -1;
   animation: fade .5s ease-out 2s forwards;
   opacity: 0;
-  display: flex;
   padding: 1rem;
   color: setcolor(gray, dark);
   background: rgba(setcolor(gray, light), .95);
@@ -128,7 +127,17 @@
   align-items: flex-start;
   justify-content: center;
   p{
-    flex: 1;
+
+  }
+  .placeholder{
+    border-radius: 0 50% 50% 0;
+    shape-outside: circle(50% at 50%) border-box;
+    shape-margin: 2em;
+    background-image: url('../images/works/spines1.png');
+    background-size: cover;
+    width: 40vw;
+    height: 40vw;
+    float: left;
   }
   p + p{
     padding: 0 0 0 $component-space-small;

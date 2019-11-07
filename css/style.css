@@ -418,6 +418,8 @@ a {
   border-radius: 10px 10px 0 10px;
   align-items: flex-start;
   justify-content: center; }
+  .contentItem-text p {
+    margin-bottom: 1rem; }
   .contentItem-text .placeholder {
     border-radius: 0 50% 50% 0;
     shape-outside: circle(50% at 50%) border-box;

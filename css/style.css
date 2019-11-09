@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600");
+:root {
+  --xpos: 0;
+  --ypos: 0; }
+
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'Nunito', sans-serif; }
 
@@ -408,7 +412,23 @@ a {
   display: flex;
   flex-flow: column; }
 
+.placeholder {
+  background-color: #EA507C;
+  background-image: url("../images/works/spines1.png");
+  background-position: var(--xpos) var(--ypos);
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 1px #4E5962;
+  min-width: 38vw;
+  min-height: 38vw;
+  grid-column: 1 / 2; }
+
+.placeholderContent {
+  grid-column: 3 / 4; }
+
 .contentItem-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
   grid-column: 1 / -1;
   animation: fade .5s ease-out 2s forwards;
   opacity: 0;
@@ -420,17 +440,6 @@ a {
   justify-content: center; }
   .contentItem-text p {
     margin-bottom: 1rem; }
-  .contentItem-text .placeholder {
-    border-radius: 0 50% 50% 0;
-    shape-outside: circle(50% at 50%) border-box;
-    shape-margin: 2em;
-    background-image: url("../images/works/spines1.png");
-    background-size: cover;
-    width: 40vw;
-    height: 40vw;
-    float: left; }
-  .contentItem-text p + p {
-    padding: 0 0 0 1rem; }
 
 .contentItem-video {
   animation: fade .5s ease-out 3s forwards;

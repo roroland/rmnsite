@@ -25,32 +25,47 @@
       .contentItem-layout{
         display: grid;
       }
+      .placeholder{
+        background-image: url('../images/works/spines1.png');
+      }
     }
     &.show-css{
       .contentItem-css{
         display: grid;
+      }
+      .placeholder{
+        background-image: url('../images/works/modular.png');
       }
     }
     &.show-ux{
       .contentItem-ux{
         display: grid;
       }
+      .placeholder{
+        background-image: url('../images/works/spines2.png');
+      }
     }
     &.show-rwd{
       .contentItem-rwd{
         display: grid;
+      }
+      .placeholder{
+        background-image: url('../images/works/traginer1.jpg');
       }
     }
     &.show-music{
       .contentItem-music{
         display: grid;
       }
+      .placeholder{
+        background-image: url('../images/works/traginer1.jpg');
+      }
     }
   }
   
   
   
-  #close{
+  .close{
     position: absolute;
     right: $component-space;
     top: $component-space;
@@ -63,6 +78,7 @@
     background: rgba(setcolor(gray, lighter), .5);
     border: 2px solid rgba(setcolor(gray, dark), .05);
     width: 75%;
+    position: relative;
     li{
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;
@@ -118,7 +134,6 @@
 }
 .placeholder{
   background-color: setcolor(brand, red);
-  background-image: url('../images/works/spines1.png');
   background-position: var(--xpos) var(--ypos);
   background-repeat: no-repeat;
   box-shadow: inset 0 0 1px setcolor(brand, dark);

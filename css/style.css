@@ -349,15 +349,25 @@ a {
     align-items: center; }
     .showFeature.show.show-layout .contentItem-layout {
       display: grid; }
+    .showFeature.show.show-layout .placeholder {
+      background-image: url("../images/works/spines1.png"); }
     .showFeature.show.show-css .contentItem-css {
       display: grid; }
+    .showFeature.show.show-css .placeholder {
+      background-image: url("../images/works/modular.png"); }
     .showFeature.show.show-ux .contentItem-ux {
       display: grid; }
+    .showFeature.show.show-ux .placeholder {
+      background-image: url("../images/works/spines2.png"); }
     .showFeature.show.show-rwd .contentItem-rwd {
       display: grid; }
+    .showFeature.show.show-rwd .placeholder {
+      background-image: url("../images/works/traginer1.jpg"); }
     .showFeature.show.show-music .contentItem-music {
       display: grid; }
-  .showFeature #close {
+    .showFeature.show.show-music .placeholder {
+      background-image: url("../images/works/traginer1.jpg"); }
+  .showFeature .close {
     position: absolute;
     right: 1.5rem;
     top: 1.5rem; }
@@ -368,7 +378,8 @@ a {
     animation: frameItem .5s ease-out 1s forwards;
     background: rgba(247, 249, 249, 0.5);
     border: 2px solid rgba(80, 80, 80, 0.05);
-    width: 75%; }
+    width: 75%;
+    position: relative; }
     .showFeature .showFeatureItem li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;
@@ -414,7 +425,6 @@ a {
 
 .placeholder {
   background-color: #EA507C;
-  background-image: url("../images/works/spines1.png");
   background-position: var(--xpos) var(--ypos);
   background-repeat: no-repeat;
   box-shadow: inset 0 0 1px #4E5962;

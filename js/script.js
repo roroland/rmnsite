@@ -2,6 +2,7 @@ const itemNav = document.querySelectorAll('.itemNav li a');
 const showFeature = document.querySelector('.showFeature');
 let itemNavId = '';
 let closeFeature = '';
+let cover = '';
 
 itemNav.forEach(function (item) {
   item.onclick = function (e) {
@@ -15,6 +16,8 @@ function getFeature() {
   showFeature.classList.add('show', 'show-' + itemNavId);
   closeFeature = document.querySelector('.contentItem-' + itemNavId + ' .close');
   closeFeature.addEventListener('click', close);
+  cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
+  setTimeout(coverOut, 3000);
   move();
 }
 
@@ -27,9 +30,14 @@ function move() {
   })
   placeholder.removeEventListener(('touchend', 'touchleave', 'mouseout', 'mouseleave'), listener);
 }
-
+function coverOut() {
+  cover.classList.add('is-active');
+}
 function close(e) {
   e.preventDefault();
-    showFeature.classList.remove('show', 'show-' + itemNavId);
-    itemNavId = '';
+  showFeature.classList.remove('show', 'show-' + itemNavId);
+  itemNavId = '';
+  cover.classList.remove('is-active');
+  clearTimeout(coverOut);
 }
+

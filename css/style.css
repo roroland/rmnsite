@@ -426,6 +426,7 @@ a {
     padding-bottom: 0; }
 
 .placeholder {
+  display: grid;
   background-color: #EA507C;
   background-position: var(--xpos) var(--ypos);
   background-repeat: no-repeat;
@@ -434,7 +435,134 @@ a {
   min-width: 50%;
   min-height: 100%;
   grid-column: 2 / 3;
-  grid-row: 1; }
+  grid-row: 1;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr); }
+  .placeholder.is-active span:nth-child(1) {
+    animation-delay: 0.15s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(2) {
+    animation-delay: 0.3s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(3) {
+    animation-delay: 0.45s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(4) {
+    animation-delay: 0.6s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(5) {
+    animation-delay: 0.75s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(6) {
+    animation-delay: 0.9s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(7) {
+    animation-delay: 1.05s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(8) {
+    animation-delay: 1.2s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(9) {
+    animation-delay: 1.35s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(10) {
+    animation-delay: 1.5s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(11) {
+    animation-delay: 1.65s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(12) {
+    animation-delay: 1.8s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(13) {
+    animation-delay: 1.95s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(14) {
+    animation-delay: 2.1s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(15) {
+    animation-delay: 2.25s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder.is-active span:nth-child(16) {
+    animation-delay: 2.4s;
+    animation-name: flip;
+    animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .placeholder span {
+    grid-column: span 1;
+    grid-row: span 1;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    .placeholder span::after, .placeholder span::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+    .placeholder span::after {
+      background: #bdbdbd;
+      z-index: 5; }
+    .placeholder span::before {
+      background: #F5F5F5;
+      backface-visibility: hidden;
+      z-index: 10; }
+
+@keyframes flip {
+  0% {
+    transform: rotate3d(1, 0, 0, 0); }
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg); } }
 
 .placeholder-static {
   border-radius: 0 10px 10px 0;

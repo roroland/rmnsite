@@ -150,10 +150,10 @@
   &.is-active span{
     @for $i from 1 to 17 {
       &:nth-child(#{$i}) { 
-        animation-delay: $i * .1s; 
+        animation-delay: $i * .15s; 
         animation-name: flip;
         animation-timing-function: cubic-bezier(.02,.53,.62,1.21);
-        animation-duration: .5s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
       }
     }

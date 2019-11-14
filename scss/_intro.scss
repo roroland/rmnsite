@@ -33,13 +33,12 @@
     height: 350px;
     width: 100%;
     @media only screen and (min-width: 48em){
-      // animation: rotate 90s linear infinite;
       height: 100%;
     }
   }
   img{
     transition: transform 1s ease-out;
-    transform: scale(.8);
+    transform: scale(.75);
     transform-origin: center;
   }
   h3,
@@ -56,9 +55,11 @@
     text-align: center;
     align-self: flex-start;
     width: 100%;
+    opacity: 0;
+    animation: fade 1s ease-out 1s forwards;
     @media only screen and (min-width: 48em){
       width: auto;
-      top: $component-space-small;
+      top: $component-space-small*2;
       &::before{
         content: '';
         background: url('../images/path-right.svg') no-repeat;
@@ -69,12 +70,17 @@
         top: 1rem;
         position: absolute;
         display: block;
+        opacity: 0;
+        animation: fade 1s ease-out 1s forwards;
       }
     }
   }
   h4{
-    display: block;
     top: -$component-space*2;
+    text-align: center;
+    opacity: 0;
+    animation: fade 1s ease-out 1.5s forwards;
+
     span{
       text-decoration: underline;
     }
@@ -84,11 +90,13 @@
     }
     &::after{
       @media only screen and (min-width: 48em){
+        animation: fade 1s ease-out 1.5s forwards;
         content: '';
         background: url('../images/path-left.svg') no-repeat;
         width: 200px;
         height: 200px;
         left: -120%;
+        opacity: 0;
         top: -7rem;
         position: absolute;
         pointer-events: none;
@@ -102,31 +110,34 @@
     backface-visibility: hidden;
     z-index: 0;
     overflow: hidden;
-    @media only screen and (min-width: 48em){
-      &::after,
-      &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -70%;
-        width: 100%;
-        height: 100%;
-        background: setcolor(gray, lighter);
-        transform-origin: 45% center;
-        filter: blur(8px);
-      }
-      &::after{
-        right: -20%;
-        animation: rotate 30s ease-in-out infinite;
-        border-radius: 40%;
-      }
-      &::before{
-        left: 0%;
-        animation: rotate 35s linear infinite reverse;
-        border-radius: 40%;
-        z-index: 1;
-      }
-    }
+    opacity: 0;
+    animation: fade 1s ease-out .5s forwards;
+    // fx blur
+    // @media only screen and (min-width: 48em){
+    //   &::after,
+    //   &::before{
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     bottom: -75%;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: setcolor(gray, lighter);
+    //     transform-origin: 45% center;
+    //     filter: blur(8px);
+    //   }
+    //   &::after{
+    //     right: -20%;
+    //     animation: rotate 30s ease-in-out infinite;
+    //     border-radius: 40%;
+    //   }
+    //   &::before{
+    //     left: 0%;
+    //     animation: rotate 35s linear infinite reverse;
+    //     border-radius: 40%;
+    //     z-index: 1;
+    //   }
+    // }
   }
   .submask{
     max-width: 100%;
@@ -134,7 +145,9 @@
     position: absolute;
     z-index: 5;
     transition: bottom .25s ease-out, top .25s ease-out;
-    
+    opacity: 0;
+    animation: fade .5s ease-out forwards;
+
     &-top{
       top: -4.5rem;
       @media only screen and (min-width: 48em){
@@ -143,9 +156,9 @@
     }
     &-bottom{
       transform: translateY(-40px) rotate(180deg);
-      bottom: -6.5rem;
+      bottom: -7.5rem;
       @media only screen and (min-width: 48em){
-        bottom: -20%;
+        bottom: -25%;
       }
     }
   }
@@ -163,7 +176,7 @@
     }
     img{
       transition: transform 1s ease-out .25s;
-      transform: scale(1);
+      transform: scale(.8);
     }
     .avatar,
     .avatar-img{
@@ -173,7 +186,7 @@
       top: -25%;
     }
     .submask-bottom{
-      bottom: -25%;
+      bottom: -35%;
     }
   }
   @keyframes rotate{
@@ -185,6 +198,14 @@
     }
     100%{
       transform: rotate(0) translateX(-10%);
+    }
+  }
+  @keyframes fade {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
     }
   }
 }

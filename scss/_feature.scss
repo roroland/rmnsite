@@ -148,13 +148,12 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   &.is-active span{
-
     @for $i from 1 to 17 {
       &:nth-child(#{$i}) { 
-        animation-delay: $i * .15s; 
+        animation-delay: $i * .1s; 
         animation-name: flip;
         animation-timing-function: cubic-bezier(.02,.53,.62,1.21);
-        animation-duration: 1s;
+        animation-duration: .5s;
         animation-fill-mode: forwards;
       }
     }

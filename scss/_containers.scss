@@ -7,16 +7,29 @@
   position: relative;
   &::after{
     content: '';
-    background: url('../images/deco-invertsml.svg') no-repeat;
+    background-image: url('../images/wave.svg');
     background-size: cover;
+    background-repeat: repeat-x;
     position: absolute;
     width: 100%;
     min-height: 50px;
     bottom: -1px;
     left: 0;
     z-index: 1;
+    animation: wave 8s ease-in-out infinite;
   }
 
+  @keyframes wave {
+    0%{
+      background-position-x: 0;
+    }
+    50%{
+      background-position-x: -300%;
+    }
+    100%{
+      background-position-x: 0%;
+    }
+  }
   &.featurebtm--three{
     &::after{
       content: '';

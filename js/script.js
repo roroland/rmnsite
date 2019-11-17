@@ -11,13 +11,20 @@ itemNav.forEach(function (item) {
   item.onclick = function (e) {
     e.preventDefault();
     if (itemNavId == '') {
-    itemNavId = this.getAttribute('id');
-    getFeature();
+      itemNavId = this.getAttribute('id');
+      showFeature.scrollIntoView();
+      getFeature();
     } else {
+      itemNav.forEach(function (item) {
+        item.classList.remove('is-active');
+      });
       close(e);
       itemNavId = this.getAttribute('id');
       getFeature();
     }
+
+    this.classList.toggle('is-active');
+
   }
 });
 
@@ -26,7 +33,7 @@ function getFeature() {
   closeFeature = document.querySelector('.contentItem-' + itemNavId + ' .close');
   closeFeature.addEventListener('click', close);
   cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
-  setTimeout(coverOut, 3000);
+  setTimeout(coverOut, 1500);
   move();
 }
 

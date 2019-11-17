@@ -117,6 +117,9 @@
         text-decoration: none;
         position: relative;
         width: 100%;
+        &.is-active p{
+          color: setcolor(brand, blue);
+        }
       }
       p{
         @extend .h4;

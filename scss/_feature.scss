@@ -1,10 +1,13 @@
+.xxx{
+  outline: 1px solid red;
+}
 .showFeature {
-  display: none;
+  opacity: 0;
   z-index: 1000;
   transition: all 1s ease-out;
-  outline: 1px solid red !important;
   grid-column: 1/-1;
-  grid-row: 2 /3;
+  max-height: 0;
+  height: 0;
 
   li[class^='contentItem-'] {
     display: none;
@@ -13,9 +16,10 @@
 
   &.show {
     animation: frame .5s ease-out forwards;
-    background: rgba(setcolor(brand, blue), .35);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    max-height: 1000px;
+    grid-row: 2 /3;
+    height: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +145,7 @@
 
 .contentItem-header {
   grid-column: 1;
-  animation: fade .5s ease-out 1.5s forwards;
+  animation: fade .5s ease-out .5s forwards;
   display: flex;
   flex-flow: column;
 
@@ -247,7 +251,7 @@
   grid-template-columns: 1fr 45%;
   grid-column: 1 / -1;
   column-gap: $component-space-small;
-  animation: fade .5s ease-out 2s forwards;
+  animation: fade .5s ease-out forwards;
   opacity: 0;
   padding: 1rem;
   color: setcolor(gray, dark);

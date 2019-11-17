@@ -325,7 +325,6 @@ a {
     @media only screen and (min-width: 48em) {
       .home .nav {
         align-self: initial;
-        grid-column: 2 / 4;
         width: auto; } }
     .home .nav h2 {
       text-align: center; }
@@ -340,14 +339,15 @@ a {
       margin: 1.5rem auto; }
       @media only screen and (min-width: 48em) {
         .home .nav .itemNav {
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: 200px min-content; } }
+          grid-template-columns: 1fr repeat(5, 120px) 1fr;
+          grid-template-rows: min-content minmax(150px, max-content) min-content; } }
     .home .nav [class^='item-'] {
       align-items: center;
       display: flex;
       flex-flow: column nowrap;
       text-align: center;
-      position: relative; }
+      position: relative;
+      padding: 1.5rem 0; }
       .home .nav [class^='item-'] a {
         display: flex;
         align-items: center;
@@ -383,35 +383,31 @@ a {
         transition: .5s all ease-out; }
     @media only screen and (min-width: 48em) {
       .home .nav .item-layout {
-        grid-column: 1 / 2; } }
+        grid-column: 2 / 3; } }
     @media only screen and (min-width: 48em) {
       .home .nav .item-responsive {
-        grid-column: 3 / 4; } }
+        grid-column: 4 / 5; } }
     @media only screen and (min-width: 48em) {
       .home .nav .item-css {
-        grid-column: 5 / 6; } }
+        grid-column: 6 / 7; } }
     @media only screen and (min-width: 48em) {
       .home .nav .item-ux {
-        grid-column: 2 / 3; } }
+        grid-column: 3 / 4; } }
     .home .nav .item-ux .img-item {
       height: 55px; }
     .home .nav .item-music {
       grid-column: 1 / -1; }
       @media only screen and (min-width: 48em) {
         .home .nav .item-music {
-          grid-column: 4 / 5; } }
+          grid-column: 5 / 6; } }
 
 .showFeature {
   display: none;
-  width: calc(100vw - $component-space-small);
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
   z-index: 1000;
-  transition: all 1s ease-out; }
+  transition: all 1s ease-out;
+  outline: 1px solid red !important;
+  grid-column: 1/-1;
+  grid-row: 2 /3; }
   .showFeature li[class^='contentItem-'] {
     display: none;
     height: 100%; }
@@ -453,11 +449,7 @@ a {
     animation: frameItem .5s ease-out 1s forwards;
     background: rgba(247, 249, 249, 0.5);
     border: 2px solid rgba(80, 80, 80, 0.05);
-    width: 85%;
     position: relative; }
-    @media only screen and (min-width: 100em) {
-      .showFeature .showFeatureItem {
-        width: 58%; } }
     .showFeature .showFeatureItem li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;

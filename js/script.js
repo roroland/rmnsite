@@ -10,8 +10,14 @@ let initY = root.style.setProperty('--ypos', 350);
 itemNav.forEach(function (item) {
   item.onclick = function (e) {
     e.preventDefault();
+    if (itemNavId == '') {
     itemNavId = this.getAttribute('id');
     getFeature();
+    } else {
+      close(e);
+      itemNavId = this.getAttribute('id');
+      getFeature();
+    }
   }
 });
 
@@ -39,7 +45,7 @@ function coverOut() {
 
 function close(e) {
   e.preventDefault();
-  showFeature.classList.remove('show', 'show-' + itemNavId);
+  showFeature.classList = 'showFeature';
   itemNavId = '';
   cover.classList.remove('is-active');
   initX = root.style.setProperty('--xpos', 150);

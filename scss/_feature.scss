@@ -1,6 +1,4 @@
-.xxx{
-  outline: 1px solid red;
-}
+
 .showFeature {
   opacity: 0;
   z-index: 1000;
@@ -81,6 +79,7 @@
     position: absolute;
     right: $component-space;
     top: $component-space;
+    padding-right: $component-space-small;
   }
 
   .showFeatureItem {
@@ -150,6 +149,7 @@
   flex-flow: column;
 
   h3 {
+    padding-left: $component-space-small;
     padding-bottom: 0;
   }
 }
@@ -234,13 +234,18 @@
 .placeholderContent {
   grid-column: 1 / 2;
   grid-row: 1;
-
+  column-count: 2;
+  column-gap: $component-space;
   .pic {
-    float: left;
     margin: 0 $component-space-small 0 0;
-    max-width: 50%;
+    max-width: 100%;
   }
-
+  .all-span{
+    padding: 1.5em 2em;
+    font-size: 1.5em;
+    column-span: all;
+    text-align: center;
+  }
   .deco {
     max-width: 100%;
   }
@@ -262,10 +267,12 @@
 
   p {
     margin-bottom: $component-space-small;
-
+    line-height: 1.6;
+    
     strong {
       background: rgba(setcolor(brand, blue), .15);
-      box-shadow: 5px 4px 0 rgba(setcolor(brand, blue), .5);
+      box-shadow: 3px 2px 0 rgba(setcolor(brand, blue), .5);
+      display: inline-block;
     }
   }
 

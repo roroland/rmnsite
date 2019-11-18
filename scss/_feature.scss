@@ -162,6 +162,7 @@
   box-shadow: inset 5px 0 5px 0 rgba(setcolor(brand, dark), .15), inset 0 0 0 1px rgba(setcolor(brand, dark), .25);
   min-width: 50%;
   min-height: 100%;
+  position: relative;
   grid-column: 2 / 3;
   grid-row: 1;
   grid-template-columns: repeat(4, 1fr);
@@ -170,7 +171,7 @@
   &.is-active span {
     @for $i from 1 to 17 {
       &:nth-child(#{$i}) {
-        animation-delay: $i * .15s;
+        animation-delay: $i * .05s;
         animation-name: flip;
         animation-timing-function: cubic-bezier(.02, .53, .62, 1.21);
         animation-duration: 1s;
@@ -220,6 +221,7 @@
       }
     }
   }
+
 }
 
 .placeholder-static {
@@ -238,7 +240,7 @@
   column-gap: $component-space;
   .pic {
     margin: 0 $component-space-small 0 0;
-    max-width: 100%;
+    max-width: 80%;
   }
   .all-span{
     padding: 1.5em 2em;
@@ -278,6 +280,9 @@
 
   &.contentItem-text--simple {
     grid-template-columns: 1fr;
+    .placeholderContent{
+      column-count: 3;
+    }
   }
 }
 
@@ -310,23 +315,28 @@
   animation: fade .5s ease-out 3s forwards;
 }
 
-.moreGrid--wrapper {
-  grid-column: 2;
+.subMenu{
+  position: relative;
+  top: auto;
+  height: 0;
   display: flex;
-  flex: 1;
-
-}
-
-.jobs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $component-space;
-}
-
-.jobsA {
-  @include job(2, #b1e9ff, 'spines', 'png');
-}
-
-.jobsB {
-  @include job(1, #b1e9ff, 'traginer', 'jpg');
+  transform: translateY(-1.85rem);
+  justify-content: center;
+  grid-column: 1 / -1;
+  z-index: 0;
+  li{
+    list-style: none;
+    &.is-active a{
+      color: rgba(setcolor(brand, dark), .5);
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+  a{
+    padding: $component-space-tiny;
+    color: setcolor(brand, dark);
+    background: setcolor(brand, blue);
+    text-decoration: none;
+    font-size: .65em;
+  }
 }

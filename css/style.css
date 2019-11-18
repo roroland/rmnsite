@@ -3,7 +3,7 @@
   --xpos: 0;
   --ypos: 0; }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Nunito', sans-serif; }
 
 h1,
@@ -505,102 +505,103 @@ a {
   box-shadow: inset 5px 0 5px 0 rgba(78, 89, 98, 0.15), inset 0 0 0 1px rgba(78, 89, 98, 0.25);
   min-width: 50%;
   min-height: 100%;
+  position: relative;
   grid-column: 2 / 3;
   grid-row: 1;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr); }
   .placeholder.is-active span:nth-child(1) {
-    animation-delay: 0.15s;
+    animation-delay: 0.05s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(2) {
-    animation-delay: 0.3s;
+    animation-delay: 0.1s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(3) {
-    animation-delay: 0.45s;
+    animation-delay: 0.15s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(4) {
-    animation-delay: 0.6s;
+    animation-delay: 0.2s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(5) {
-    animation-delay: 0.75s;
+    animation-delay: 0.25s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(6) {
-    animation-delay: 0.9s;
+    animation-delay: 0.3s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(7) {
-    animation-delay: 1.05s;
+    animation-delay: 0.35s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(8) {
-    animation-delay: 1.2s;
+    animation-delay: 0.4s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(9) {
-    animation-delay: 1.35s;
+    animation-delay: 0.45s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(10) {
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(11) {
-    animation-delay: 1.65s;
+    animation-delay: 0.55s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(12) {
-    animation-delay: 1.8s;
+    animation-delay: 0.6s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(13) {
-    animation-delay: 1.95s;
+    animation-delay: 0.65s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(14) {
-    animation-delay: 2.1s;
+    animation-delay: 0.7s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(15) {
-    animation-delay: 2.25s;
+    animation-delay: 0.75s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
     animation-fill-mode: forwards; }
   .placeholder.is-active span:nth-child(16) {
-    animation-delay: 2.4s;
+    animation-delay: 0.8s;
     animation-name: flip;
     animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
     animation-duration: 1s;
@@ -648,7 +649,7 @@ a {
   column-gap: 1.5rem; }
   .placeholderContent .pic {
     margin: 0 1rem 0 0;
-    max-width: 100%; }
+    max-width: 80%; }
   .placeholderContent .all-span {
     padding: 1.5em 2em;
     font-size: 1.5em;
@@ -679,6 +680,8 @@ a {
       display: inline-block; }
   .contentItem-text.contentItem-text--simple {
     grid-template-columns: 1fr; }
+    .contentItem-text.contentItem-text--simple .placeholderContent {
+      column-count: 3; }
 
 .contentItem-video {
   animation: fade .5s ease-out 3s forwards;
@@ -703,50 +706,27 @@ a {
   grid-row: 1;
   animation: fade .5s ease-out 3s forwards; }
 
-.moreGrid--wrapper {
-  grid-column: 2;
+.subMenu {
+  position: relative;
+  top: auto;
+  height: 0;
   display: flex;
-  flex: 1; }
-
-.jobs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5rem; }
-
-.jobsA .job0 {
-  border: 2px solid #007fb1;
-  background: #007fb1 url("../images/works/spines0.png");
-  background-size: cover;
-  height: 80px;
-  width: 80px; }
-
-.jobsA .job1 {
-  border: 2px solid #007bac;
-  background: #007bac url("../images/works/spines1.png");
-  background-size: cover;
-  height: 80px;
-  width: 80px; }
-
-.jobsA .job2 {
-  border: 2px solid #00709d;
-  background: #00709d url("../images/works/spines2.png");
-  background-size: cover;
-  height: 80px;
-  width: 80px; }
-
-.jobsB .job0 {
-  border: 2px solid #007fb1;
-  background: #007fb1 url("../images/works/traginer0.jpg");
-  background-size: cover;
-  height: 80px;
-  width: 80px; }
-
-.jobsB .job1 {
-  border: 2px solid #007bac;
-  background: #007bac url("../images/works/traginer1.jpg");
-  background-size: cover;
-  height: 80px;
-  width: 80px; }
+  transform: translateY(-1.85rem);
+  justify-content: center;
+  grid-column: 1 / -1;
+  z-index: 0; }
+  .subMenu li {
+    list-style: none; }
+    .subMenu li.is-active a {
+      color: rgba(78, 89, 98, 0.5);
+      cursor: pointer;
+      pointer-events: none; }
+  .subMenu a {
+    padding: 0.5rem;
+    color: #4E5962;
+    background: #AEC4D5;
+    text-decoration: none;
+    font-size: .65em; }
 
 *,
 *::after,

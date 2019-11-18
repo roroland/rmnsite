@@ -5,16 +5,3 @@ $component-space-tiny: .5rem;
   --xpos: 0;
   --ypos: 0;
 }
-@mixin job ($count, $startcolor, $bgurl, $format) {
-  @for $i from 0 through $count {
-    $background-color: darken($startcolor, $i * $i+50); 
-    .job#{$i} {
-      @content;
-      border: 2px solid darken($startcolor, $i * $i+50);
-      background: $background-color url('../images/works/#{$bgurl}#{$i}.#{$format}');
-      background-size: cover;   
-      height: 80px;
-      width: 80px;
-    }
-  }
-}

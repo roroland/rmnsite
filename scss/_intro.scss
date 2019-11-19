@@ -76,17 +76,21 @@
     }
   }
   h4{
+    animation: fade 1s ease-out 1.5s forwards;
     top: -$component-space*2;
     text-align: center;
     opacity: 0;
-    animation: fade 1s ease-out 1.5s forwards;
-
-    span{
+    > span{
       text-decoration: underline;
     }
     small{
       display: block;
       text-align: center;
+      span{
+        opacity: 0;
+        animation: fade 1s ease-out 2.5s forwards;
+        text-decoration: none;
+      }
     }
     &::after{
       @media only screen and (min-width: 48em){

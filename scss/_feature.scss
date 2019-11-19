@@ -5,6 +5,7 @@
   transition: all 1s ease-out;
   grid-column: 1/-1;
   max-height: 0;
+  padding: 0 $component-space;
   height: 0;
 
   li[class^='contentItem-'] {
@@ -73,8 +74,6 @@
     }
   }
 
-
-
   .close {
     position: absolute;
     right: $component-space;
@@ -87,8 +86,20 @@
     opacity: 0;
     animation: frameItem .5s ease-out 1s forwards;
     background: rgba(setcolor(gray, lighter), .5);
-    border: 2px solid rgba(setcolor(gray, dark), .05);
+    border-top: 2px solid rgba(setcolor(gray, dark), .025);
+    border-bottom: 2px solid rgba(setcolor(gray, dark), .025);
     position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 50%;
+      margin: 0 auto;
+      height: 1px;
+      transform: translateX(50%);
+      top: -2px;
+      box-shadow: 0 7px 40px 1px rgba(setcolor(gray, dark), .5);
+      z-index: 1;
+    }
 
     li {
       grid-template-columns: 1fr 1fr;
@@ -240,7 +251,7 @@
   column-gap: $component-space;
   .pic {
     margin: 0 $component-space-small 0 0;
-    max-width: 80%;
+    max-width: 75%;
   }
   .all-span{
     padding: 1.5em 2em;
@@ -339,4 +350,10 @@
     text-decoration: none;
     font-size: .65em;
   }
+}
+
+.question{
+  position: relative;
+  top: -$component-space;
+  padding: $component-space 0;
 }

@@ -69,7 +69,7 @@
       max-width: 100%;
     }
     img{
-      max-width: 85%;
+      max-width: 65%;
     }
   }
   .nav{
@@ -96,7 +96,7 @@
       grid-template-rows: 150px min-content;
       justify-content: center;
       list-style: none;
-      margin: $component-space auto;
+      margin: $component-space auto 0;
       @media only screen and (min-width: 48em){
         grid-template-columns: 1fr repeat(5, 120px) 1fr;
         grid-template-rows: min-content minmax(150px, max-content) min-content;

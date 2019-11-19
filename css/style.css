@@ -155,15 +155,19 @@ a {
           opacity: 0;
           animation: fade 1s ease-out 1s forwards; } }
   .avatar--wrapper h4 {
+    animation: fade 1s ease-out 1.5s forwards;
     top: -3rem;
     text-align: center;
-    opacity: 0;
-    animation: fade 1s ease-out 1.5s forwards; }
-    .avatar--wrapper h4 span {
+    opacity: 0; }
+    .avatar--wrapper h4 > span {
       text-decoration: underline; }
     .avatar--wrapper h4 small {
       display: block;
       text-align: center; }
+      .avatar--wrapper h4 small span {
+        opacity: 0;
+        animation: fade 1s ease-out 2.5s forwards;
+        text-decoration: none; }
     @media only screen and (min-width: 48em) {
       .avatar--wrapper h4::after {
         animation: fade 1s ease-out 1.5s forwards;
@@ -313,7 +317,7 @@ a {
       text-align: center;
       max-width: 100%; }
     .home .me img {
-      max-width: 85%; }
+      max-width: 65%; }
   .home .nav {
     align-self: normal;
     align-items: center;
@@ -336,7 +340,7 @@ a {
       grid-template-rows: 150px min-content;
       justify-content: center;
       list-style: none;
-      margin: 1.5rem auto; }
+      margin: 1.5rem auto 0; }
       @media only screen and (min-width: 48em) {
         .home .nav .itemNav {
           grid-template-columns: 1fr repeat(5, 120px) 1fr;
@@ -409,6 +413,7 @@ a {
   transition: all 1s ease-out;
   grid-column: 1/-1;
   max-height: 0;
+  padding: 0 1.5rem;
   height: 0; }
   .showFeature li[class^='contentItem-'] {
     display: none;
@@ -452,8 +457,19 @@ a {
     opacity: 0;
     animation: frameItem .5s ease-out 1s forwards;
     background: rgba(247, 249, 249, 0.5);
-    border: 2px solid rgba(80, 80, 80, 0.05);
+    border-top: 2px solid rgba(80, 80, 80, 0.025);
+    border-bottom: 2px solid rgba(80, 80, 80, 0.025);
     position: relative; }
+    .showFeature .showFeatureItem::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      margin: 0 auto;
+      height: 1px;
+      transform: translateX(50%);
+      top: -2px;
+      box-shadow: 0 7px 40px 1px rgba(80, 80, 80, 0.5);
+      z-index: 1; }
     .showFeature .showFeatureItem li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;
@@ -649,7 +665,7 @@ a {
   column-gap: 1.5rem; }
   .placeholderContent .pic {
     margin: 0 1rem 0 0;
-    max-width: 80%; }
+    max-width: 75%; }
   .placeholderContent .all-span {
     padding: 1.5em 2em;
     font-size: 1.5em;
@@ -727,6 +743,11 @@ a {
     background: #AEC4D5;
     text-decoration: none;
     font-size: .65em; }
+
+.question {
+  position: relative;
+  top: -1.5rem;
+  padding: 1.5rem 0; }
 
 *,
 *::after,

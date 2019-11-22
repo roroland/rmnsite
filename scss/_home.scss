@@ -56,8 +56,9 @@
       }
     }
     .moreAbout{
-      grid-column: 1 / -1;
       display: none;
+      grid-column: 1 / -1;
+      margin-bottom: $component-space;
       &.is-open{
         display: block;
         opacity: 0;
@@ -71,6 +72,11 @@
     .timeline{
       grid-column: 1 / -1;
       display: none;
+      &.is-open{
+        display: block;
+        opacity: 0;
+        animation: right .5s ease-out 1.5s forwards;
+      }
       @media only screen and (min-width: 48em){
         grid-column: 1 / 3;
         grid-row: 2;

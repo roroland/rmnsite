@@ -12,7 +12,9 @@ let initY = root.style.setProperty('--ypos', 350);
 more.addEventListener('click', function (e) {
   e.preventDefault();
   document.querySelector('.moreAbout').classList.add('is-open');
+  let timeline = document.querySelector('.timeline');
   this.style.setProperty('display', 'none');
+  setTimeout(timeline.classList.add('is-open'), 3000);
 });
 
 itemNav.forEach(function (item) {

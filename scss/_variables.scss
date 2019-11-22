@@ -20,6 +20,16 @@ $component-space-tiny: .5rem;
     opacity: 1;
   }
 }
+@keyframes bottom {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to  {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes right {
   from {
     transform: translateX(-200px);

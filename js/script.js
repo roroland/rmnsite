@@ -14,7 +14,7 @@ itemNav.forEach(function (item) {
     e.preventDefault();
     if (itemNavId == '') {
       itemNavId = this.getAttribute('id');
-      showFeature.scrollIntoView();
+      showFeature.scrollIntoView({block: 'center'});
       getFeature();
     } else {
       itemNav.forEach(function (item) {
@@ -33,12 +33,12 @@ itemNav.forEach(function (item) {
 observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
-      entry.target.style.animation = `${entry.target.dataset.anim} .5s ${entry.target.dataset.delay} ease-out forwards`;
+      entry.target.style.animation = `${entry.target.dataset.anim} .75s ${entry.target.dataset.delay} ease-out forwards`;
+      observer.unobserve(entry.target);
     } else {
       entry.target.style.animation = 'none';
     }
   })
-  console.log(observer);
 });
 itemAnim.forEach(sipi => {
   observer.observe(sipi)

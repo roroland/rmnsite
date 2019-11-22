@@ -35,10 +35,10 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: $component-space;
     padding: 6em 0 $component-space 0;
+    overflow: hidden;
     @media only screen and (min-width: 90em){
       padding: 8em 0 $component-space 0;
     }
-
     .introAbout{
       grid-column: 1 / -1;
       @media only screen and (min-width: 48em){
@@ -58,6 +58,11 @@
     .moreAbout{
       grid-column: 1 / -1;
       display: none;
+      &.is-open{
+        display: block;
+        opacity: 0;
+        animation: left .5s ease-out .5s forwards;
+      }
       @media only screen and (min-width: 48em){
         grid-column: 4 / 7;
         grid-row: 2;
@@ -174,7 +179,7 @@
           top: 0;
         }
         .img-item{
-          filter: blur(4px);
+          filter: blur(3px);
           opacity: .25;
           transform: translateY(-$component-space-small);
         }
@@ -183,7 +188,7 @@
         height: 60px;
         filter: blur(0);
         transform: translateY(0);
-        transition: 5s all ease-out;
+        transition: 3s all ease-out;
         position: relative;
       }
       .img-mask{

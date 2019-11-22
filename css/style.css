@@ -30,6 +30,14 @@
     transform: translateX(0);
     opacity: 1; } }
 
+@keyframes left {
+  from {
+    transform: translateX(200px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Nunito', sans-serif; }
 
@@ -311,7 +319,8 @@ a {
     grid-column: 1 / -1;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 1.5rem;
-    padding: 6em 0 1.5rem 0; }
+    padding: 6em 0 1.5rem 0;
+    overflow: hidden; }
     @media only screen and (min-width: 90em) {
       .home main {
         padding: 8em 0 1.5rem 0; } }
@@ -331,6 +340,10 @@ a {
     .home main .moreAbout {
       grid-column: 1 / -1;
       display: none; }
+      .home main .moreAbout.is-open {
+        display: block;
+        opacity: 0;
+        animation: left .5s ease-out .5s forwards; }
       @media only screen and (min-width: 48em) {
         .home main .moreAbout {
           grid-column: 4 / 7;
@@ -422,14 +435,14 @@ a {
       .home .nav [class^='item-']:hover .img-mask {
         top: 0; }
       .home .nav [class^='item-']:hover .img-item {
-        filter: blur(4px);
+        filter: blur(3px);
         opacity: .25;
         transform: translateY(-1rem); }
       .home .nav [class^='item-'] .img-item {
         height: 60px;
         filter: blur(0);
         transform: translateY(0);
-        transition: 5s all ease-out;
+        transition: 3s all ease-out;
         position: relative; }
       .home .nav [class^='item-'] .img-mask {
         display: block;

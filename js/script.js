@@ -1,12 +1,19 @@
 const itemNav = document.querySelectorAll('.itemNav li a');
 const itemAnim = document.querySelectorAll('.animatable');
 const showFeature = document.querySelector('.showFeature');
+const more = document.querySelector('#more');
 let itemNavId = '';
 let closeFeature = '';
 let cover = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
+
+more.addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('.moreAbout').classList.add('is-open');
+  this.style.setProperty('display', 'none');
+});
 
 itemNav.forEach(function (item) {
  
@@ -40,6 +47,7 @@ let observer = new IntersectionObserver((entries) => {
     }
   })
 });
+
 itemAnim.forEach(sipi => {
   observer.observe(sipi)
 });

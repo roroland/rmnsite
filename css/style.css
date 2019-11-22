@@ -169,18 +169,23 @@ a {
       .avatar--wrapper h3 {
         width: auto;
         top: 2rem; }
-        .avatar--wrapper h3::before {
+        .avatar--wrapper h3::after, .avatar--wrapper h3::before {
           content: '';
-          background: url("../images/path-right.svg") no-repeat;
           width: 200px;
           height: 200px;
-          right: -34%;
           pointer-events: none;
           top: 1rem;
           position: absolute;
           display: block;
           opacity: 0;
-          animation: fade 1s ease-out 1s forwards; } }
+          animation: fade 1s ease-out 2s forwards; }
+        .avatar--wrapper h3::after {
+          background: url("../images/path-left.svg") no-repeat;
+          left: -12.5%; }
+        .avatar--wrapper h3::before {
+          content: '';
+          background: url("../images/path-right.svg") no-repeat;
+          right: -34%; } }
   .avatar--wrapper h4 {
     animation: fade 1s ease-out 1.5s forwards;
     top: -3rem;
@@ -195,19 +200,6 @@ a {
         opacity: 0;
         animation: fade 1s ease-out 2.5s forwards;
         text-decoration: none; }
-    @media only screen and (min-width: 48em) {
-      .avatar--wrapper h4::after {
-        animation: fade 1s ease-out 1.5s forwards;
-        content: '';
-        background: url("../images/path-left.svg") no-repeat;
-        width: 200px;
-        height: 200px;
-        left: -120%;
-        opacity: 0;
-        top: -7rem;
-        position: absolute;
-        pointer-events: none;
-        display: block; } }
   .avatar--wrapper .avatar-img {
     position: relative;
     backface-visibility: hidden;

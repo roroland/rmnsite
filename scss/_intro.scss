@@ -60,18 +60,27 @@
     @media only screen and (min-width: 48em){
       width: auto;
       top: $component-space-small*2;
+      &::after,
       &::before{
         content: '';
-        background: url('../images/path-right.svg') no-repeat;
         width: 200px;
         height: 200px;
-        right: -34%;
         pointer-events: none;
         top: 1rem;
         position: absolute;
         display: block;
         opacity: 0;
-        animation: fade 1s ease-out 1s forwards;
+        animation: fade 1s ease-out 2s forwards;
+      }
+      &::after{
+        background: url('../images/path-left.svg') no-repeat;
+        left: -12.5%;
+
+      }
+      &::before{
+        content: '';
+        background: url('../images/path-right.svg') no-repeat;
+        right: -34%;
       }
     }
   }
@@ -92,22 +101,6 @@
         text-decoration: none;
       }
     }
-    &::after{
-      @media only screen and (min-width: 48em){
-        animation: fade 1s ease-out 1.5s forwards;
-        content: '';
-        background: url('../images/path-left.svg') no-repeat;
-        width: 200px;
-        height: 200px;
-        left: -120%;
-        opacity: 0;
-        top: -7rem;
-        position: absolute;
-        pointer-events: none;
-        display: block;
-      }
-    }
-    
   }
   .avatar-img{
     position: relative;

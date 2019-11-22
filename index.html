@@ -35,15 +35,19 @@
         <h1>About Me</h1>
       </header>
       <main>
-        <p><span>Hi</span>, I work from Argentina with teams around the globe creating sites and web apps since 2002.</p>
-        <p>As a front-end developer my goal is to make design and business logic
-          to work together to achieve a great user-facing product.</p>
-        <p>Although my skills are varied, one of my core strengths is coding
-          great clean, semantic and responsive websites always with a modular,
-          scalable approach, that will work future-proof on a wide range of
-          devices. I also have a good eye for UI design, and UX.</p>
-        <p style="display: none;"><a href="#" >More about me...</a></p>
-        <div class="timeline" style="display: none;">
+        <div class="introAbout animatable" data-delay="0s" data-anim="right">
+          <p><strong>Hi</strong>, I work with teams around the globe creating
+            sites and web apps since 2002.</p>
+          <p>As a front-end developer my goal is to make design and business
+            logic
+            to work together to achieve a great user-facing product.</p>
+          <p>Although my skills are varied, one of my core strengths is coding
+            great clean, semantic and responsive websites always with a modular,
+            scalable approach, that will work future-proof on a wide range of
+            devices. I also have a good eye for UI design, and UX.</p>
+          <p><a href="#">More about me...</a></p>
+        </div>
+        <div class="moreAbout">
           <p>I'm a self-taught developer, based in Argentina. I've started
             learning about web development around the year 2000 helping my
             brother to build a news website about latin rock
@@ -56,12 +60,14 @@
             projects and we being able to driven our craft further. From local
             food restaurants to the MVP of a social-based apps for the
             university of Zaragoza, Spain</p>
+        </div>
+        <div class="timeline pbg">
           <p>In 2014 I started working in a start up called "Spines" a learning
             web app</p>
           <p>Currently I work for...</p>
         </div>
       </main>
-      <div class="me">
+      <div class="me animatable" data-delay="0s" data-anim="top">
         <span>
           <img src="images/me.png" alt="Rodrigo M Noales pic">
         </span>
@@ -92,7 +98,7 @@
             </g>
           </g>
         </svg>
-        <nav>
+        <nav class="animatable" data-delay=".5s" data-anim="top">
           <ul class="itemNav">
             <li class="item-layout">
               <a href="#" id="layout">
@@ -249,10 +255,15 @@
                         philosophy allowing me to create a <strong>true
                           modular</strong>, reusable,
                         encapsulated and scalable styles.</p>
-                      <p class="h5"><strong>Sass</strong> is my preprocessor of choice to
-                        build faster, more efficient code as well as Postcss and other tools to optimize speed and minimize the code footprint. Also I always try to apply <strong>latest css core native
+                      <p class="h5"><strong>Sass</strong> is my preprocessor of
+                        choice to
+                        build faster, more efficient code as well as Postcss and
+                        other tools to optimize speed and minimize the code
+                        footprint. Also I always try to apply <strong>latest css
+                          core native
                           features</strong> (like
-                        custom properties) when possible to deliver the best solution for
+                        custom properties) when possible to deliver the best
+                        solution for
                         sites and web apps of all sizes and needs.
                       </p> <img class="pic" src="/images/modular-deco.svg"
                         alt="deco">
@@ -260,7 +271,7 @@
 
 
                       <!-- <h3>Javascript</h3>
-                      <p class="h5">I code in vanilla Javascript for DOM based interactions, light logic and most common every-day tasks for a front-end developer.</p> -->
+                                                <p class="h5">I code in vanilla Javascript for DOM based interactions, light logic and most common every-day tasks for a front-end developer.</p> -->
 
 
                     </div>
@@ -323,10 +334,10 @@
                     </div>
                   </div>
                   <!--      <div class="contentItem-video is-music">
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/619064223&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351193621&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298186273&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-      </div> -->
+                                                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/619064223&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351193621&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298186273&color=%23d2486f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                                  </div> -->
                 </li>
                 <li class="contentItem-ux">
                   <div class="contentItem-header">
@@ -390,9 +401,11 @@
   </section>
 
   <footer>
-    <p>I work remotely for teams all over the world, if you need me for your
-      next project, just <a href="mailto:roroland@gmail.com">write me</a>.<br>Also you can reach me in <a
-        href="https://www.linkedin.com/in/rodrigonoales/">LinkedIn</a> or <a href="https://twitter.com/roroland">Twitter</a>.</p>
+    <p class="animatable" data-delay="0s" data-anim="top">I work remotely for teams all over the world, if you need me for your
+      next project, just <a href="mailto:roroland@gmail.com">write
+        me</a>.<br>Also you can reach me in <a
+        href="https://www.linkedin.com/in/rodrigonoales/">LinkedIn</a> or <a
+        href="https://twitter.com/roroland">Twitter</a>.</p>
   </footer>
   <script src="js/script.js"></script>
 </body>

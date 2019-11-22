@@ -1,4 +1,5 @@
 const itemNav = document.querySelectorAll('.itemNav li a');
+const itemAnim = document.querySelectorAll('.animatable');
 const showFeature = document.querySelector('.showFeature');
 let itemNavId = '';
 let closeFeature = '';
@@ -8,6 +9,7 @@ let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
 
 itemNav.forEach(function (item) {
+ 
   item.onclick = function (e) {
     e.preventDefault();
     if (itemNavId == '') {
@@ -26,6 +28,20 @@ itemNav.forEach(function (item) {
     this.classList.toggle('is-active');
 
   }
+});
+
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.animation = `${entry.target.dataset.anim} .5s ${entry.target.dataset.delay} ease-out forwards`;
+    } else {
+      entry.target.style.animation = 'none';
+    }
+  })
+  console.log(observer);
+});
+itemAnim.forEach(sipi => {
+  observer.observe(sipi)
 });
 
 function getFeature() {
@@ -59,3 +75,4 @@ function close(e) {
   initY = root.style.setProperty('--ypos', 350);
   clearTimeout(coverOut);
 }
+

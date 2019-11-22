@@ -3,6 +3,25 @@
   --xpos: 0;
   --ypos: 0; }
 
+.animatable {
+  opacity: 0; }
+
+@keyframes top {
+  from {
+    transform: translateY(-100px);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes right {
+  from {
+    transform: translateX(-200px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Nunito', sans-serif; }
 
@@ -288,22 +307,56 @@ a {
         .home header h1 {
           font-size: 1.563rem; } }
   .home main {
-    grid-column: 1 / -1; }
-    @media only screen and (min-width: 48em) {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1.5rem;
+    padding: 6em 0 1.5rem 0; }
+    @media only screen and (min-width: 90em) {
       .home main {
-        grid-column: 1 / 3;
-        padding: 1.5rem 1.5rem 1.5rem 0; } }
+        padding: 8em 0 1.5rem 0; } }
+    .home main .introAbout {
+      grid-column: 1 / -1; }
+      @media only screen and (min-width: 48em) {
+        .home main .introAbout {
+          grid-column: 1 / 4;
+          grid-row: 1; } }
+      .home main .introAbout > p:first-child {
+        font-weight: 700;
+        font-size: 1.563rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        margin-bottom: 1em; }
+        .home main .introAbout > p:first-child span {
+          font-size: initial; }
+    .home main .moreAbout {
+      grid-column: 1 / -1;
+      display: none; }
+      @media only screen and (min-width: 48em) {
+        .home main .moreAbout {
+          grid-column: 4 / 7;
+          grid-row: 2; } }
+    .home main .timeline {
+      grid-column: 1 / -1;
+      display: none; }
+      @media only screen and (min-width: 48em) {
+        .home main .timeline {
+          grid-column: 1 / 3;
+          grid-row: 2; } }
     .home main p {
       font-weight: 300;
-      color: white;
+      color: #4E5962;
       display: inline-block;
       padding: 0.25em 0.5em 0 1.5rem;
-      background: rgba(78, 89, 98, 0.75);
       margin-bottom: 0.5rem; }
       .home main p > span {
         font-weight: 600; }
       .home main p a {
         color: #AEC4D5; }
+    .home main .pbg {
+      margin: 4rem 0; }
+    .home main .pbg p {
+      background: rgba(78, 89, 98, 0.05);
+      font-size: 1em; }
   .home .me {
     display: flex;
     flex-flow: column nowrap;
@@ -337,13 +390,13 @@ a {
     .home .nav .itemNav {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 150px min-content;
+      grid-template-rows: 9.375em min-content;
       justify-content: center;
       list-style: none;
       margin: 1.5rem auto 0; }
       @media only screen and (min-width: 48em) {
         .home .nav .itemNav {
-          grid-template-columns: 1fr repeat(5, 120px) 1fr;
+          grid-template-columns: 1fr repeat(5, 7.5em) 1fr;
           grid-template-rows: min-content minmax(150px, max-content) min-content; } }
     .home .nav [class^='item-'] {
       align-items: center;
@@ -760,6 +813,9 @@ html {
   font-size: 100%;
   line-height: 1.5;
   scroll-behavior: smooth; }
+  @media only screen and (min-width: 90em) {
+    html {
+      font-size: 125%; } }
 
 body {
   background: #F7F9F9; }

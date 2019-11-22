@@ -30,7 +30,7 @@ itemNav.forEach(function (item) {
   }
 });
 
-observer = new IntersectionObserver((entries) => {
+let observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
       entry.target.style.animation = `${entry.target.dataset.anim} .75s ${entry.target.dataset.delay} ease-out forwards`;
@@ -47,10 +47,12 @@ itemAnim.forEach(sipi => {
 function getFeature() {
   showFeature.classList.add('show', 'show-' + itemNavId);
   closeFeature = document.querySelector('.contentItem-' + itemNavId + ' .close');
-  closeFeature.addEventListener('click', close);
-  cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
-  setTimeout(coverOut, 1500);
-  move();
+  if (closeFeature) {
+    cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
+    setTimeout(coverOut, 1500);
+    move();
+    closeFeature.addEventListener('click', close);
+  }
 }
 
 function move() {

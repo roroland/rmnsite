@@ -4,25 +4,52 @@
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0;
   @media only screen and (min-width: 48em){
     padding: inherit;
+  }
+  @media only screen and (min-width: 100em){
+    justify-content: center;
+  }
+  nav{
+    position: relative;
+    top: -$component-space*2;
+    @media only screen and (min-width: 100em){
+      position: absolute;
+      top: 92vh;
+    }
+  }
+  ul{
+    display: flex;
+    list-style: none;
+    align-self: flex-end;
+    a{
+      padding: $component-space;
+      transition: color .3s ease-out;
+      &:hover{
+        color: setcolor(brand, blue);
+      }
+    }
   }
 }
 .avatar--wrapper{  
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   transition: all .3s ease-out;
+  top: 15vh;
   height: 100vh;
   width: 100%;
   text-decoration: none;
   @media only screen and (min-width: 48em){
     height: 100%;
     width: auto;
+  }
+  @media only screen and (min-width: 100em){
+    top: 0;
   }
   .avatar{
     display: flex;
@@ -75,7 +102,7 @@
       &::after{
         background: url('../images/path-left.svg') no-repeat;
         left: -12.5%;
-
+        
       }
       &::before{
         content: '';
@@ -93,7 +120,9 @@
       text-decoration: underline;
     }
     small{
+      color: setcolor(gray, pale);
       display: block;
+      font-weight: 300;
       text-align: center;
       span{
         opacity: 0;
@@ -144,11 +173,14 @@
     transition: bottom .25s ease-out, top .25s ease-out;
     opacity: 0;
     animation: fade .5s ease-out forwards;
-
+    
     &-top{
       top: -4.5rem;
       @media only screen and (min-width: 48em){
         top: -20%;
+      }
+      @media only screen and (min-width: 100em){
+        top: -35%;
       }
     }
     &-bottom{
@@ -181,10 +213,14 @@
     }
     .submask-top{
       top: -25%;
+      @media only screen and (min-width: 100em){
+        top: -40%;
+      }
     }
     .submask-bottom{
       bottom: -35%;
     }
+    
   }
   @keyframes rotate{
     0%{

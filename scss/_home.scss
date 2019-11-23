@@ -58,7 +58,7 @@
     .moreAbout{
       display: none;
       grid-column: 1 / -1;
-      margin-bottom: $component-space;
+      margin-bottom: $component-space*2;
       &.is-open{
         display: block;
         opacity: 0;

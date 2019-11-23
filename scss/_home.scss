@@ -59,6 +59,9 @@
       display: none;
       grid-column: 1 / -1;
       margin-bottom: $component-space*2;
+      p{
+       padding: .25em $component-space 0 0;
+      }
       &.is-open{
         display: block;
         opacity: 0;
@@ -75,11 +78,24 @@
       &.is-open{
         display: block;
         opacity: 0;
-        animation: right .5s ease-out 1.5s forwards;
+        animation: right .5s ease-out forwards;
       }
       @media only screen and (min-width: 48em){
         grid-column: 1 / 3;
         grid-row: 2;
+      }
+      li{
+        margin-bottom: $component-space;
+        opacity: 0;
+        @for $i from 1 to 7 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * .5s;
+            animation-name: right;
+            animation-timing-function: cubic-bezier(.02, .53, .62, 1.21);
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+          }
+        }
       }
     }
     p,

@@ -15,6 +15,8 @@
   nav{
     position: relative;
     top: -$component-space*2;
+    opacity: 0;
+    animation: bottom 1s ease-out 3s forwards;
     @media only screen and (min-width: 100em){
       position: absolute;
       top: 92vh;

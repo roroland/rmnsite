@@ -11,8 +11,13 @@ let initY = root.style.setProperty('--ypos', 350);
 
 more.addEventListener('click', function (e) {
   e.preventDefault();
-  document.querySelector('.moreAbout').classList.add('is-open');
+  let moreAbout = document.querySelector('.moreAbout');
   let timeline = document.querySelector('.timeline');
+  moreAbout.classList.add('is-open');
+  window.scrollTo({
+    top: moreAbout.offsetTop * 2,
+    behavior: 'smooth',
+  })
   this.style.setProperty('display', 'none');
   setTimeout(timeline.classList.add('is-open'), 3000);
 });

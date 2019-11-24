@@ -28,7 +28,7 @@
     align-self: flex-end;
     a{
       padding: $component-space;
-      transition: color .3s ease-out;
+      color: setcolor(brand, darkblue);
       &:hover{
         color: setcolor(brand, blue);
       }
@@ -37,6 +37,7 @@
 }
 .avatar--wrapper{  
   display: flex;
+  color: setcolor(brand, dark);
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
@@ -74,17 +75,17 @@
   h4{
     transition: top .25s ease-in-out;
     position: relative;
+    text-align: center;
+    font-weight: 300;
+    opacity: 0;
     z-index: 10;
   }
   h3{
     background: setcolor(brand);
     color: setcolor(gray, lighter);
-    font-weight: 300;
     padding: 0 $component-space;
-    text-align: center;
     align-self: flex-start;
     width: 100%;
-    opacity: 0;
     animation: fade 1s ease-out 1s forwards;
     @media only screen and (min-width: 48em){
       width: auto;
@@ -116,20 +117,20 @@
   h4{
     animation: fade 1s ease-out 1.5s forwards;
     top: -$component-space*2;
-    text-align: center;
-    opacity: 0;
     > span{
+      font-weight: 400;
       text-decoration: underline;
     }
+
     small{
-      color: setcolor(gray, pale);
       display: block;
-      font-weight: 300;
+      color: setcolor(gray, dark);
       text-align: center;
       span{
         opacity: 0;
         animation: fade 1s ease-out 2.5s forwards;
         text-decoration: none;
+        color: setcolor(brand, dark);
       }
     }
   }
@@ -146,6 +147,7 @@
       &::before{
         content: '';
         display: block;
+        border-radius: 40%;
         position: absolute;
         bottom: -75%;
         width: 100%;
@@ -157,12 +159,10 @@
       &::after{
         right: -20%;
         animation: rotate 30s ease-in-out infinite;
-        border-radius: 40%;
       }
       &::before{
         left: 0%;
         animation: rotate 35s linear infinite reverse;
-        border-radius: 40%;
         z-index: 1;
       }
     }
@@ -185,16 +185,10 @@
         top: -35%;
       }
     }
-    &-bottom{
-      transform: translateY(-40px) rotate(180deg);
-      bottom: -7.5rem;
-      @media only screen and (min-width: 48em){
-        bottom: -25%;
-      }
-    }
   }
   &:hover{
     cursor: pointer;
+    color: currentColor;
     transform-origin: center;
     @media only screen and (min-width: 48em){
       height: 100%;
@@ -209,21 +203,15 @@
       transition: transform 1s ease-out .25s;
       transform: scale(.8);
     }
-    .avatar,
-    .avatar-img{
-      animation-play-state: paused;
-    }
+
     .submask-top{
       top: -25%;
       @media only screen and (min-width: 100em){
         top: -40%;
       }
     }
-    .submask-bottom{
-      bottom: -35%;
-    }
-    
   }
+
   @keyframes rotate{
     0%{
       transform: rotate(0) translateX(-10%);

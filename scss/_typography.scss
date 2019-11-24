@@ -25,5 +25,10 @@ a{
   font-size: 1rem;
 }
 a{
-  color: setcolor(gray, dark);
+  color: setcolor(brand, darkblue);
+  transition: color .3s ease-out;
+  &:hover{
+    color: setcolor(brand, blue);
+  }
+
 }

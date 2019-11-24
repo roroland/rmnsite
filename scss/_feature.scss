@@ -141,8 +141,7 @@
 
 }
 
-.contentItem-header,
-.contentItem-footer {
+.contentItem-header{
   opacity: 0;
 
   h3 {
@@ -294,35 +293,6 @@
       column-count: 3;
     }
   }
-}
-
-.contentItem-video {
-  animation: fade .5s ease-out 3s forwards;
-  opacity: 0;
-  padding: 1rem;
-  display: flex;
-  flex-flow: column;
-  background: rgba(setcolor(gray, light), .95);
-  transition: transform .3s ease-in-out;
-  transform-origin: 150% 150%;
-  align-items: center;
-  justify-content: center;
-  overflow: auto;
-
-  &:hover {
-    transform: scale(1.5);
-    box-shadow: 0 0 20px rgba(setcolor(gray, dark), .25);
-  }
-
-  &.is-music {
-    justify-content: flex-start;
-  }
-}
-
-.contentItem-footer {
-  grid-column: 2;
-  grid-row: 1;
-  animation: fade .5s ease-out 3s forwards;
 }
 
 .subMenu{

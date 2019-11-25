@@ -87,7 +87,7 @@
       li{
         margin-bottom: $component-space;
         opacity: 0;
-        @for $i from 1 to 7 {
+        @for $i from 1 to 8 {
           &:nth-child(#{$i}) {
             animation-delay: $i * .5s;
             animation-name: right;

@@ -426,6 +426,12 @@ a {
           animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
           animation-duration: .5s;
           animation-fill-mode: forwards; }
+        .home main .timeline li:nth-child(7) {
+          animation-delay: 3.5s;
+          animation-name: right;
+          animation-timing-function: cubic-bezier(0.02, 0.53, 0.62, 1.21);
+          animation-duration: .5s;
+          animation-fill-mode: forwards; }
     .home main p {
       font-weight: 300;
       color: #4E5962;

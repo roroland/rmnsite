@@ -279,12 +279,6 @@
   p {
     margin-bottom: $component-space-small;
     line-height: 1.6;
-    
-    strong {
-      background: rgba(setcolor(brand, blue), .15);
-      box-shadow: 3px 2px 0 rgba(setcolor(brand, blue), .5);
-      display: inline-block;
-    }
   }
 
   &.contentItem-text--simple {

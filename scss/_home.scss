@@ -45,8 +45,8 @@
         grid-column: 1 / 4;
         grid-row: 1;
       }
-      > p:first-child{
-        font-weight: 700;
+      > h2{
+        color: setcolor(gray, dark);
         font-size: 1.563rem;
         padding: $component-space-small $component-space $component-space-small $component-space;
         margin-bottom: 1em;
@@ -87,6 +87,9 @@
       li{
         margin-bottom: $component-space;
         opacity: 0;
+        h4{
+          margin-left: $component-space;
+        }
         @for $i from 1 to 8 {
           &:nth-child(#{$i}) {
             animation-delay: $i * .5s;
@@ -94,10 +97,18 @@
             animation-timing-function: cubic-bezier(.02, .53, .62, 1.21);
             animation-duration: .5s;
             animation-fill-mode: forwards;
+            p{
+              border-right: 2px solid rgba(setcolor(brand, palered), calc(.15 * #{$i}));
+            }
           }
+        }
+        p:first-child{
+          border-right: 0;
         }
       }
     }
+
+
     p,
     a{
       @extend .h4;
@@ -112,7 +123,9 @@
         @extend .h3;
         font-weight: 600;
       }
-
+      a{
+        font-size: 1rem;
+      }
     }
     .pbg{
       margin: 4rem 0;

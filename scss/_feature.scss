@@ -321,3 +321,25 @@
   padding: $component-space 0;
 }
 
+#gallery{
+  display: grid;
+  max-width: 70vw;
+  margin: $component-space auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-flow: dense;
+  gap: $component-space-small;
+  img{
+    max-width: 100%;
+    box-shadow: 0 5px 30px setcolor(gray, pale);
+    background: setcolor(brand, darkblue);
+  }
+  .super{
+    grid-column: 1 / -1;
+  }
+  .normal{
+    grid-column: span 2;
+  }
+  .tall{
+    grid-row: span 2;
+  }
+}

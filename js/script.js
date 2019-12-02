@@ -1,5 +1,7 @@
 const itemNav = document.querySelectorAll('.itemNav li a');
 const itemAnim = document.querySelectorAll('.animatable');
+const imgAll = document.querySelectorAll('img');
+const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const more = document.querySelector('#more');
 let itemNavId = '';
@@ -55,8 +57,25 @@ let observer = new IntersectionObserver((entries) => {
   })
 });
 
-itemAnim.forEach(sipi => {
-  observer.observe(sipi)
+let imgObs = new IntersectionObserver((images) => {
+  images.forEach(image => { 
+    if (image.intersectionRatio > 0) {
+      let obsSrc = image.target.dataset.source;
+      image.target.src = obsSrc;
+      imgSrc = obsSrc;
+      image.target.classList.add('is-active');
+      imgObs.unobserve(image.target);
+    }
+  })
+})
+
+
+imgLazy.forEach(item => {
+  imgObs.observe(item);
+});
+
+itemAnim.forEach(itm => {
+  observer.observe(itm)
 });
 
 function getFeature() {

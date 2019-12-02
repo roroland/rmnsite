@@ -330,6 +330,12 @@
   img{
     border: 1pt solid setcolor(gray, normal);
     max-width: 100%;
+    opacity: 0;
+    position: relative;
+    transform: translateY($component-space);
+    &.is-active{
+      animation: showImg 1s ease .5s forwards;
+    }
   }
   .brand{
     border: 0;
@@ -353,5 +359,11 @@
   .tall{
     grid-row: span 2;
     max-height: 360px;
+  }
+  @keyframes showImg{
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

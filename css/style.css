@@ -899,7 +899,12 @@ a {
   margin: 1.5rem 0; }
   .gallery img {
     border: 1pt solid #E5E5E5;
-    max-width: 100%; }
+    max-width: 100%;
+    opacity: 0;
+    position: relative;
+    transform: translateY(1.5rem); }
+    .gallery img.is-active {
+      animation: showImg 1s ease .5s forwards; }
   .gallery .brand {
     border: 0;
     filter: saturate(0);
@@ -918,6 +923,11 @@ a {
   .gallery .tall {
     grid-row: span 2;
     max-height: 360px; }
+
+@keyframes showImg {
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
 
 *,
 *::after,

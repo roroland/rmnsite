@@ -888,15 +888,27 @@ a {
 
 .question {
   position: relative;
-  top: -1.5rem;
-  padding: 1.5rem 0; }
+  top: -1rem;
+  padding: 1.5rem 0 0; }
+
+.recent {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative; }
+  .recent::after {
+    background: none; }
+  .recent h2,
+  .recent h4 {
+    text-align: center; }
 
 .gallery {
   display: grid;
   width: 100%;
   position: relative;
   grid-template-columns: 250px 1fr;
-  margin: 1.5rem 0; }
+  margin: 1.5rem 0 0;
+  padding-right: 1.5rem; }
   .gallery img {
     border: 1pt solid #E5E5E5;
     max-width: 100%;

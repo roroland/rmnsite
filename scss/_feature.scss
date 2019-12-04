@@ -260,6 +260,9 @@
   .deco {
     max-width: 100%;
   }
+  p span{
+    color: setcolor(brand, palered);
+  }
 }
 
 .contentItem-text {

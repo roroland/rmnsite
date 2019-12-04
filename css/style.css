@@ -842,6 +842,8 @@ a {
     text-align: center; }
   .placeholderContent .deco {
     max-width: 100%; }
+  .placeholderContent p span {
+    color: #b9506e; }
 
 .contentItem-text {
   display: grid;

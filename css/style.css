@@ -69,9 +69,12 @@ footer p {
 
 strong {
   background: rgba(156, 176, 190, 0.15);
-  box-shadow: 3px 2px 0 rgba(156, 176, 190, 0.5);
+  box-shadow: 3px 3px 0 rgba(156, 176, 190, 0.36);
   padding: 0 .15em;
   display: inline-block; }
+  .contentItem--wrapper strong {
+    background: rgba(77, 28, 53, 0.25);
+    box-shadow: 3px 3px 0 0px rgba(24, 16, 16, 0.36); }
 
 p,
 h5,
@@ -571,7 +574,7 @@ a {
     .work .nav .item-ux {
       grid-column: 3 / 4; } }
   .work .nav .item-ux .img-item {
-    height: 55px; }
+    max-width: 75px; }
   .work .nav .item-music {
     grid-column: 1 / -1; }
     @media only screen and (min-width: 48em) {
@@ -837,7 +840,8 @@ a {
   .contentItem-text .deco {
     max-width: 100%; }
   .contentItem-text p span {
-    color: #9CB0BE; }
+    color: #472c53;
+    font-weight: 600; }
 
 .contentItem--wrapper {
   display: grid;

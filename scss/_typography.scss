@@ -20,9 +20,13 @@ h4,
 }
 strong {
   background: rgba(setcolor(brand, blue), .15);
-  box-shadow: 3px 2px 0 rgba(setcolor(brand, blue), .5);
+  box-shadow: 3px 3px 0 rgba(setcolor(brand, blue), .36);
   padding: 0 .15em;
   display: inline-block;
+  .contentItem--wrapper &{
+    background: rgba(77, 28, 53, 0.25);
+    box-shadow: 3px 3px 0 0px rgba(24, 16, 16, 0.36);
+  }
 }
 p,
 h5,

@@ -584,7 +584,6 @@ a {
   transition: all 1s ease-out;
   grid-column: 1/-1;
   max-height: 0;
-  padding: 0 1.5rem;
   height: 0; }
   .showFeature li[class^='contentItem-'] {
     display: none;
@@ -619,15 +618,17 @@ a {
     .showFeature.show.show-music .placeholder {
       background-image: url("../images/works/traginer1.jpg"); }
   .showFeature .close {
+    color: white;
+    font-size: .75em;
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
     padding-right: 1rem; }
   .showFeature .showFeatureItem {
-    padding: 1rem;
+    padding: 3rem 2rem;
     opacity: 0;
     animation: frameItem .5s ease-out 1s forwards;
-    background: rgba(247, 249, 249, 0.5);
+    background: #EA507C;
     border-top: 2px solid rgba(80, 80, 80, 0.025);
     border-bottom: 2px solid rgba(80, 80, 80, 0.025);
     position: relative; }
@@ -644,7 +645,7 @@ a {
     .showFeature .showFeatureItem li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;
-      grid-gap: 1rem; }
+      column-gap: 1rem; }
 
 @keyframes frame {
   0% {
@@ -666,28 +667,11 @@ a {
   100% {
     opacity: 1; } }
 
-.contentItem-header {
-  opacity: 0; }
-  .contentItem-header h3 {
-    color: #4E5962;
-    font-weight: normal;
-    padding-bottom: 1.5rem; }
-
-.contentItem-header {
-  grid-column: 1;
-  animation: fade .5s ease-out .5s forwards;
-  display: flex;
-  flex-flow: column; }
-  .contentItem-header h3 {
-    padding-left: 1rem;
-    padding-bottom: 0; }
-
 .placeholder {
   display: grid;
-  background-color: #9CB0BE;
+  background-color: #b9506e;
   background-position: var(--xpos) var(--ypos);
   background-repeat: no-repeat;
-  box-shadow: inset 5px 0 5px 0 rgba(78, 89, 98, 0.15), inset 0 0 0 1px rgba(78, 89, 98, 0.25);
   min-width: 50%;
   min-height: 100%;
   position: relative;
@@ -827,43 +811,54 @@ a {
   .placeholder-static img {
     max-width: 100%; }
 
-.placeholderContent {
+.contentItem-text {
   grid-column: 1 / 2;
   grid-row: 1;
   column-count: 2;
   column-gap: 1.5rem; }
-  .placeholderContent .pic {
+  .contentItem-text .contentItem-header {
+    opacity: 0;
+    animation: fade .5s ease-out .5s forwards;
+    display: flex;
+    flex-flow: column;
+    column-span: all; }
+    .contentItem-text .contentItem-header h3 {
+      color: white;
+      font-weight: normal;
+      padding-bottom: 1.5rem; }
+  .contentItem-text .pic {
     margin: 0 1rem 0 0;
     max-width: 75%; }
-  .placeholderContent .all-span {
-    padding: 1.5em 2em;
+  .contentItem-text .all-span {
+    padding: 1em 2em;
     font-size: 1.5em;
     column-span: all;
     text-align: center; }
-  .placeholderContent .deco {
+  .contentItem-text .deco {
     max-width: 100%; }
-  .placeholderContent p span {
-    color: #b9506e; }
+  .contentItem-text p span {
+    color: #9CB0BE; }
 
-.contentItem-text {
+.contentItem--wrapper {
   display: grid;
   grid-template-columns: 1fr 45%;
   grid-column: 1 / -1;
-  column-gap: 1rem;
+  column-gap: 3rem;
   animation: fade .5s ease-out forwards;
   opacity: 0;
   padding: 1rem;
-  color: #505050;
-  background: rgba(245, 245, 245, 0.95);
+  color: white;
+  background: #EA507C;
   align-items: flex-start;
   justify-content: center;
   min-height: 60vh; }
-  .contentItem-text p {
+  .contentItem--wrapper p {
+    color: white;
     margin-bottom: 1rem;
     line-height: 1.6; }
-  .contentItem-text.contentItem-text--simple {
+  .contentItem--wrapper.contentItem--simple {
     grid-template-columns: 1fr; }
-    .contentItem-text.contentItem-text--simple .placeholderContent {
+    .contentItem--wrapper.contentItem--simple .contentItem-text {
       column-count: 3; }
 
 .subMenu {

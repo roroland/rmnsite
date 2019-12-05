@@ -90,7 +90,7 @@ function getFeature() {
 }
 
 function move() {
-  let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem-text');
+  let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper');
   let listener = placeholder.addEventListener(('touchstart', 'touchmove', 'mouseenter', 'mousemove'), e => {
     root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetHeight / 2) + "px");
     root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");

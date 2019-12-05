@@ -5,7 +5,6 @@
   transition: all 1s ease-out;
   grid-column: 1/-1;
   max-height: 0;
-  padding: 0 $component-space;
   height: 0;
 
   li[class^='contentItem-'] {
@@ -74,6 +73,8 @@
   }
 
   .close {
+    color: white;
+    font-size: .75em;
     position: absolute;
     right: $component-space;
     top: $component-space;
@@ -81,10 +82,10 @@
   }
 
   .showFeatureItem {
-    padding: 1rem;
+    padding: 3rem 2rem;
     opacity: 0;
     animation: frameItem .5s ease-out 1s forwards;
-    background: rgba(setcolor(gray, lighter), .5);
+    background: setcolor(brand, red);
     border-top: 2px solid rgba(setcolor(gray, dark), .025);
     border-bottom: 2px solid rgba(setcolor(gray, dark), .025);
     position: relative;
@@ -103,7 +104,7 @@
     li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;
-      grid-gap: $component-space-small;
+      column-gap: $component-space-small;
     }
   }
 
@@ -141,34 +142,14 @@
 
 }
 
-.contentItem-header{
-  opacity: 0;
 
-  h3 {
-    color: setcolor(brand, dark);
-    font-weight: normal;
-    padding-bottom: $component-space;
-  }
-}
-
-.contentItem-header {
-  grid-column: 1;
-  animation: fade .5s ease-out .5s forwards;
-  display: flex;
-  flex-flow: column;
-
-  h3 {
-    padding-left: $component-space-small;
-    padding-bottom: 0;
-  }
-}
 
 .placeholder {
   display: grid;
-  background-color: setcolor(brand, blue);
+  background-color: setcolor(brand, palered);
   background-position: var(--xpos) var(--ypos);
   background-repeat: no-repeat;
-  box-shadow: inset 5px 0 5px 0 rgba(setcolor(brand, dark), .15), inset 0 0 0 1px rgba(setcolor(brand, dark), .25);
+ // box-shadow: inset 5px 0 5px 0 rgba(setcolor(brand, dark), .15), inset 0 0 0 1px rgba(setcolor(brand, dark), .25);
   min-width: 50%;
   min-height: 100%;
   position: relative;
@@ -242,17 +223,33 @@
   }
 }
 
-.placeholderContent {
+.contentItem-text {
   grid-column: 1 / 2;
   grid-row: 1;
   column-count: 2;
   column-gap: $component-space;
+
+
+  .contentItem-header {
+    opacity: 0;
+    animation: fade .5s ease-out .5s forwards;
+    display: flex;
+    flex-flow: column;
+    column-span: all;
+    h3 {
+      color: white;
+      font-weight: normal;
+      padding-bottom: $component-space;
+    }
+  }
+
+
   .pic {
     margin: 0 $component-space-small 0 0;
     max-width: 75%;
   }
   .all-span{
-    padding: 1.5em 2em;
+    padding: 1em 2em;
     font-size: 1.5em;
     column-span: all;
     text-align: center;
@@ -261,32 +258,33 @@
     max-width: 100%;
   }
   p span{
-    color: setcolor(brand, palered);
+    color: setcolor(brand, blue);
   }
 }
 
-.contentItem-text {
+.contentItem--wrapper {
   display: grid;
   grid-template-columns: 1fr 45%;
   grid-column: 1 / -1;
-  column-gap: $component-space-small;
+  column-gap: $component-space-small*3;
   animation: fade .5s ease-out forwards;
   opacity: 0;
   padding: 1rem;
-  color: setcolor(gray, dark);
-  background: rgba(setcolor(gray, light), .95);
+  color: white;
+  background: setcolor(brand, red);
   align-items: flex-start;
   justify-content: center;
   min-height: 60vh;
 
   p {
+    color: white;
     margin-bottom: $component-space-small;
     line-height: 1.6;
   }
 
-  &.contentItem-text--simple {
+  &.contentItem--simple {
     grid-template-columns: 1fr;
-    .placeholderContent{
+    .contentItem-text{
       column-count: 3;
     }
   }

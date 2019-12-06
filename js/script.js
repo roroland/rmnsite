@@ -88,12 +88,16 @@ function getFeature() {
     closeFeature.addEventListener('click', close);
   }
 }
-
 function move() {
+  wait = false;
   let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper');
   let listener = placeholder.addEventListener(('touchstart', 'touchmove', 'mouseenter', 'mousemove'), e => {
-    root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetHeight / 2) + "px");
-    root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");
+    if (!wait) {
+      wait = true;
+      root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetHeight / 2) + "px");
+      root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");
+      setTimeout(function(){ wait = false; }, 25);
+    }
   })
   placeholder.removeEventListener(('touchend', 'touchleave', 'mouseout', 'mouseleave'), listener);
 }

@@ -5,6 +5,7 @@
   transition: all 1s ease-out;
   grid-column: 1/-1;
   max-height: 0;
+  position: relative;
   height: 0;
 
   li[class^='contentItem-'] {
@@ -26,8 +27,11 @@
         display: grid;
       }
 
-      .placeholder {
+      .placeholder1 {
         background-image: url('../images/works/spines1.png');
+      }
+      .placeholder2 {
+        background-image: url('../images/works/spines2.png');
       }
     }
 
@@ -79,6 +83,7 @@
     right: $component-space;
     top: $component-space;
     padding-right: $component-space-small;
+    z-index: 999;
   }
 
   .showFeatureItem {
@@ -149,7 +154,6 @@
   background-color: setcolor(brand, palered);
   background-position: var(--xpos) var(--ypos);
   background-repeat: no-repeat;
- // box-shadow: inset 5px 0 5px 0 rgba(setcolor(brand, dark), .15), inset 0 0 0 1px rgba(setcolor(brand, dark), .25);
   min-width: 50%;
   min-height: 100%;
   position: relative;
@@ -302,7 +306,7 @@
   z-index: 0;
   li{
     list-style: none;
-    &.is-active a{
+    .is-active{
       color: rgba(setcolor(brand, dark), .5);
       cursor: pointer;
       pointer-events: none;

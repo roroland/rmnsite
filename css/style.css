@@ -587,6 +587,7 @@ a {
   transition: all 1s ease-out;
   grid-column: 1/-1;
   max-height: 0;
+  position: relative;
   height: 0; }
   .showFeature li[class^='contentItem-'] {
     display: none;
@@ -602,8 +603,10 @@ a {
     align-items: center; }
     .showFeature.show.show-layout .contentItem-layout {
       display: grid; }
-    .showFeature.show.show-layout .placeholder {
+    .showFeature.show.show-layout .placeholder1 {
       background-image: url("../images/works/spines1.png"); }
+    .showFeature.show.show-layout .placeholder2 {
+      background-image: url("../images/works/spines2.png"); }
     .showFeature.show.show-css .contentItem-css {
       display: grid; }
     .showFeature.show.show-css .placeholder {
@@ -626,7 +629,8 @@ a {
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    z-index: 999; }
   .showFeature .showFeatureItem {
     padding: 3rem 2rem;
     opacity: 0;
@@ -876,7 +880,7 @@ a {
   z-index: 0; }
   .subMenu li {
     list-style: none; }
-    .subMenu li.is-active a {
+    .subMenu li .is-active {
       color: rgba(78, 89, 98, 0.5);
       cursor: pointer;
       pointer-events: none; }

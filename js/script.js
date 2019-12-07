@@ -4,13 +4,17 @@ const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const more = document.querySelector('#more');
+const closeLink = document.querySelector('.close');
+
 let itemNavId = '';
 let closeFeature = '';
 let cover = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
+let sub = document.querySelectorAll('.subMenu li a');
 
+// More about
 more.addEventListener('click', function (e) {
   e.preventDefault();
   let moreAbout = document.querySelector('.moreAbout');
@@ -24,8 +28,9 @@ more.addEventListener('click', function (e) {
   setTimeout(timeline.classList.add('is-open'), 3000);
 });
 
+// Menu
 itemNav.forEach(function (item) {
- 
+  
   item.onclick = function (e) {
     e.preventDefault();
     if (itemNavId == '') {
@@ -36,13 +41,12 @@ itemNav.forEach(function (item) {
       itemNav.forEach(function (item) {
         item.classList.remove('is-active');
       });
-      close(e);
-      itemNavId = this.getAttribute('id');
-      getFeature();
+      // itemNavId = this.getAttribute('id');
+      // getFeature();
     }
-
+    
     this.classList.toggle('is-active');
-
+    
   }
 });
 
@@ -78,16 +82,22 @@ itemAnim.forEach(itm => {
   observer.observe(itm)
 });
 
+// Open feature
 function getFeature() {
+  coverActive = true;
   showFeature.classList.add('show', 'show-' + itemNavId);
-  closeFeature = document.querySelector('.contentItem-' + itemNavId + ' .close');
-  if (closeFeature) {
-    cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
-    setTimeout(coverOut, 1500);
-    move();
-    closeFeature.addEventListener('click', close);
+  subRun();
+  cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
+  if (coverActive) {
+    setTimeout(function () {
+      coverOut();
+      coverActive = false;
+    }, 1500);
   }
+  move();
 }
+
+// Move placeholder
 function move() {
   wait = false;
   let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper');
@@ -96,16 +106,20 @@ function move() {
       wait = true;
       root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetHeight / 2) + "px");
       root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");
-      setTimeout(function(){ wait = false; }, 25);
+      setTimeout(function () { wait = false; }, 25);
     }
   })
   placeholder.removeEventListener(('touchend', 'touchleave', 'mouseout', 'mouseleave'), listener);
 }
 
+// Fade cover for placeholder
 function coverOut() {
   cover.classList.add('is-active');
 }
 
+
+// Close feature modal
+closeLink.addEventListener('click', close);
 function close(e) {
   e.preventDefault();
   showFeature.classList = 'showFeature';
@@ -113,6 +127,16 @@ function close(e) {
   cover.classList.remove('is-active');
   initX = root.style.setProperty('--xpos', 150);
   initY = root.style.setProperty('--ypos', 350);
-  clearTimeout(coverOut);
 }
 
+// Sub menu
+function subRun() {
+  sub.forEach(event => {
+    event.addEventListener('click', e => {
+      e.preventDefault();
+      let ph = e.target.parentNode.parentNode.parentNode;
+      ph.classList.toggle('placeholder2');
+      ph.classList.toggle('placeholder1');
+    })
+  })
+}

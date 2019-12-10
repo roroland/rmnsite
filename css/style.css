@@ -606,7 +606,7 @@ a {
     .showFeature.show.show-layout .placeholder1 {
       background-image: url("../images/works/spines1.png"); }
     .showFeature.show.show-layout .placeholder2 {
-      background-image: url("../images/works/spines2.png"); }
+      background-image: url("../images/works/cdr2.jpg"); }
     .showFeature.show.show-css .contentItem-css {
       display: grid; }
     .showFeature.show.show-css .placeholder {
@@ -618,7 +618,7 @@ a {
     .showFeature.show.show-rwd .contentItem-rwd {
       display: grid; }
     .showFeature.show.show-rwd .placeholder {
-      background-image: url("../images/works/traginer1.jpg"); }
+      background-image: url("../images/works/rwd1.png"), url("../images/works/rwd2.png"); }
     .showFeature.show.show-music .contentItem-music {
       display: grid; }
     .showFeature.show.show-music .placeholder {
@@ -874,20 +874,20 @@ a {
   top: auto;
   height: 0;
   display: flex;
-  transform: translateY(-1.85rem);
+  transform: translateY(-1.8rem);
   justify-content: center;
   grid-column: 1 / -1;
   z-index: 0; }
   .subMenu li {
     list-style: none; }
     .subMenu li .is-active {
-      color: rgba(78, 89, 98, 0.5);
+      color: rgba(245, 245, 245, 0.5);
       cursor: pointer;
       pointer-events: none; }
   .subMenu a {
     padding: 0.5rem;
-    color: #4E5962;
-    background: #9CB0BE;
+    color: #fff;
+    background: #EA507C;
     text-decoration: none;
     font-size: .65em; }
 

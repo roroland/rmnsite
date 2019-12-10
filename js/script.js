@@ -88,13 +88,15 @@ function getFeature() {
   showFeature.classList.add('show', 'show-' + itemNavId);
   subRun();
   cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
-  if (coverActive) {
-    setTimeout(function () {
-      coverOut();
+    let time = setTimeout(() => {
       coverActive = false;
-    }, 1500);
-  }
-  move();
+      cover.classList.add('is-active');
+      if (coverActive == false) {
+       clearTimeout(time);
+       move();
+       console.log('cleared');
+     }
+    }, 1000);
 }
 
 // Move placeholder
@@ -112,10 +114,7 @@ function move() {
   placeholder.removeEventListener(('touchend', 'touchleave', 'mouseout', 'mouseleave'), listener);
 }
 
-// Fade cover for placeholder
-function coverOut() {
-  cover.classList.add('is-active');
-}
+
 
 
 // Close feature modal

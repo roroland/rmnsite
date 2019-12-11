@@ -166,7 +166,7 @@
   &.is-active span {
     @for $i from 1 to 17 {
       &:nth-child(#{$i}) {
-        animation-delay: $i * .05s;
+        animation-delay: $i * .065s;
         animation-name: flip;
         animation-timing-function: cubic-bezier(.02, .53, .62, 1.21);
         animation-duration: 1s;
@@ -196,12 +196,12 @@
     }
 
     &::after {
-      background: setcolor(gray, pale);
+      background: setcolor(brand, palered);
       z-index: 5;
     }
 
     &::before {
-      background: setcolor(gray, light);
+      background: setcolor(brand, red);
       backface-visibility: hidden;
       z-index: 10;
     }

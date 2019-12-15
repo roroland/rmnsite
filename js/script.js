@@ -38,15 +38,15 @@ itemNav.forEach(function (item) {
       showFeature.scrollIntoView({block: 'center'});
       getFeature();
     } else {
+      itemNavId = this.getAttribute('id');
+      showFeature.className = 'showFeature';
+      getFeature();
       itemNav.forEach(function (item) {
         item.classList.remove('is-active');
       });
-      // itemNavId = this.getAttribute('id');
-      // getFeature();
     }
     
     this.classList.toggle('is-active');
-    
   }
 });
 

@@ -137,6 +137,10 @@ function subRun() {
     event.addEventListener('click', e => {
       e.preventDefault();
       e.stopPropagation();
+      sub.forEach(anchor => {
+        anchor.classList.remove('is-active');
+      })
+      e.target.classList.add('is-active');
       let ph = e.target.parentNode.parentNode.parentNode;
       ph.classList.toggle('placeholder2');
       ph.classList.toggle('placeholder1');

@@ -1,4 +1,4 @@
-const itemNav = document.querySelectorAll('.itemNav li a');
+const itemNav = document.querySelectorAll('.itemNav > li > a');
 const itemAnim = document.querySelectorAll('.animatable');
 const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
@@ -12,7 +12,7 @@ let cover = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
-let sub = document.querySelectorAll('.subMenu li a');
+let sub = document.querySelectorAll('.subMenu > li > a');
 
 // More about
 more.addEventListener('click', function (e) {
@@ -30,23 +30,19 @@ more.addEventListener('click', function (e) {
 
 // Menu
 itemNav.forEach(function (item) {
-  
   item.onclick = function (e) {
     e.preventDefault();
+    this.classList.toggle('is-active');
     if (itemNavId == '') {
       itemNavId = this.getAttribute('id');
-      showFeature.scrollIntoView({block: 'center'});
       getFeature();
-    } else {
+    } else if (itemNavId !== '') {
       itemNavId = this.getAttribute('id');
-      showFeature.className = 'showFeature';
       getFeature();
       itemNav.forEach(function (item) {
         item.classList.remove('is-active');
       });
     }
-    
-    this.classList.toggle('is-active');
   }
 });
 
@@ -85,12 +81,17 @@ itemAnim.forEach(itm => {
 // Open feature
 function getFeature() {
   coverActive = true;
-  showFeature.classList.add('show', 'show-' + itemNavId);
-  subRun();
+  showFeature.className = '';
+  showFeature.classList.add('showFeature', 'show', 'show-' + itemNavId);
+  showFeature.scrollIntoView({block: 'center'});
   cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
+  subRun();
+
     let time = setTimeout(() => {
       coverActive = false;
-      cover.classList.add('is-active');
+      if (cover !== null) {
+        cover.classList.add('is-active');
+      }
       if (coverActive == false) {
        clearTimeout(time);
        move();
@@ -123,7 +124,9 @@ function close(e) {
   e.preventDefault();
   showFeature.classList = 'showFeature';
   itemNavId = '';
-  cover.classList.remove('is-active');
+  if (cover !== null) {
+    cover.classList.remove('is-active');
+  }
   initX = root.style.setProperty('--xpos', 150);
   initY = root.style.setProperty('--ypos', 350);
 }
@@ -133,9 +136,10 @@ function subRun() {
   sub.forEach(event => {
     event.addEventListener('click', e => {
       e.preventDefault();
+      e.stopPropagation();
       let ph = e.target.parentNode.parentNode.parentNode;
       ph.classList.toggle('placeholder2');
       ph.classList.toggle('placeholder1');
-    })
+    }, true)
   })
 }

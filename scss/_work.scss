@@ -56,6 +56,7 @@
       text-align: center;
       position: relative;
       padding: $component-space 0;
+      will-change: transform, top;
       a{
         display: flex;
         align-items: center;

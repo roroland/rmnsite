@@ -14,11 +14,14 @@
 
 .gallery{
   display: grid;
-  width: 100%;
   position: relative;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 1fr;
   margin: $component-space 0 0;
-  padding-right: $component-space;
+  width: 100%;
+  @media only screen and (min-width: 40em){
+    padding-right: $component-space;
+    grid-template-columns: 250px 1fr;
+  }
   img{
     border: 1pt solid setcolor(gray, normal);
     max-width: 100%;
@@ -30,11 +33,30 @@
     }
   }
   .brand{
+    display: flex;
     border: 0;
     filter: saturate(0);
-    max-width: 200px;
     position: sticky;
     top: 0;
+    width: 100%;
+    z-index: 10;
+    @media only screen and (max-width: 47.99em){
+      background-color: white;
+    }
+    @media only screen and (min-width: 48em){
+      display: block;
+      background-color: none;
+    }
+    img{
+      align-self: flex-start;
+      border: 0;
+      max-width: 120px;
+      position: sticky;
+      top: 0;
+      @media only screen and (min-width: 48em){
+        max-width: 200px;
+      }
+    }
   }
   .gallery-items{
     display: grid;

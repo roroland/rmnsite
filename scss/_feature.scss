@@ -95,6 +95,7 @@
     border-top: 2px solid rgba(setcolor(gray, dark), .025);
     border-bottom: 2px solid rgba(setcolor(gray, dark), .025);
     position: relative;
+    will-change: opacity, scroll-position;
     &::before{
       content: '';
       position: absolute;

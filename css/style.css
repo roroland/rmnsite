@@ -165,16 +165,17 @@ a {
   display: flex;
   color: #4E5962;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   transition: all .3s ease-out;
-  top: 15vh;
   height: 100vh;
   width: 100%;
   text-decoration: none; }
   @media only screen and (min-width: 48em) {
     .avatar--wrapper {
+      justify-content: space-around;
+      top: 15vh;
       height: 100%;
       width: auto; } }
   @media only screen and (min-width: 100em) {
@@ -525,7 +526,8 @@ a {
     flex-flow: column nowrap;
     text-align: center;
     position: relative;
-    padding: 1.5rem 0; }
+    padding: 1.5rem 0;
+    will-change: transform, top; }
     .work .nav [class^='item-'] a {
       display: flex;
       align-items: center;
@@ -638,7 +640,8 @@ a {
     background: #EA507C;
     border-top: 2px solid rgba(80, 80, 80, 0.025);
     border-bottom: 2px solid rgba(80, 80, 80, 0.025);
-    position: relative; }
+    position: relative;
+    will-change: opacity, scroll-position; }
     .showFeature .showFeatureItem::before {
       content: '';
       position: absolute;
@@ -909,11 +912,14 @@ a {
 
 .gallery {
   display: grid;
-  width: 100%;
   position: relative;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 1fr;
   margin: 1.5rem 0 0;
-  padding-right: 1.5rem; }
+  width: 100%; }
+  @media only screen and (min-width: 40em) {
+    .gallery {
+      padding-right: 1.5rem;
+      grid-template-columns: 250px 1fr; } }
   .gallery img {
     border: 1pt solid #E5E5E5;
     max-width: 100%;
@@ -923,11 +929,29 @@ a {
     .gallery img.is-active {
       animation: showImg 1s ease .5s forwards; }
   .gallery .brand {
+    display: flex;
     border: 0;
     filter: saturate(0);
-    max-width: 200px;
     position: sticky;
-    top: 0; }
+    top: 0;
+    width: 100%;
+    z-index: 10; }
+    @media only screen and (max-width: 47.99em) {
+      .gallery .brand {
+        background-color: white; } }
+    @media only screen and (min-width: 48em) {
+      .gallery .brand {
+        display: block;
+        background-color: none; } }
+    .gallery .brand img {
+      align-self: flex-start;
+      border: 0;
+      max-width: 120px;
+      position: sticky;
+      top: 0; }
+      @media only screen and (min-width: 48em) {
+        .gallery .brand img {
+          max-width: 200px; } }
   .gallery .gallery-items {
     display: grid;
     gap: 1rem;

@@ -23,6 +23,9 @@ html{
   font-size: 100%;
   line-height: 1.5;
   scroll-behavior: smooth;
+  @media only screen and (max-width: 47.99em){
+    font-size: 85%;
+  }
   @media only screen and (min-width: 90em){
     font-size: 125%;
   }  
@@ -42,12 +45,15 @@ footer{
   p{
     @extend .h4;
     margin: auto 0 $component-space;
-    flex: 0 50%;
+    flex: 1 50%;
     font-weight: 300;
     color: white;
     display: inline-block;
     padding: .25em .5em 0 $component-space;
     background: rgba(setcolor(brand, dark), .75);
+    @media only screen and (min-width: 48em){
+      flex: 0 50%;
+    }
     a{
       color: setcolor(brand, blue);
     }

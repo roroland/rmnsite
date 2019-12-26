@@ -60,7 +60,10 @@
       grid-column: 1 / -1;
       margin-bottom: $component-space*2;
       p{
-        padding: .25em $component-space 0 0;
+        padding: .25em $component-space 0;
+        @media only screen and (min-width: 48em){
+          padding: .25em $component-space 0 0;
+        }
       }
       &.is-open{
         display: block;
@@ -107,8 +110,6 @@
         }
       }
     }
-
-
     p,
     a{
       @extend .h4;

@@ -40,19 +40,27 @@ footer{
   display: flex;
   justify-content: flex-end;
   background: url('../images/deco-btm.svg') no-repeat;
-  background-size: 100%;
+  background-position-x: right;
+  background-size: cover;
+  margin-top: $component-space*3;
   min-height: 15rem;
+  @media only screen and (min-width: 64em){
+    margin-top: 0;
+    background-size: 100%;
+  }
   p{
     @extend .h4;
-    margin: auto 0 $component-space;
+    background: rgba(setcolor(brand, dark), .75);
+    margin: $component-space*2 $component-space $component-space-small;
     flex: 1 50%;
     font-weight: 300;
     color: white;
     display: inline-block;
-    padding: .25em .5em 0 $component-space;
-    background: rgba(setcolor(brand, dark), .75);
-    @media only screen and (min-width: 48em){
+    padding: $component-space;
+    @media only screen and (min-width: 64em){
       flex: 0 50%;
+      margin: auto 0 $component-space;
+      padding: .25em .5em 0 $component-space;
     }
     a{
       color: setcolor(brand, blue);

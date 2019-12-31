@@ -40,7 +40,6 @@
     .itemNav{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 9.375em min-content;
       justify-content: center;
       list-style: none;
       margin: $component-space auto 0;

@@ -129,6 +129,8 @@ a {
   .line.line-over {
     margin: 1.5rem 0 0;
     top: -2rem; }
+    .line.line-over:last-of-type {
+      top: 0; }
 
 .intro {
   align-items: center;
@@ -933,6 +935,8 @@ a {
   .recent h2,
   .recent h4 {
     text-align: center; }
+  .recent h4 {
+    margin: 1.5rem 0; }
 
 .gallery {
   display: grid;
@@ -949,7 +953,7 @@ a {
     max-width: 100%;
     opacity: 0;
     position: relative;
-    transform: translateY(1.5rem); }
+    transform: translateY(4.5rem); }
     .gallery img.is-active {
       animation: showImg 1s ease .5s forwards; }
   .gallery .brand {

@@ -10,6 +10,9 @@
   h4{
     text-align: center;
   }
+  h4{
+    margin: $component-space 0;
+  }
 }
 
 .gallery{
@@ -27,7 +30,7 @@
     max-width: 100%;
     opacity: 0;
     position: relative;
-    transform: translateY($component-space);
+    transform: translateY($component-space*3);
     &.is-active{
       animation: showImg 1s ease .5s forwards;
     }

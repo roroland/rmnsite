@@ -399,6 +399,14 @@ a {
         .home main .moreAbout {
           grid-column: 4 / 7;
           grid-row: 2; } }
+    .home main .world {
+      border-radius: 50%;
+      padding: 2.25rem 1rem;
+      background: white url("../images/world.svg") repeat-x;
+      background-size: 500px;
+      background-position-x: -50%;
+      overflow: hidden;
+      grid-column: 4 / 6; }
     .home main .timeline {
       grid-column: 1 / -1;
       display: none; }

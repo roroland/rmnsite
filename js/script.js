@@ -50,8 +50,12 @@ let observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
       entry.target.style.animation = `${entry.target.dataset.anim} .75s ${entry.target.dataset.delay} ease-out forwards`;
+      if(entry.target.dataset.duration != null){
+        entry.target.style.animation = `${entry.target.dataset.anim} ${entry.target.dataset.duration} ${entry.target.dataset.delay} ease-out forwards`;
+      }
       observer.unobserve(entry.target);
-    } else {
+    }
+     else {
       entry.target.style.animation = 'none';
     }
   })

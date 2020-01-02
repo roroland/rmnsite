@@ -50,3 +50,10 @@ $component-space-tiny: .5rem;
     opacity: 1;
   }
 }
+
+@keyframes world{
+  to{
+    background-position-x: -90%;
+    opacity: 1;
+  }
+}

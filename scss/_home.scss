@@ -79,19 +79,31 @@
       align-self: center;
       border-radius: 50%;
       padding: 2.25rem $component-space-small;
+      position: relative;
       grid-column: 4 / -1;
       width: 100%;
       height: 100%;
-      outline: 1px solid red;
-      position: relative;
     }
     .world{
-      background: white url('../images/world.svg') repeat-x;
+      background: url('../images/world.svg') repeat-x;
       clip-path: circle(125px at 50%);
       background-size: 350px;
       background-position-x: 100%;
       height: 90%;
       fill: #9CB0BE;
+      position: relative;
+      transform: scale(.5) translateX(-50px);
+      &::after{
+        content: '';
+        position: absolute;
+        box-shadow: inset 0 0 10px red;
+        background: radial-gradient(ellipse at 40% 30%, rgba(setcolor(gray, dark), 0) 50%, rgba(setcolor(gray, dark), .65) 100%), linear-gradient(to right, rgba(setcolor(gray, dark), .15) 0%, rgba(setcolor(gray, dark), 0) 100%);
+        filter: blur(10px);
+        transform: rotateZ(-30deg);
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+      }
     }
     .timeline{
       grid-column: 1 / -1;

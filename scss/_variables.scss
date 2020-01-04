@@ -54,6 +54,8 @@ $component-space-tiny: .5rem;
 @keyframes world{
   to{
     background-position-x: -90%;
+    transform: scale(1) translateX(0);
     opacity: 1;
   }
+
 }

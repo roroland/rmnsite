@@ -107,12 +107,13 @@ function getFeature() {
 // Move placeholder
 function move() {
   wait = false;
-  let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper');
+  let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper .contentItem-text');
   let listener = placeholder.addEventListener(('touchstart', 'touchmove', 'mouseenter', 'mousemove'), e => {
     if (!wait) {
       wait = true;
-      root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetHeight / 2) + "px");
+      root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetWidth / 2) + "px");
       root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");
+
       setTimeout(function () { wait = false; }, 25);
     }
   })

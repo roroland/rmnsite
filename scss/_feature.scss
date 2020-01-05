@@ -110,11 +110,16 @@
       box-shadow: 0 7px 40px 1px rgba(setcolor(gray, dark), .5);
       z-index: 1;
     }
-    
+    > ul{
+      margin-bottom: $component-space;
+    }  
     li {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content 1fr;
       column-gap: $component-space-small;
+    }
+    .link{
+        color: setcolor(brand, darkred);
     }
   }
   

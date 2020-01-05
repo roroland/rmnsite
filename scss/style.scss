@@ -34,7 +34,10 @@ body{
   background: setcolor(gray, lighter);
 }
 
-
+ul{
+  list-style-position: inside;
+  list-style: none;
+}
 
 footer{
   display: flex;

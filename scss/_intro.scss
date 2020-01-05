@@ -120,6 +120,9 @@
         right: -34%;
       }
     }
+    @media only screen and (min-width: 100em){
+      top: $component-space-small;
+    }
   }
   h4{
     animation: fade 1s ease-out 1.5s forwards;
@@ -127,6 +130,10 @@
     @media only screen and (min-width: 48em){
       top: -$component-space*2;;
     }
+    @media only screen and (min-width: 100em){
+      top: -$component-space;
+    }
+
     > span{
       font-weight: 400;
       text-decoration: underline;
@@ -135,6 +142,7 @@
     small{
       display: block;
       color: setcolor(gray, dark);
+      margin-top: $component-space-tiny;
       text-align: center;
       span{
         opacity: 0;
@@ -189,7 +197,7 @@
     &-top{
       top: -$component-space-small;
       @media only screen and (min-width: 100em){
-        top: -35%;
+        top: 0;
       }
     }
   }
@@ -217,7 +225,7 @@
     .submask-top{
       top: -25%;
       @media only screen and (min-width: 100em){
-        top: -40%;
+        top: -$component-space-tiny;
       }
     }
   }

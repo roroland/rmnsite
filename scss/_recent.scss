@@ -30,9 +30,21 @@
     max-width: 100%;
     opacity: 0;
     position: relative;
-    transform: translateY($component-space*3);
+    perspective: 1000px;
+    transform: translateY(5rem) rotateX(85deg) skew(10deg, -5deg);
+    backface-visibility: hidden;
+    transform-origin: 0;
+    transform-style: preserve-3d;
     &.is-active{
-      animation: showImg 1s ease .5s forwards;
+      @for $i from 1 to 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * .25s;
+          animation-name: showImg;
+          animation-timing-function: ease-out;
+          animation-duration: .5s;
+          animation-fill-mode: forwards;
+        }
+      }
     }
   }
   .brand{
@@ -80,7 +92,7 @@
   @keyframes showImg{
     to{
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0) rotateX(0) skew(0, 0);
     }
   }
 }

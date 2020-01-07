@@ -999,9 +999,65 @@ a {
     max-width: 100%;
     opacity: 0;
     position: relative;
-    transform: translateY(4.5rem); }
-    .gallery img.is-active {
-      animation: showImg 1s ease .5s forwards; }
+    perspective: 1000px;
+    transform: translateY(5rem) rotateX(85deg) skew(10deg, -5deg);
+    backface-visibility: hidden;
+    transform-origin: 0;
+    transform-style: preserve-3d; }
+    .gallery img.is-active:nth-child(1) {
+      animation-delay: 0.25s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(2) {
+      animation-delay: 0.5s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(3) {
+      animation-delay: 0.75s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(4) {
+      animation-delay: 1s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(5) {
+      animation-delay: 1.25s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(6) {
+      animation-delay: 1.5s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(7) {
+      animation-delay: 1.75s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(8) {
+      animation-delay: 2s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
+    .gallery img.is-active:nth-child(9) {
+      animation-delay: 2.25s;
+      animation-name: showImg;
+      animation-timing-function: ease-out;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
   .gallery .brand {
     display: flex;
     border: 0;
@@ -1042,7 +1098,7 @@ a {
 @keyframes showImg {
   to {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateY(0) rotateX(0) skew(0, 0); } }
 
 *,
 *::after,

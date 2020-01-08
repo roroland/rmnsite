@@ -22,6 +22,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    [class^='placeholder']{
+      background-size: 160%;
+    }
     @media only screen and (min-width: 64em){
       max-height: 1000px;
     }
@@ -55,6 +58,9 @@
       
       .placeholder1 {
         background-image: url('../images/works/spines2.png');
+      }
+      .placeholder2 {
+        background-image: url('../images/works/spines6.png');
       }
     }
     

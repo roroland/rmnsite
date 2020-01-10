@@ -152,3 +152,5 @@ function subRun() {
     }, true)
   })
 }
+
+gsap.to("#worldA", {duration: 10, translateX: -920, ease: 'none'}, 1);

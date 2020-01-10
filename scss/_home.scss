@@ -84,29 +84,34 @@
       width: 100%;
       height: 100%;
     }
-    .world{
-      background: url('../images/world.svg') repeat-x;
-      clip-path: circle(125px at 50%);
-      background-size: 350px;
-      background-position-x: 200px;
+    .planet--wrapper{
       height: 250px;
       width: 350px;
-      fill: #9CB0BE;
-      position: absolute;
-      right: 35%;
-      transform: scale(.5) translateX(-50px);
-      &::after{
-        content: '';
-        position: absolute;
-        box-shadow: inset 0 0 10px #505050;
-        background: radial-gradient(ellipse at 40% 30%, rgba(setcolor(gray, dark), 0) 50%, rgba(setcolor(gray, dark), .65) 100%), linear-gradient(to top left, rgba(setcolor(gray, dark), .25) 30%, rgba(setcolor(gray, dark), 0) 40%);
-        filter: blur(10px);
-        transform: rotateZ(-30deg);
-        width: 100%;
-        height: 100%;
-        z-index: 9;
-      }
+      transform: scale(.75) translateX(20px) translateY(0);
     }
+    // .world{
+    //   background: url('../images/world.svg') repeat-x;
+    //   clip-path: circle(125px at 50%);
+    //   background-size: 350px;
+    //   background-position-x: 200px;
+    //   height: 250px;
+    //   width: 350px;
+    //   fill: #9CB0BE;
+    //   position: absolute;
+    //   right: 35%;
+    //   transform: scale(.5) translateX(-50px);
+    //   &::after{
+    //     content: '';
+    //     position: absolute;
+    //     box-shadow: inset 0 0 10px #505050;
+    //     background: radial-gradient(ellipse at 40% 30%, rgba(setcolor(gray, dark), 0) 50%, rgba(setcolor(gray, dark), .65) 100%), linear-gradient(to top left, rgba(setcolor(gray, dark), .25) 30%, rgba(setcolor(gray, dark), 0) 40%);
+    //     filter: blur(10px);
+    //     transform: rotateZ(-30deg);
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 9;
+    //   }
+    // }
     .timeline{
       grid-column: 1 / -1;
       display: none;

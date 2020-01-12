@@ -6,6 +6,13 @@ const showFeature = document.querySelector('.showFeature');
 const more = document.querySelector('#more');
 const closeLink = document.querySelector('.close');
 
+const tlm = gsap.timeline({});
+const usa = document.querySelector('.lines #usa');
+const usa2 = document.querySelector('.lines #usa_2');
+const spain = document.querySelector('.lines #spain');
+const itemGeneric = document.querySelectorAll('.generic');
+
+
 let itemNavId = '';
 let closeFeature = '';
 let cover = '';
@@ -61,6 +68,15 @@ let observer = new IntersectionObserver((entries) => {
   })
 });
 
+let generic = new IntersectionObserver((genitems) => {
+ genitems.forEach(genitem => {
+    if (genitem.intersectionRatio > 0) {
+      tlm.resume();
+      generic.unobserve(genitem.target);
+    }
+  })
+});
+
 let imgObs = new IntersectionObserver((images) => {
   images.forEach(image => { 
     if (image.intersectionRatio > 0) {
@@ -81,6 +97,17 @@ imgLazy.forEach(item => {
 itemAnim.forEach(itm => {
   observer.observe(itm)
 });
+itemGeneric.forEach(itmgen => {
+ generic.observe(itmgen)
+});
+
+tlm.pause();
+
+
+tlm.to("#worldA", { duration: 10, translateX: -920, ease: 'none' });
+tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 
 // Open feature
 function getFeature() {
@@ -152,5 +179,3 @@ function subRun() {
     }, true)
   })
 }
-
-gsap.to("#worldA", {duration: 10, translateX: -920, ease: 'none'}, 1);

@@ -420,9 +420,15 @@ a {
       width: 100%;
       height: 100%; }
     .home main .planet--wrapper {
-      height: 250px;
-      width: 350px;
-      transform: scale(0.75) translateX(20px) translateY(0); }
+      height: 350px;
+      width: 450px;
+      transform: scale(0.75) translateX(120px) translateY(0); }
+      .home main .planet--wrapper .lines #usa,
+      .home main .planet--wrapper .lines #usa_2,
+      .home main .planet--wrapper .lines #spain {
+        opacity: 0;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300; }
     .home main .timeline {
       grid-column: 1 / -1;
       display: none; }

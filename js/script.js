@@ -104,7 +104,8 @@ itemGeneric.forEach(itmgen => {
 tlm.pause();
 
 
-tlm.to("#worldA", { duration: 10, translateX: -920, ease: 'none' });
+tlm.to(".planet--wrapper", { duration: 5, opacity:1, translateX: 0, translateY: 0, scale:1, ease: 'power2.out'}, 0);
+tlm.to("#worldA", { duration: 14, scale:1, translateX: -910, ease: 'power1.out' }, 0);
 tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });

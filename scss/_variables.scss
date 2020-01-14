@@ -51,10 +51,3 @@ $component-space-tiny: .5rem;
   }
 }
 
-@keyframes world{
-  to{
-    transform: scale(1) translateX(0) translateY(75px);
-    opacity: 1;
-  }
-
-}

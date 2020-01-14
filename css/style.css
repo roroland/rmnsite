@@ -38,11 +38,6 @@
     transform: translateX(0);
     opacity: 1; } }
 
-@keyframes world {
-  to {
-    transform: scale(1) translateX(0) translateY(75px);
-    opacity: 1; } }
-
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Nunito', sans-serif; }
 
@@ -421,8 +416,11 @@ a {
       height: 100%; }
     .home main .planet--wrapper {
       height: 350px;
-      width: 450px;
-      transform: scale(0.75) translateX(120px) translateY(0); }
+      opacity: 0;
+      transform: scale(0.5) translateX(-300px) translateY(-100px);
+      width: 450px; }
+      .home main .planet--wrapper #worldA path {
+        fill: #9CB0BE; }
       .home main .planet--wrapper .lines #usa,
       .home main .planet--wrapper .lines #usa_2,
       .home main .planet--wrapper .lines #spain {

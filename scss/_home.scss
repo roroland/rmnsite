@@ -78,21 +78,33 @@
     .world--container{
       align-self: center;
       border-radius: 50%;
-      padding: 2.25rem $component-space-small;
+      padding: 2.25rem 0;
       position: relative;
-      grid-column: 4 / -1;
+      grid-column: 1 / -1;
       width: 100%;
       height: 100%;
+      @media only screen and (min-width: 48em){
+        padding: 2.25rem $component-space-small;
+        grid-column: 4 / -1;
+      }
     }
     .planet--wrapper{
-      height: 350px;
+      display: block;
+      margin: 0 auto;
+      height: 250px;
       opacity: 0;
       transform: scale(.5) translateX(-300px) translateY(-100px);
-      width: 450px;
+      width: 95%;
+      @media only screen and (min-width: 48em){
+        height: 350px;
+        width: 450px;
+      }
       #worldA path{
         fill: setcolor(brand, blue);
       }
-
+  #city{
+    transform: scale(0);
+  }
      .lines #usa,
      .lines #usa_2,
      .lines #spain{

@@ -96,6 +96,7 @@
       transform: scale(.5) translateX(-300px) translateY(-100px);
       width: 95%;
       @media only screen and (min-width: 48em){
+        transform: scale(.25) translateX(-1500px) translateY(-500px);
         height: 350px;
         width: 450px;
       }
@@ -128,16 +129,17 @@
       }
       li{
         margin-bottom: $component-space;
+        perspective: 1000px;
         opacity: 0;
         h4{
           margin-left: $component-space;
         }
         @for $i from 1 to 8 {
           &:nth-child(#{$i}) {
-            animation-delay: $i * .5s;
-            animation-name: right;
-            animation-timing-function: cubic-bezier(.02, .53, .62, 1.21);
-            animation-duration: .5s;
+            animation-delay: $i * .25s;
+            animation-name: card;
+            animation-timing-function: cubic-bezier(1,-.41,-.85, 1.25);
+            animation-duration: 1.5s;
             animation-fill-mode: forwards;
             p{
               border-right: 2px solid rgba(setcolor(brand, palered), calc(.15 * #{$i}));

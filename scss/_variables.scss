@@ -50,4 +50,17 @@ $component-space-tiny: .5rem;
     opacity: 1;
   }
 }
-
+@keyframes card {
+  0% {
+    transform: translate(-350px, 50px) rotate(250deg) scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(inherit, 50px) rotate(320deg) rotateY(135deg) scale(inherit);
+    opacity: .5;
+  }
+  100%  {
+    transform: translate(0, 0) rotate(0) scale(inherit);
+    opacity: 1;
+  }
+}

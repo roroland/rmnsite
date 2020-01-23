@@ -356,6 +356,9 @@ a {
   background: url("../images/deco-top.svg") no-repeat;
   background-size: 100%;
   background-position-y: -1px; }
+  @media only screen and (max-width: 48em) {
+    .home {
+      padding: 0; } }
   .home::after {
     background: none; }
   .home .wrapper {
@@ -698,6 +701,9 @@ a {
       display: grid; }
     .showFeature.show.show-music .placeholder {
       background-image: url("../images/works/traginer1.jpg"); }
+    @media only screen and (max-width: 48em) {
+      .showFeature.show.show-music .is-music {
+        grid-column: 1/-1; } }
   .showFeature .close {
     color: white;
     font-size: .75em;
@@ -923,6 +929,9 @@ a {
   .contentItem-text .pic {
     margin: 0 1rem 0 0;
     max-width: 75%; }
+    @media only screen and (max-width: 48em) {
+      .contentItem-text .pic {
+        display: none; } }
   .contentItem-text .all-span {
     padding: 1em 2em;
     font-size: 1.5em;

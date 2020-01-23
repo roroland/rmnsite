@@ -82,6 +82,11 @@
       .placeholder {
         background-image: url('../images/works/traginer1.jpg');
       }
+      .is-music{
+        @media only screen and (max-width: 48em){
+          grid-column: 1/-1;
+        }
+      }
     }
   }
   
@@ -273,6 +278,9 @@
   .pic {
     margin: 0 $component-space-small 0 0;
     max-width: 75%;
+    @media only screen and (max-width: 48em){
+      display: none;
+    }
   }
   .all-span{
     padding: 1em 2em;

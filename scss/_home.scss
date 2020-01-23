@@ -4,6 +4,9 @@
   background: url('../images/deco-top.svg') no-repeat;
   background-size: 100%;
   background-position-y: -1px;
+  @media only screen and (max-width: 48em){
+    padding: 0;
+  }
   &::after{
     background: none;
   }

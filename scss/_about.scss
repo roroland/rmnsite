@@ -1,0 +1,185 @@
+// Home
+
+.about{
+  background: url('../images/deco-top.svg') no-repeat;
+  background-size: 100%;
+  background-position-y: -1px;
+  @media only screen and (max-width: 48em){
+    padding: 0;
+  }
+  &::after{
+    background: none;
+  }
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    @media only screen and (min-width: 87em){
+      max-width: 80vw;
+    }
+  }
+  header{
+    max-width: 80vw;
+    grid-column: 1 / -1;
+    align-self: flex-start;
+    padding: 0 $component-space;
+    margin-bottom: $component-space;
+    h1{
+      color: white;
+      @media only screen and (max-width: 48em){
+        font-size: 1.563rem;
+      }
+      font-size: 2.441rem;
+    }
+  }
+  main{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: $component-space;
+    padding: 6em 0 $component-space 0;
+    overflow: hidden;
+    @media only screen and (min-width: 90em){
+      padding: 8em 0 $component-space 0;
+    }
+    .introAbout{
+      grid-column: 1 / -1;
+      @media only screen and (min-width: 48em){
+        grid-column: 1 / 4;
+        grid-row: 1;
+      }
+      > h2{
+        color: setcolor(gray, dark);
+        font-size: 1.563rem;
+        padding: $component-space-small $component-space $component-space-small $component-space;
+        margin-bottom: 1em;
+        span{
+          font-size: initial;
+        }
+      }
+    }
+    .moreAbout{
+      display: none;
+      grid-column: 1 / -1;
+      margin-bottom: $component-space*2;
+      p{
+        padding: .25em $component-space 0;
+        @media only screen and (min-width: 48em){
+          padding: .25em $component-space 0 0;
+        }
+      }
+      &.is-open{
+        display: block;
+        opacity: 0;
+        animation: left .5s ease-out .5s forwards;
+      }
+      @media only screen and (min-width: 48em){
+        grid-column: 4 / 7;
+        grid-row: 2;
+      }
+    }
+    .world--container{
+      align-self: center;
+      border-radius: 50%;
+      padding: 2.25rem 0;
+      position: relative;
+      grid-column: 1 / -1;
+      width: 100%;
+      height: 100%;
+      @media only screen and (min-width: 48em){
+        padding: 2.25rem $component-space-small;
+        grid-column: 4 / -1;
+      }
+    }
+    .planet--wrapper{
+      display: block;
+      margin: 0 auto;
+      height: 250px;
+      opacity: 0;
+      transform: scale(.5) translateX(-300px) translateY(-100px);
+      width: 95%;
+      @media only screen and (min-width: 48em){
+        transform: scale(.25) translateX(-1500px) translateY(-500px);
+        height: 350px;
+        width: 450px;
+      }
+      #worldA path{
+        fill: setcolor(brand, blue);
+      }
+  #city{
+    transform: scale(0);
+  }
+     .lines #usa,
+     .lines #usa_2,
+     .lines #spain{
+        opacity: 0;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+      }
+    }
+
+    .timeline{
+      grid-column: 1 / -1;
+      display: none;
+      &.is-open{
+        display: block;
+        opacity: 0;
+        animation: right .5s ease-out forwards;
+      }
+      @media only screen and (min-width: 48em){
+        grid-column: 1 / 3;
+        grid-row: 2;
+      }
+      li{
+        margin-bottom: $component-space;
+        perspective: 1000px;
+        opacity: 0;
+        h4{
+          margin-left: $component-space;
+        }
+        @for $i from 1 to 8 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * .25s;
+            animation-name: card;
+            animation-timing-function: cubic-bezier(1,-.41,-.85, 1.25);
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            p{
+              border-right: 2px solid rgba(setcolor(brand, palered), calc(.15 * #{$i}));
+            }
+          }
+        }
+        p:first-child{
+          border-right: 0;
+        }
+      }
+    }
+    p,
+    a{
+      @extend .h4;
+    }
+    p{
+      font-weight: 300;
+      color: setcolor(brand, dark);
+      display: inline-block;
+      padding: .25em .5em 0 $component-space;
+      margin-bottom: $component-space-tiny;
+      > span{
+        @extend .h3;
+        font-weight: 600;
+      }
+      a{
+        font-size: 1rem;
+      }
+    }
+    .pbg{
+      margin: 4rem 0;
+    }
+    .pbg p{
+      background: rgba(setcolor(brand, dark), .05);
+      font-size: 1em;
+    }
+  }
+  
+}
+

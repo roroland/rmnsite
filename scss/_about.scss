@@ -91,7 +91,7 @@
         grid-column: 4 / -1;
       }
     }
-    .planet--wrapper{
+    .world{
       display: block;
       margin: 0 auto;
       height: 250px;
@@ -103,7 +103,7 @@
         height: 350px;
         width: 450px;
       }
-      #worldA path{
+      #worldVector path{
         fill: setcolor(brand, blue);
       }
   #city{
@@ -172,10 +172,10 @@
         font-size: 1rem;
       }
     }
-    .pbg{
+    .timeline--panel{
       margin: 4rem 0;
     }
-    .pbg p{
+    .timeline--panel p{
       background: rgba(setcolor(brand, dark), .05);
       font-size: 1em;
     }

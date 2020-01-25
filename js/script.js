@@ -104,8 +104,8 @@ itemGeneric.forEach(itmgen => {
 tlm.pause();
 
 
-tlm.to(".planet--wrapper", { duration: 3, opacity:1, translateX: 0, translateY: 0, scale:1, ease: 'power2.out'}, 0);
-tlm.to("#worldA", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
+tlm.to(".world", { duration: 3, opacity:1, translateX: 0, translateY: 0, scale:1, ease: 'power2.out'}, 0);
+tlm.to("#worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
 tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
 tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });

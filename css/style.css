@@ -223,7 +223,7 @@ a {
   .avatar--wrapper h3 {
     background: #4E5962;
     color: #F7F9F9;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     align-self: flex-start;
     width: 100%;
     animation: fade 1s ease-out 1s forwards;
@@ -385,8 +385,7 @@ a {
     grid-column: 1 / -1;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 1.5rem;
-    padding: 6em 0 1.5rem 0;
-    overflow: hidden; }
+    padding: 6em 0 1.5rem 0; }
     @media only screen and (min-width: 90em) {
       .about main {
         padding: 8em 0 1.5rem 0; } }
@@ -1098,6 +1097,7 @@ a {
     @media only screen and (max-width: 47.99em) {
       .workGallery .brand {
         background-color: white;
+        box-shadow: 0px 5px 5px rgba(80, 80, 80, 0.25);
         height: 48px; }
         .workGallery .brand-empty {
           display: none; } }
@@ -1110,7 +1110,9 @@ a {
       border: 0;
       max-width: 120px;
       position: sticky;
-      top: 0; }
+      top: 0;
+      opacity: 1;
+      transform: inherit; }
       @media only screen and (min-width: 48em) {
         .workGallery .brand img {
           max-width: 200px; } }

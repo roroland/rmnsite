@@ -60,13 +60,13 @@
     top: 0;
     width: 100%;
     z-index: 10;
-    
     @media only screen and (max-width: 47.99em){
+      background-color: white;
+      box-shadow: 0px 5px 5px rgba(setcolor(gray, dark), .25);
+      height: 48px;
       &-empty{
         display: none;
       }
-      background-color: white;
-      height: 48px;
     }
     @media only screen and (min-width: 48em){
       display: block;
@@ -78,6 +78,8 @@
       max-width: 120px;
       position: sticky;
       top: 0;
+      opacity: 1;
+      transform: inherit;
       @media only screen and (min-width: 48em){
         max-width: 200px;
       }

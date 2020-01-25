@@ -87,7 +87,7 @@
   h3{
     background: setcolor(brand);
     color: setcolor(gray, lighter);
-    padding: $component-space-tiny $component-space-small;
+    padding: $component-space-small;
     align-self: flex-start;
     width: 100%;
     animation: fade 1s ease-out 1s forwards;

@@ -38,7 +38,6 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: $component-space;
     padding: 6em 0 $component-space 0;
-    overflow: hidden;
     @media only screen and (min-width: 90em){
       padding: 8em 0 $component-space 0;
     }

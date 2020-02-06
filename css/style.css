@@ -80,12 +80,12 @@ footer p {
 
 strong {
   background: rgba(156, 176, 190, 0.15);
-  box-shadow: 3px 3px 0 rgba(156, 176, 190, 0.36);
+  box-shadow: 2px 2px 0 rgba(156, 176, 190, 0.36);
   padding: 0 .15em;
   display: inline-block; }
   .contentItem--wrapper strong {
     background: rgba(77, 28, 53, 0.25);
-    box-shadow: 3px 3px 0 0px rgba(24, 16, 16, 0.36); }
+    box-shadow: 2px 2px 0 0px rgba(24, 16, 16, 0.36); }
 
 p,
 h5,
@@ -738,6 +738,8 @@ a {
       column-gap: 1rem; }
     .showFeature .showFeatureItem .link {
       color: #400717; }
+      .showFeature .showFeatureItem .link:hover {
+        color: white; }
 
 @keyframes frame {
   0% {
@@ -925,12 +927,6 @@ a {
       color: white;
       font-weight: normal;
       padding-bottom: 1.5rem; }
-  .contentItem-text .pic {
-    margin: 0 1rem 0 0;
-    max-width: 75%; }
-    @media only screen and (max-width: 48em) {
-      .contentItem-text .pic {
-        display: none; } }
   .contentItem-text .all-span {
     padding: 1em 2em;
     font-size: 1.5em;

@@ -130,6 +130,9 @@
     }
     .link{
         color: setcolor(brand, darkred);
+        &:hover{
+          color: white;
+        }
     }
   }
   
@@ -274,14 +277,7 @@
     }
   }
   
-  
-  .pic {
-    margin: 0 $component-space-small 0 0;
-    max-width: 75%;
-    @media only screen and (max-width: 48em){
-      display: none;
-    }
-  }
+
   .all-span{
     padding: 1em 2em;
     font-size: 1.5em;

@@ -64,7 +64,7 @@
       p{
         padding: .25em $component-space 0;
         @media only screen and (min-width: 48em){
-          padding: .25em $component-space 0 0;
+          padding: .25em $component-space 0;
         }
       }
       &.is-open{
@@ -158,10 +158,10 @@
       @extend .h4;
     }
     p{
-      font-weight: 300;
       color: setcolor(brand, dark);
+      font-weight: 300;
       display: inline-block;
-      padding: .25em .5em 0 $component-space;
+      padding: .25em $component-space 0;
       margin-bottom: $component-space-tiny;
       > span{
         @extend .h3;

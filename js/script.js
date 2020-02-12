@@ -5,11 +5,6 @@ const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const more = document.querySelector('#more');
 const closeLink = document.querySelector('.close');
-
-const tlm = gsap.timeline({});
-const usa = document.querySelector('.lines #usa');
-const usa2 = document.querySelector('.lines #usa_2');
-const spain = document.querySelector('.lines #spain');
 const itemGeneric = document.querySelectorAll('.generic');
 
 
@@ -19,7 +14,6 @@ let cover = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
-let sub = document.querySelectorAll('.subMenu > li > a');
 
 // More about
 more.addEventListener('click', function (e) {
@@ -101,15 +95,6 @@ itemGeneric.forEach(itmgen => {
  generic.observe(itmgen)
 });
 
-tlm.pause();
-
-
-tlm.to(".world", { duration: 3, opacity:1, translateX: 0, translateY: 0, scale:1, ease: 'power2.out'}, 0);
-tlm.to("#worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
-tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out'});
-tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
-tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
-tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 
 // Open feature
 function getFeature() {
@@ -149,9 +134,6 @@ function move() {
   placeholder.removeEventListener(('touchend', 'touchleave', 'mouseout', 'mouseleave'), listener);
 }
 
-
-
-
 // Close feature modal
 closeLink.addEventListener('click', close);
 function close(e) {
@@ -167,6 +149,8 @@ function close(e) {
 
 // Sub menu
 function subRun() {
+  let sub = document.querySelectorAll('.subMenu > li > a');
+
   sub.forEach(event => {
     event.addEventListener('click', e => {
       e.preventDefault();
@@ -181,3 +165,17 @@ function subRun() {
     }, true)
   })
 }
+
+// Gsap interactions
+const tlm = gsap.timeline({});
+const usa = document.querySelector('.lines #usa');
+const usa2 = document.querySelector('.lines #usa_2');
+const spain = document.querySelector('.lines #spain');
+tlm.pause();
+
+tlm.to(".world", { duration: 3, opacity:1, translateX: 0, translateY: 0, scale:1, ease: 'power2.out'}, 0);
+tlm.to("#worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
+tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
+tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });

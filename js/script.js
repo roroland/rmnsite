@@ -1,21 +1,18 @@
-const itemNav = document.querySelectorAll('.itemNav > li > a');
 const itemAnim = document.querySelectorAll('.animatable');
 const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
-const more = document.querySelector('#more');
-const closeLink = document.querySelector('.close');
 const itemGeneric = document.querySelectorAll('.generic');
 
-
 let itemNavId = '';
-let closeFeature = '';
 let cover = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
 
 // More about
+const more = document.querySelector('#more');
+
 more.addEventListener('click', function (e) {
   e.preventDefault();
   let moreAbout = document.querySelector('.moreAbout');
@@ -30,6 +27,8 @@ more.addEventListener('click', function (e) {
 });
 
 // Menu
+const itemNav = document.querySelectorAll('.itemNav > li > a');
+
 itemNav.forEach(function (item) {
   item.onclick = function (e) {
     e.preventDefault();
@@ -98,11 +97,14 @@ itemGeneric.forEach(itmgen => {
 
 // Open feature
 function getFeature() {
+  const closeLink = document.querySelector('.close');
   coverActive = true;
   showFeature.className = '';
   showFeature.classList.add('showFeature', 'show', 'show-' + itemNavId);
   showFeature.scrollIntoView({block: 'center'});
   cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
+  closeLink.addEventListener('click', close);
+
   subRun();
 
     let time = setTimeout(() => {
@@ -135,7 +137,6 @@ function move() {
 }
 
 // Close feature modal
-closeLink.addEventListener('click', close);
 function close(e) {
   e.preventDefault();
   showFeature.classList = 'showFeature';

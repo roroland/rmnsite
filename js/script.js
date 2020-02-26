@@ -4,7 +4,6 @@ const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const itemGeneric = document.querySelectorAll('.generic');
 
-let itemNavId = '';
 let cover = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
@@ -30,21 +29,18 @@ more.addEventListener('click', function (e) {
 const itemNav = document.querySelectorAll('.itemNav > li > a');
 
 itemNav.forEach(function (item) {
-  item.onclick = function (e) {
+  let itemNavId = item.getAttribute('id');
+  item.addEventListener('click', function (e) {
     e.preventDefault();
-    this.classList.toggle('is-active');
-    if (itemNavId == '') {
-      itemNavId = this.getAttribute('id');
-      getFeature();
-    } else if (itemNavId !== '') {
-      itemNavId = this.getAttribute('id');
-      getFeature();
-      itemNav.forEach(function (item) {
-        item.classList.remove('is-active');
-      });
-    }
-  }
+    itemNav.forEach(function (item) {
+      item.classList.remove('is-active');
+    });
+    item.classList.toggle('is-active');
+    console.log(itemNavId);
+    getFeature(itemNavId);
+  });
 });
+
 
 let uiAnim = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -55,14 +51,14 @@ let uiAnim = new IntersectionObserver((entries) => {
       }
       uiAnim.unobserve(entry.target);
     }
-     else {
+    else {
       entry.target.style.animation = 'none';
     }
   })
 });
 
 let generic = new IntersectionObserver((genitems) => {
- genitems.forEach(genitem => {
+  genitems.forEach(genitem => {
     if (genitem.intersectionRatio > 0) {
       tlm.resume();
       generic.unobserve(genitem.target);
@@ -91,12 +87,12 @@ itemAnim.forEach(itm => {
   uiAnim.observe(itm)
 });
 itemGeneric.forEach(itmgen => {
- generic.observe(itmgen)
+  generic.observe(itmgen)
 });
 
 
 // Open feature
-function getFeature() {
+function getFeature(itemNavId) {
   const closeLink = document.querySelector('.close');
   coverActive = true;
   showFeature.className = '';
@@ -104,32 +100,33 @@ function getFeature() {
   showFeature.scrollIntoView({block: 'center'});
   cover = document.querySelector('.contentItem-' + itemNavId + ' .placeholder');
   closeLink.addEventListener('click', close);
-
+  
   subRun();
-
-    let time = setTimeout(() => {
-      coverActive = false;
-      if (cover !== null) {
-        cover.classList.add('is-active');
-      }
-      if (coverActive == false) {
-       clearTimeout(time);
-       move();
-       console.log('cleared');
-     }
-    }, 1000);
+  
+  let time = setTimeout(() => {
+    coverActive = false;
+    if (cover !== null) {
+      cover.classList.add('is-active');
+    }
+    if (coverActive == false) {
+      clearTimeout(time);
+      move(itemNavId);
+      console.log('cleared');
+    }
+  }, 1000);
 }
 
 // Move placeholder
-function move() {
+function move(itemNavId) {
   wait = false;
+  console.log('es:' + itemNavId);
   let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper .contentItem-text');
   let listener = placeholder.addEventListener(('touchstart', 'touchmove', 'mouseenter', 'mousemove'), e => {
     if (!wait) {
       wait = true;
       root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetWidth / 2) + "px");
       root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");
-
+      
       setTimeout(function () { wait = false; }, 25);
     }
   })
@@ -151,7 +148,7 @@ function close(e) {
 // Sub menu
 function subRun() {
   let sub = document.querySelectorAll('.subMenu > li > a');
-
+  
   sub.forEach(event => {
     event.addEventListener('click', e => {
       e.preventDefault();

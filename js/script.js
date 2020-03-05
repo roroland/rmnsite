@@ -1,3 +1,5 @@
+"use strict";
+
 const itemAnim = document.querySelectorAll('.animatable');
 const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
@@ -5,9 +7,11 @@ const showFeature = document.querySelector('.showFeature');
 const itemGeneric = document.querySelectorAll('.generic');
 
 let cover = '';
+let coverActive = '';
 let root = document.documentElement;
 let initX = root.style.setProperty('--xpos', 150);
 let initY = root.style.setProperty('--ypos', 350);
+let imgSrc = '';
 
 // More about
 const more = document.querySelector('#more');
@@ -86,6 +90,7 @@ imgLazy.forEach(item => {
 itemAnim.forEach(itm => {
   uiAnim.observe(itm)
 });
+
 itemGeneric.forEach(itmgen => {
   generic.observe(itmgen)
 });
@@ -94,6 +99,30 @@ itemGeneric.forEach(itmgen => {
 // Open feature
 function getFeature(itemNavId) {
   const closeLink = document.querySelector('.close');
+  if (itemNavId === 'layout') {
+    fetch('./content/layout.html')
+    .then(function (response) {
+      console.log(response.ok);
+      return response.text();
+    })
+    .then(function (data) {
+      document.getElementById('templateLayout').innerHTML = data;
+      featureUI(itemNavId, closeLink);
+    })
+  } else if (itemNavId === 'rwd') {
+    fetch('./content/rwd.html')
+    .then(function (response) {
+      console.log(response.ok);
+      return response.text();
+    })
+    .then(function (data) {
+      document.getElementById('templateRwd').innerHTML = data;
+      featureUI(itemNavId, closeLink);
+    })
+  }
+}
+
+let featureUI = function (itemNavId, closeLink) {
   coverActive = true;
   showFeature.className = '';
   showFeature.classList.add('showFeature', 'show', 'show-' + itemNavId);
@@ -118,7 +147,7 @@ function getFeature(itemNavId) {
 
 // Move placeholder
 function move(itemNavId) {
-  wait = false;
+  let wait = false;
   console.log('es:' + itemNavId);
   let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper .contentItem-text');
   let listener = placeholder.addEventListener(('touchstart', 'touchmove', 'mouseenter', 'mousemove'), e => {
@@ -148,7 +177,6 @@ function close(e) {
 // Sub menu
 function subRun() {
   let sub = document.querySelectorAll('.subMenu > li > a');
-  
   sub.forEach(event => {
     event.addEventListener('click', e => {
       e.preventDefault();

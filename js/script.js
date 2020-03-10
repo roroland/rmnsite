@@ -119,6 +119,36 @@ function getFeature(itemNavId) {
       document.getElementById('templateRwd').innerHTML = data;
       featureUI(itemNavId, closeLink);
     })
+  } else if (itemNavId === 'css') {
+    fetch('./content/css.html')
+    .then(function (response) {
+      console.log(response.ok);
+      return response.text();
+    })
+    .then(function (data) {
+      document.getElementById('templateCss').innerHTML = data;
+      featureUI(itemNavId, closeLink);
+    })
+  } else if (itemNavId === 'music') {
+    fetch('./content/music.html')
+    .then(function (response) {
+      console.log(response.ok);
+      return response.text();
+    })
+    .then(function (data) {
+      document.getElementById('templateMusic').innerHTML = data;
+      featureUI(itemNavId, closeLink);
+    })
+  } else if (itemNavId === 'ui') {
+    fetch('./content/ui.html')
+    .then(function (response) {
+      console.log(response.ok);
+      return response.text();
+    })
+    .then(function (data) {
+      document.getElementById('templateUi').innerHTML = data;
+      featureUI(itemNavId, closeLink);
+    })
   }
 }
 

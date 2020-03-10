@@ -641,9 +641,9 @@ a {
     .skills-nav .item-css {
       grid-column: 6 / 7; } }
   @media only screen and (min-width: 48em) {
-    .skills-nav .item-ux {
+    .skills-nav .item-ui {
       grid-column: 3 / 4; } }
-  .skills-nav .item-ux .img-item {
+  .skills-nav .item-ui .img-item {
     max-width: 75px; }
   .skills-nav .item-music {
     grid-column: 1 / -1; }
@@ -686,11 +686,11 @@ a {
       display: grid; }
     .showFeature.show.show-css .placeholder {
       background-image: url("../images/works/modular.png"); }
-    .showFeature.show.show-ux .contentItem-ux {
+    .showFeature.show.show-ui .contentItem-ui {
       display: grid; }
-    .showFeature.show.show-ux .placeholder1 {
+    .showFeature.show.show-ui .placeholder1 {
       background-image: url("../images/works/spines2.png"); }
-    .showFeature.show.show-ux .placeholder2 {
+    .showFeature.show.show-ui .placeholder2 {
       background-image: url("../images/works/spines6.png"); }
     .showFeature.show.show-rwd .contentItem-rwd {
       display: grid; }

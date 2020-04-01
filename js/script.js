@@ -5,6 +5,8 @@ const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const itemGeneric = document.querySelectorAll('.generic');
+const gotoTopHook = document.querySelectorAll('.topHide');
+const gotoTop = document.querySelector('.gotoTop');
 
 let cover = '';
 let coverActive = '';
@@ -15,7 +17,6 @@ let imgSrc = '';
 
 // More about
 const more = document.querySelector('#more');
-
 more.addEventListener('click', function (e) {
   e.preventDefault();
   let moreAbout = document.querySelector('.moreAbout');
@@ -44,7 +45,6 @@ itemNav.forEach(function (item) {
     getFeature(itemNavId);
   });
 });
-
 
 let uiAnim = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -82,6 +82,23 @@ let imgObs = new IntersectionObserver((images) => {
   })
 })
 
+let gotoObs = new IntersectionObserver((topItems) => {
+  topItems.forEach(topItem => {
+    if (topItem.intersectionRatio === 0) {
+      gotoTop.style.display = 'none';
+    }
+    else {
+      gotoTop.style.display = 'block';
+      gotoObs.unobserve(topItem.target);
+    }
+  })
+});
+
+if (window.matchMedia("(max-width: 48em)").matches) {
+  gotoTopHook.forEach(toplink => {
+    gotoObs.observe(toplink);
+  });
+} 
 
 imgLazy.forEach(item => {
   imgObs.observe(item);
@@ -196,12 +213,13 @@ function move(itemNavId) {
 function close(e) {
   e.preventDefault();
   showFeature.classList = 'showFeature';
-  itemNavId = '';
+  e.itemNavId = '';
   if (cover !== null) {
     cover.classList.remove('is-active');
   }
   initX = root.style.setProperty('--xpos', 150);
   initY = root.style.setProperty('--ypos', 350);
+  window.scrollBy(0, -window.innerHeight/2);
 }
 
 // Sub menu

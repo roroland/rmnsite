@@ -196,17 +196,16 @@ let featureUI = function (itemNavId, closeLink) {
 function move(itemNavId) {
   let wait = false;
   console.log('es:' + itemNavId);
-  let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper .contentItem-text');
-  let listener = placeholder.addEventListener(('touchstart', 'touchmove', 'mouseenter', 'mousemove'), e => {
+  let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper .placeholder');
+  let listener = placeholder.addEventListener(('mouseenter', 'mousemove'), e => {
     if (!wait) {
       wait = true;
-      root.style.setProperty('--xpos', -e.clientX + (placeholder.offsetWidth / 2) + "px");
-      root.style.setProperty('--ypos', -e.clientY + (placeholder.offsetHeight / 2) + "px");
-      
+        root.style.setProperty('--xpos', -e.clientX + (screen.width - placeholder.offsetWidth)  + "px");
+        root.style.setProperty('--ypos', -e.clientY + (screen.height - placeholder.offsetHeight )  + "px");
       setTimeout(function () { wait = false; }, 25);
     }
   })
-  placeholder.removeEventListener(('touchend', 'touchleave', 'mouseout', 'mouseleave'), listener);
+  placeholder.removeEventListener(('mouseout', 'mouseleave'), listener);
 }
 
 // Close feature modal

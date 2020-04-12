@@ -36,8 +36,18 @@ h5,
 a{
   color: setcolor(brand, darkblue);
   transition: color .3s ease-out;
+  position: relative;
   &:hover{
     color: setcolor(brand, blue);
   }
-
+  &:focus::after,
+  &:active::after{
+    content: '';
+    border-bottom: 1pt dotted lightblue;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: -.25em;
+  }
 }

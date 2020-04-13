@@ -33,9 +33,6 @@
     a{
       padding: $component-space;
       color: setcolor(brand, darkblue);
-      &:hover{
-        color: setcolor(brand, blue);
-      }
     }
   }
 }
@@ -49,7 +46,9 @@
   transition: all .3s ease-out;
   height: 100vh;
   width: 100%;
-  text-decoration: none;
+  a{
+    text-decoration: none;
+  }
   @media only screen and (min-width: 48em){
     justify-content: space-around;
     top: 15vh;

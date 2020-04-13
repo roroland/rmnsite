@@ -79,11 +79,12 @@ footer p {
   font-size: 1.25rem; }
 
 strong {
-  background: rgba(156, 176, 190, 0.15);
-  box-shadow: 2px 2px 0 rgba(156, 176, 190, 0.36);
+  color: #52768d;
   padding: 0 .15em;
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
   .contentItem--wrapper strong {
+    color: currentColor;
     background: rgba(77, 28, 53, 0.25);
     box-shadow: 2px 2px 0 0px rgba(24, 16, 16, 0.36); }
 
@@ -102,9 +103,10 @@ a {
     content: '';
     border-bottom: 1pt dotted lightblue;
     position: absolute;
-    width: 100%;
+    transform: translateX(50%);
+    left: 25%;
+    width: 25%;
     height: 1px;
-    left: 0;
     top: -.25em; }
 
 .container {
@@ -112,6 +114,8 @@ a {
   margin: 0 auto;
   padding: 1rem 0;
   position: relative; }
+  .container a:hover {
+    color: #b9506e; }
   .container::after {
     content: '';
     background-image: url("../images/wave.svg");
@@ -184,8 +188,6 @@ a {
     .intro ul a {
       padding: 1.5rem;
       color: #52768d; }
-      .intro ul a:hover {
-        color: #9CB0BE; }
 
 .avatar--wrapper {
   display: flex;
@@ -196,8 +198,9 @@ a {
   position: relative;
   transition: all .3s ease-out;
   height: 100vh;
-  width: 100%;
-  text-decoration: none; }
+  width: 100%; }
+  .avatar--wrapper a {
+    text-decoration: none; }
   @media only screen and (min-width: 48em) {
     .avatar--wrapper {
       justify-content: space-around;
@@ -618,18 +621,21 @@ a {
     .skills-nav [class^='item-'] p {
       color: #505050;
       position: relative;
+      transition: 3s all ease-out;
       top: 1.5rem; }
     .skills-nav [class^='item-']:hover .img-mask {
-      top: 0; }
+      top: -1rem; }
     .skills-nav [class^='item-']:hover .img-item {
-      filter: blur(3px);
-      opacity: .25;
+      filter: blur(2px);
+      opacity: .15;
       transform: translateY(-1rem); }
+    .skills-nav [class^='item-']:hover p {
+      color: #b9506e; }
     .skills-nav [class^='item-'] .img-item {
       height: 60px;
       filter: blur(0);
       transform: translateY(0);
-      transition: 3s all ease-out;
+      transition: 1s all ease-out;
       position: relative; }
     .skills-nav [class^='item-'] .img-mask {
       display: block;

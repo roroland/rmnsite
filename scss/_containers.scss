@@ -5,6 +5,9 @@
   margin: 0 auto;
   padding: 1rem 0;
   position: relative;
+  a:hover{
+    color: setcolor(brand, palered);
+  }
   &::after{
     content: '';
     background-image: url('../images/wave.svg');

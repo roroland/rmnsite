@@ -72,23 +72,27 @@
         @extend .h4;
         color: setcolor(gray, dark);
         position: relative;
+        transition: 3s all ease-out;
         top: $component-space;
       }
       &:hover{
         .img-mask{
-          top: 0;
+          top: -$component-space-small;
         }
         .img-item{
-          filter: blur(3px);
-          opacity: .25;
+          filter: blur(2px);
+          opacity: .15;
           transform: translateY(-$component-space-small);
+        }
+        p{
+          color: setcolor(brand, palered);
         }
       }
       .img-item{
         height: 60px;
         filter: blur(0);
         transform: translateY(0);
-        transition: 3s all ease-out;
+        transition: 1s all ease-out;
         position: relative;
       }
       .img-mask{

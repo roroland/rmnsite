@@ -784,6 +784,7 @@ a {
       background-color: #b9506e;
       background-position: var(--xpos) var(--ypos);
       background-repeat: no-repeat;
+      font-family: sans-serif;
       min-width: 50%;
       min-height: 100%;
       position: relative;
@@ -916,6 +917,42 @@ a {
     transform: rotate3d(1, 0, 0, 0); }
   100% {
     transform: rotate3d(1, 0, 0, 90deg); } }
+  .placeholder::after {
+    content: '';
+    pointer-events: none;
+    background: rgba(185, 80, 110, 0.35);
+    backdrop-filter: saturate(0%) blur(2px);
+    position: absolute;
+    transition: all .3s ease-out;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0; }
+  .placeholder::before {
+    content: 'Hover Me';
+    position: absolute;
+    color: #fff;
+    left: 0;
+    transform: translate(-50% -50%);
+    text-shadow: 0 2px #b9506e;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    height: 200px;
+    z-index: 10; }
+  .placeholder:hover {
+    cursor: move; }
+    .placeholder:hover::after {
+      content: '';
+      background: rgba(185, 80, 110, 0);
+      backdrop-filter: saturate(100%) blur(0); }
+    .placeholder:hover::before {
+      display: none; }
+    .placeholder:hover .subMenu {
+      display: flex; }
 
 .placeholder-static {
   grid-column: 2 / 3;
@@ -960,6 +997,7 @@ a {
   column-gap: 3rem;
   animation: fade .5s ease-out forwards;
   opacity: 0;
+  position: relative;
   padding: 1rem;
   color: white;
   background: #EA507C;
@@ -979,10 +1017,10 @@ a {
           column-count: 3; } }
 
 .subMenu {
+  display: none;
   position: relative;
   top: auto;
   height: 0;
-  display: flex;
   transform: translateY(-1.8rem);
   justify-content: center;
   grid-column: 1 / -1;

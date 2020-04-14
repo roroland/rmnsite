@@ -39,9 +39,9 @@
 .avatar--wrapper{  
   display: flex;
   color: setcolor(brand, dark);
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
   position: relative;
   transition: all .3s ease-out;
   height: 100vh;
@@ -50,6 +50,8 @@
     text-decoration: none;
   }
   @media only screen and (min-width: 48em){
+    align-items: center;
+    flex-flow: column nowrap;
     justify-content: space-around;
     top: 15vh;
     height: 100%;
@@ -132,7 +134,7 @@
     @media only screen and (min-width: 100em){
       top: -$component-space;
     }
-
+    
     > span{
       font-weight: 400;
       text-decoration: underline;
@@ -201,32 +203,35 @@
     }
   }
   &:hover{
-    cursor: pointer;
-    color: currentColor;
-    transform-origin: center;
-    @media only screen and (min-width: 48em){
-      height: 100%;
-    }
-    h3{
-      top: 0;
-    }
-    h4{
-      top: -$component-space-small*4;
+    @media (hover: hover) {
+      cursor: pointer;
+      color: currentColor;
+      transform-origin: center;
       @media only screen and (min-width: 48em){
-        top: -$component-space-small;
+        height: 100%;
       }
-    }
-    img{
-      transition: transform 1s ease-out .25s;
-      transform: scale(.8);
+      h3{
+        top: 0;
+      }
+      h4{
+        top: -$component-space-small*4;
+        @media only screen and (min-width: 48em){
+          top: -$component-space-small;
+        }
+      }
+      img{
+        transition: transform 1s ease-out .25s;
+        transform: scale(.8);
+      }
+      
+      .submask-top{
+        top: -25%;
+        @media only screen and (min-width: 100em){
+          top: -$component-space-tiny;
+        }
+      }
     }
     
-    .submask-top{
-      top: -25%;
-      @media only screen and (min-width: 100em){
-        top: -$component-space-tiny;
-      }
-    }
   }
   
   @keyframes rotate{

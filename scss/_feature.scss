@@ -22,6 +22,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 10;
     [class^='placeholder']{
       background-size: 160%;
     }
@@ -87,6 +89,18 @@
           grid-column: 1/-1;
         }
       }
+    }
+
+    &::before{
+      content: '';
+      clip-path: circle(60% at 0 0);
+      position: absolute;
+      display: block;
+      background: setcolor(brand, palered);
+      mix-blend-mode: soft-light;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
     }
   }
   
@@ -174,19 +188,24 @@
 
 .placeholder {
   display: none;
+  overflow: hidden;
   @media only screen and (min-width: 64em){
     display: grid;
     background-color: setcolor(brand, palered);
     background-position: var(--xpos) var(--ypos);
     background-repeat: no-repeat;
+    border-radius: 50%;
     font-family: sans-serif;
     min-width: 50%;
-    min-height: 100%;
+    min-height: 75vh;
     position: relative;
     grid-column: 2 / 3;
     grid-row: 1;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+  }
+  @media only screen and (min-width: 100em){
+    min-height: 80vh;
   }
   
   &.is-active span {
@@ -246,7 +265,8 @@
     content: '';
     pointer-events: none;
     background: rgba(setcolor(brand, palered), .35);
-    backdrop-filter: saturate(0%) blur(2px);
+    backdrop-filter: saturate(70%) blur(2px);
+    border-radius: 50%;
     position: absolute;
     transition: all .3s ease-out;
     left: 0;

@@ -253,3 +253,31 @@ tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
 tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+
+const introLm = gsap.timeline({});
+const hero = document.querySelector('.heroText');
+const subMask = document.querySelector('.submask');
+const avatarImg = document.querySelector('.avatar-img');
+const avatarLines = document.querySelector('.avatar--wrapper h3');
+const avatarText = document.querySelector('.avatar--wrapper h4');
+const mainNav = document.querySelector('.mainNav');
+
+if (window.matchMedia("(min-width: 48em)").matches) {
+  introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
+  introLm.to(hero, { duration: 1.5, translateY: -150, ease: 'power2.out' }, "+=4.75");
+  introLm.to(avatarLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
+  introLm.to(avatarImg, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(avatarText, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(mainNav, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(hero, { duration: 1.5, translateY: -150, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
+} else {
+  introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
+  introLm.to(hero, { duration: 1.5, translateY: 0, ease: 'power2.out' }, "+=4.75");
+  introLm.to(avatarLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
+  introLm.to(avatarImg, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(avatarText, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(mainNav, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(hero, { duration: 1.5, translateY: 0, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
+}
+
+

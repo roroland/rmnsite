@@ -12,10 +12,10 @@
   @media only screen and (min-width: 100em){
     justify-content: center;
   }
-  nav{
+  .mainNav{
     display: none;
     @media only screen and (min-width: 48em){
-      animation: bottom 1s ease-out 3s forwards;
+      // animation: bottom 1s ease-out 3s forwards;
       display: block;
       top: -$component-space*2;
       opacity: 0;
@@ -47,6 +47,7 @@
   height: 100vh;
   width: 100%;
   a{
+    color: currentColor;
     text-decoration: none;
   }
   @media only screen and (min-width: 48em){
@@ -76,24 +77,83 @@
       transform: scale(.75);
     }
   }
+  .heroText{
+    border-radius: 5px;
+    border: 1pt solid transparent;
+    padding: $component-space-tiny $component-space;
+    display: block;
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    align-self: flex-start;
+    transition: top .25s ease-in-out;
+    @media only screen and (max-width: 47.99em) {
+      border: 0;
+      padding: $component-space 0 0;
+      width: 85%;
+    }
+    @media only screen and (min-width: 48em) {
+      top: 8.5rem;
+    }
+    @media only screen and (min-width: 100em) {
+      top: 5.925rem;
+    }
+    path {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      @for $i from 1 to 36 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * .16s;
+          animation-name: dash;
+          animation-timing-function: ease-in;
+          animation-duration: .6s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+  @keyframes colorBg {
+    from{
+      background-color: transparent;
+    }
+    to{
+      background-color: setcolor(gray, light);
+    }
+  }
+  @keyframes borderColor {
+    from{
+      border: 1pt solid transparent;
+    }
+    to{
+      border: 1pt solid setcolor(gray, normal);
+    }
+  }
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 100;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .heroText{
+    z-index: 20;
+  }
+  .heroText,
   h3,
   h4{
     transition: top .25s ease-in-out;
     position: relative;
     text-align: center;
     font-weight: 300;
-    opacity: 0;
-    z-index: 10;
   }
   h3{
-    background: setcolor(brand);
-    color: setcolor(gray, lighter);
-    padding: $component-space-small;
-    align-self: flex-start;
-    width: 100%;
-    animation: fade 1s ease-out 1s forwards;
-    font-size: 1.25rem;
+    display: none;
+    opacity: 0;
     @media only screen and (min-width: 48em){
+      z-index: 10;
+      color: setcolor(gray, lighter);
+      display: block;
       font-size: 1.563rem;
       padding: 0 $component-space;
       top: $component-space-small*2;
@@ -108,12 +168,11 @@
         position: absolute;
         display: block;
         opacity: 0;
-        animation: fade 1s ease-out 2s forwards;
+        animation: fade 1s ease-out forwards;
       }
       &::after{
         background: url('../images/path-left.svg') no-repeat;
         left: -12.5%;
-        
       }
       &::before{
         content: '';
@@ -121,15 +180,30 @@
         right: -34%;
       }
     }
+    @media only screen and (min-width: 48em) and (orientation: portrait){
+      &::after{
+        background: url('../images/path-left.svg') no-repeat;
+        left: -10.5%;
+      }
+      &::before{
+        right: -32%;
+      }
+    }
+    
     @media only screen and (min-width: 100em){
       top: $component-space-small;
     }
   }
   h4{
-    animation: fade 1s ease-out 1.5s forwards;
+    // animation: fade 1s ease-out 8.5s forwards;
     top: -15%;
+    opacity: 0;
+    z-index: 10;
+    @media only screen and (max-width: 47.99em) and (orientation: landscape){
+      display: none;
+    }
     @media only screen and (min-width: 48em){
-      top: -$component-space*2;;
+      top: -$component-space*1.5;
     }
     @media only screen and (min-width: 100em){
       top: -$component-space;
@@ -154,12 +228,14 @@
     }
   }
   .avatar-img{
+    display: flex;
     position: relative;
     backface-visibility: hidden;
+    justify-content: center;
     z-index: 0;
     overflow: hidden;
+    top: -$component-space*2;
     opacity: 0;
-    animation: fade 1s ease-out .5s forwards;
     // fx blur
     @media only screen and (min-width: 48em){
       &::after,
@@ -192,13 +268,11 @@
     position: absolute;
     z-index: 5;
     transition: bottom .25s ease-out, top .25s ease-out;
-    opacity: 0;
-    animation: fade .5s ease-out forwards;
     
     &-top{
-      top: -$component-space-small;
+      top: -$component-space*2;
       @media only screen and (min-width: 100em){
-        top: 0;
+        top: -3rem;
       }
     }
   }
@@ -216,7 +290,13 @@
       h4{
         top: -$component-space-small*4;
         @media only screen and (min-width: 48em){
-          top: -$component-space-small;
+          top: -2.75rem;
+        }
+      }
+      .heroText{
+        top: 6.5rem;
+        @media only screen and (min-width: 100em){
+          top: 5rem;
         }
       }
       img{
@@ -227,7 +307,7 @@
       .submask-top{
         top: -25%;
         @media only screen and (min-width: 100em){
-          top: -$component-space-tiny;
+          top: -4.5rem;
         }
       }
     }

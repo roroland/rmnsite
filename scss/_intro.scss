@@ -84,6 +84,7 @@
     display: block;
     position: absolute;
     z-index: 99999;
+    max-width: 30rem;
     width: 100%;
     align-self: flex-start;
     transition: top .25s ease-in-out;

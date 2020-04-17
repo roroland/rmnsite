@@ -233,6 +233,7 @@ a {
     display: block;
     position: absolute;
     z-index: 99999;
+    max-width: 30rem;
     width: 100%;
     align-self: flex-start;
     transition: top .25s ease-in-out; }
@@ -1333,6 +1334,9 @@ a {
   position: relative;
   top: -1rem;
   padding: 1.5rem 0 0; }
+
+_::-webkit-full-page-media, _:future, :root .showFeature::before {
+  display: none; }
 
 .work {
   align-items: center;

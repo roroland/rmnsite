@@ -418,3 +418,6 @@
   padding: $component-space 0 0;
 }
 
+_::-webkit-full-page-media, _:future, :root .showFeature::before {
+  display: none;
+}

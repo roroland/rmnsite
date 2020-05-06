@@ -33,6 +33,9 @@ more.addEventListener('click', function (e) {
 // Menu
 const itemNav = document.querySelectorAll('.itemNav > li > a');
 
+const navWrapper = document.querySelector('.mainNav');
+const menuTopHook = document.querySelectorAll('.menuTop');
+
 itemNav.forEach(function (item) {
   let itemNavId = item.getAttribute('id');
   item.addEventListener('click', function (e) {
@@ -93,6 +96,26 @@ let gotoObs = new IntersectionObserver((topItems) => {
     }
   })
 });
+
+let addtopObs = new IntersectionObserver((addtops) => {
+  addtops.forEach(addtop => {
+    if (addtop.intersectionRatio === 0) {
+      navWrapper.classList.add('is-top');
+      console.log('add class');
+    }
+    else {
+      navWrapper.classList.remove('is-top');
+      console.log('remove class');
+
+      // gotoObs.unobserve(topItem.target);
+    }
+  })
+});
+
+menuTopHook.forEach(addTop => {
+  addtopObs.observe(addTop);
+});
+
 
 if (window.matchMedia("(max-width: 48em)").matches) {
   gotoTopHook.forEach(toplink => {
@@ -195,7 +218,6 @@ let featureUI = function (itemNavId, closeLink) {
 // Move placeholder
 function move(itemNavId) {
   let wait = false;
-  console.log('es:' + itemNavId);
   let placeholder = document.querySelector('.contentItem-' + itemNavId + ' .contentItem--wrapper .placeholder');
   let listener = placeholder.addEventListener(('mouseenter', 'mousemove'), e => {
     if (!wait) {

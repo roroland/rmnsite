@@ -39,6 +39,14 @@
 
 <body>
   <main>
+    <nav class="mainNav">
+      <ul>
+        <li><a href="#aboutIntro" tabindex="2">About Me</a></li>
+        <li><a href="#what" tabindex="3">What I Do</a></li>
+        <li><a href="#works" tabindex="4">Recent Work</a></li>
+        <li><a href="#contact" tabindex="5">Contact</a></li>
+      </ul>
+    </nav>
 
   <section class="container intro">
     <div class="avatar--wrapper" role="heading">
@@ -132,20 +140,13 @@
     </a>
 
     </div>
-
-    <nav class="mainNav">
-      <ul>
-        <li><a href="#aboutIntro" tabindex="2">About Me</a></li>
-        <li><a href="#what" tabindex="3">What I Do</a></li>
-        <li><a href="#works" tabindex="4">Recent Work</a></li>
-        <li><a href="#contact" tabindex="5">Contact</a></li>
-      </ul>
-    </nav>
   </section>
-  <section class="container about" id="aboutIntro">
+  <div class="menuTop">
+
+  <section class="container about">
     <div class="wrapper">
       <header>
-        <h1>About Me</h1>
+        <h1>About Me <span id="aboutIntro" class="offset" data-offset="about"></span></h1>
       </header>
       <div class="aboutSummary">
         <div class="introAbout animatable" data-delay="0s" data-anim="right">
@@ -318,9 +319,9 @@
         </g>
       </svg>
     </div>
-    <div class="skills-nav topHide" id="what">
-      <h2 class="animatable" data-delay="0s" data-anim="right">What I do</h2>
-      <svg class="line animatable" data-delay="1s" data-anim="bottom" width="2" height="100" viewBox="0 0 2 100" xmlns="http://www.w3.org/2000/svg">
+    <div class="skills-nav topHide" >
+      <h2 class="animatable" data-delay="0s" data-anim="right">What I do <span id="what" class="offset" data-offset="what"></span></h2>
+      <svg class="line ani matable" data-delay="1s" data-anim="bottom" width="2" height="100" viewBox="0 0 2 100" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 .5v235" stroke="#979797" fill="none" fill-rule="evenodd"/>
       </svg>
       <nav class="animatable" data-delay=".5s" data-anim="bottom">
@@ -405,8 +406,8 @@
     <svg class="line line-over" width="2" height="164" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 .5v235" stroke="#979797" fill="none" fill-rule="evenodd"/>
     </svg>
-    <h2 id="works" class="animatable" data-delay="0s" data-anim="right">Recent
-      work</h2>
+    <h2 class="animatable" data-delay="0s" data-anim="right">Recent
+      work <span id="works" class="offset" data-offset="work"></span></h2>
 
     <div class="workGallery">
       <div class="brand">
@@ -467,14 +468,18 @@
         href="https://www.linkedin.com/in/rodrigonoales/?locale=en_US"
         target="_blank" tabindex="11">LinkedIn</a> for a deeper look of all my skills</h4>
   </section>
-  <footer id="contact" class="animatable" data-delay=".35s" data-anim="bottom">
+  <footer class="animatable" data-delay=".35s" data-anim="bottom">
     <p class="animatable" data-delay=".5s" data-anim="top">I work remotely for
       teams all over the world, if you need me for your
       next project, just <a href="mailto:roroland@gmail.com" tabindex="12">write
         me</a>.<br>Also you can reach me in <a
         href="https://www.linkedin.com/in/rodrigonoales/" tabindex="13">LinkedIn</a> or <a
-        href="https://twitter.com/roroland" tabindex="14">Twitter</a>.</p>
+        href="https://twitter.com/roroland" tabindex="14">Twitter</a>.
+      <span id="contact" class="offset" data-offset="contact"></span>
+      </p>
   </footer>
+</div>
+
 </main>
 
   <script

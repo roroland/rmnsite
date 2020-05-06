@@ -58,4 +58,19 @@
     }
   }
 }
+.offset{
+  position: relative;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  &[data-offset='about']{
+    top: var(--data-about);
+  }
+  &[data-offset='what']{
+    top: var(--data-what);
+  }
+  &[data-offset='works']{
+    top: var(--data-works);
+  }
+}
 

@@ -33,6 +33,20 @@
       background-position-x: 0%;
     }
   }
+  &.intro{
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0;
+    // min-height: 95vh;
+    @media only screen and (min-width: 48em){
+      padding: inherit;
+    }
+    @media only screen and (min-width: 100em){
+      justify-content: center;
+    }
+  }
   &.featurebtm--three{
     &::after{
       content: '';
@@ -58,6 +72,8 @@
     }
   }
 }
+
+// Anchors offsets
 .offset{
   position: relative;
   display: inline-block;

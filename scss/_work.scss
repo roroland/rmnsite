@@ -79,10 +79,12 @@
       border: 0;
       max-width: 120px;
       position: sticky;
+      left: .75rem;
       top: $component-space;
       opacity: 1;
       transform: inherit;
       @media only screen and (min-width: 48em){
+        left: 0;
         max-width: 200px;
       }
     }

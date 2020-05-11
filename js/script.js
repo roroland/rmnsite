@@ -5,8 +5,6 @@ const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const itemGeneric = document.querySelectorAll('.generic');
-const gotoTopHook = document.querySelectorAll('.topHide');
-const gotoTop = document.querySelector('.gotoTop');
 
 let cover = '';
 let coverActive = '';
@@ -32,10 +30,6 @@ more.addEventListener('click', function (e) {
 
 // Menu
 const itemNav = document.querySelectorAll('.itemNav > li > a');
-
-const navWrapper = document.querySelector('.mainNav');
-const menuTopHook = document.querySelectorAll('.menuTop');
-
 itemNav.forEach(function (item) {
   let itemNavId = item.getAttribute('id');
   item.addEventListener('click', function (e) {
@@ -85,43 +79,28 @@ let imgObs = new IntersectionObserver((images) => {
   })
 })
 
-let gotoObs = new IntersectionObserver((topItems) => {
-  topItems.forEach(topItem => {
-    if (topItem.intersectionRatio === 0) {
-      gotoTop.style.display = 'none';
+
+const navWrapper = document.querySelector('.intro');
+const navWrapperDest = document.querySelector('.mainNav');
+
+const options = {
+  root: null, // sets the framing element to the viewport
+  threshold: 0.5
+}
+function handleIntersection(entries) {
+
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      navWrapperDest.classList.add('is-top');
+    } else {
+      navWrapperDest.classList.remove('is-top');
     }
-    else {
-      gotoTop.style.display = 'block';
-      gotoObs.unobserve(topItem.target);
-    }
-  })
-});
-
-let addtopObs = new IntersectionObserver((addtops) => {
-  addtops.forEach(addtop => {
-    if (addtop.intersectionRatio === 0) {
-      navWrapper.classList.add('is-top');
-      console.log('add class');
-    }
-    else {
-      navWrapper.classList.remove('is-top');
-      console.log('remove class');
-
-      // gotoObs.unobserve(topItem.target);
-    }
-  })
-});
-
-menuTopHook.forEach(addTop => {
-  addtopObs.observe(addTop);
-});
-
-
-if (window.matchMedia("(max-width: 48em)").matches) {
-  gotoTopHook.forEach(toplink => {
-    gotoObs.observe(toplink);
   });
-} 
+}
+
+const menuobserver = new IntersectionObserver(handleIntersection, options);
+menuobserver.observe(navWrapper);
+ 
 
 imgLazy.forEach(item => {
   imgObs.observe(item);

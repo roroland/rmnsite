@@ -140,6 +140,18 @@ a {
     background-position-x: -300%; }
   100% {
     background-position-x: 0%; } }
+  .container.intro {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0; }
+    @media only screen and (min-width: 48em) {
+      .container.intro {
+        padding: inherit; } }
+    @media only screen and (min-width: 100em) {
+      .container.intro {
+        justify-content: center; } }
   .container.featurebtm--three::after {
     content: '';
     background: url("../images/deco-invertsml-3.svg") no-repeat;
@@ -188,10 +200,13 @@ a {
   z-index: 999; }
   .mainNav ul {
     display: flex;
-    flex: 0 1 40%;
+    flex: 0 88%;
     list-style: none;
     justify-content: space-between;
     transition: flex .25s linear; }
+    @media only screen and (min-width: 48em) {
+      .mainNav ul {
+        flex: 0 1 40%; } }
     .mainNav ul li {
       font-size: .75rem; }
     .mainNav ul a {
@@ -205,25 +220,20 @@ a {
     width: 100%;
     top: 0; }
     .mainNav.is-top ul {
-      flex: 0 1 50%; }
+      flex: 0 1 90%; }
       .mainNav.is-top ul li {
-        font-size: .9rem; }
+        font-size: .8rem; }
+      @media only screen and (min-width: 48em) {
+        .mainNav.is-top ul {
+          flex: 0 1 50%; }
+          .mainNav.is-top ul li {
+            font-size: .9rem; } }
       .mainNav.is-top ul a {
         color: #52768d;
-        padding: 1.5rem; }
-
-.intro {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  padding: 0; }
-  @media only screen and (min-width: 48em) {
-    .intro {
-      padding: inherit; } }
-  @media only screen and (min-width: 100em) {
-    .intro {
-      justify-content: center; } }
+        padding: 0.5rem; }
+        @media only screen and (min-width: 48em) {
+          .mainNav.is-top ul a {
+            padding: 1.5rem; } }
 
 .avatar--wrapper {
   display: flex;
@@ -235,9 +245,6 @@ a {
   transition: all .3s ease-out;
   height: 100vh;
   width: 100%; }
-  .avatar--wrapper a {
-    color: currentColor;
-    text-decoration: none; }
   @media only screen and (min-width: 48em) {
     .avatar--wrapper {
       align-items: center;
@@ -249,6 +256,13 @@ a {
   @media only screen and (min-width: 100em) {
     .avatar--wrapper {
       top: 0; } }
+  .avatar--wrapper a {
+    color: currentColor;
+    display: block;
+    text-decoration: none; }
+    @media only screen and (min-width: 48em) {
+      .avatar--wrapper a {
+        top: -3rem; } }
   .avatar--wrapper .avatar {
     display: flex;
     flex-flow: column nowrap;
@@ -256,13 +270,12 @@ a {
     align-items: center;
     position: relative;
     width: 100%; }
-  .avatar--wrapper img {
-    transition: transform 1s ease-out;
-    transform: scale(0.65);
-    transform-origin: center; }
-    @media only screen and (min-width: 48em) {
-      .avatar--wrapper img {
-        transform: scale(0.75); } }
+    .avatar--wrapper .avatar img {
+      transform: scale(0.65);
+      transform-origin: center; }
+      @media only screen and (min-width: 48em) {
+        .avatar--wrapper .avatar img {
+          transform: scale(0.75); } }
   .avatar--wrapper .heroText {
     border-radius: 5px;
     border: 1pt solid transparent;
@@ -273,7 +286,8 @@ a {
     max-width: 30rem;
     width: 100%;
     align-self: flex-start;
-    transition: top .25s ease-in-out; }
+    transition: top .25s ease-in-out;
+    z-index: 20; }
     @media only screen and (max-width: 47.99em) {
       .avatar--wrapper .heroText {
         border: 0;
@@ -516,8 +530,6 @@ a {
     stroke-dashoffset: 100; }
   to {
     stroke-dashoffset: 0; } }
-  .avatar--wrapper .heroText {
-    z-index: 20; }
   .avatar--wrapper .heroText,
   .avatar--wrapper h3,
   .avatar--wrapper h4 {
@@ -564,7 +576,6 @@ a {
       .avatar--wrapper h3 {
         top: 1rem; } }
   .avatar--wrapper h4 {
-    top: -15%;
     opacity: 0;
     z-index: 10; }
     @media only screen and (max-width: 47.99em) and (orientation: landscape) {
@@ -596,7 +607,7 @@ a {
     justify-content: center;
     z-index: 0;
     overflow: hidden;
-    top: -3rem;
+    top: 0;
     opacity: 0; }
     @media only screen and (min-width: 48em) {
       .avatar--wrapper .avatar-img::after, .avatar--wrapper .avatar-img::before {
@@ -624,10 +635,7 @@ a {
     z-index: 5;
     transition: bottom .25s ease-out, top .25s ease-out; }
     .avatar--wrapper .submask-top {
-      top: -3rem; }
-      @media only screen and (min-width: 100em) {
-        .avatar--wrapper .submask-top {
-          top: -3rem; } }
+      top: 0; }
   @media (hover: hover) {
     .avatar--wrapper:hover {
       cursor: pointer;
@@ -652,7 +660,7 @@ a {
         top: 5rem; } }
   @media (hover: hover) {
       .avatar--wrapper:hover img {
-        transition: transform 1s ease-out .25s;
+        transition: transform .25s ease-out;
         transform: scale(0.8); }
       .avatar--wrapper:hover .submask-top {
         top: -25%; } }
@@ -1492,11 +1500,13 @@ _::-webkit-full-page-media, _:future, :root .showFeature::before {
       border: 0;
       max-width: 120px;
       position: sticky;
+      left: .75rem;
       top: 1.5rem;
       opacity: 1;
       transform: inherit; }
       @media only screen and (min-width: 48em) {
         .workGallery .brand img {
+          left: 0;
           max-width: 200px; } }
   .workGallery .workGallery-items {
     display: grid;

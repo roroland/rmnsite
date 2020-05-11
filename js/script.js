@@ -80,26 +80,45 @@ let imgObs = new IntersectionObserver((images) => {
 })
 
 
-const navWrapper = document.querySelector('.intro');
-const navWrapperDest = document.querySelector('.mainNav');
-
-const options = {
-  root: null, // sets the framing element to the viewport
-  threshold: 0.5
-}
-function handleIntersection(entries) {
-
-  entries.map((entry) => {
-    if (entry.isIntersecting) {
-      navWrapperDest.classList.add('is-top');
-    } else {
-      navWrapperDest.classList.remove('is-top');
+// const navWrapper = document.querySelector('.intro');
+const menuTopHook = document.querySelectorAll('.menuTop');
+const navWrapper = document.querySelector('.mainNav');
+let addtopObs = new IntersectionObserver((addtops) => {
+  addtops.forEach(addtop => {
+    if (addtop.intersectionRatio === 0) {
+      navWrapper.classList.add('is-top');
+      console.log('add class');
     }
-  });
-}
+    else {
+      navWrapper.classList.remove('is-top');
+      console.log('remove class');
 
-const menuobserver = new IntersectionObserver(handleIntersection, options);
-menuobserver.observe(navWrapper);
+      // gotoObs.unobserve(topItem.target);
+    }
+  })
+});
+
+menuTopHook.forEach(addTop => {
+  addtopObs.observe(addTop);
+});
+// const options = {
+//   root: null, // sets the framing element to the viewport
+//   threshold: 0.5
+// }
+// function handleIntersection(entries) {
+
+//   entries.map((entry) => {
+//     if (entry.isIntersecting) {
+//       navWrapperDest.classList.add('is-top');
+//     } else {
+//       navWrapperDest.classList.remove('is-top');
+//       console.log('out');
+//     }
+//   });
+// }
+
+// const menuobserver = new IntersectionObserver(handleIntersection, options);
+// menuobserver.observe(navWrapper);
  
 
 imgLazy.forEach(item => {

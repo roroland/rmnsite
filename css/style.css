@@ -164,6 +164,9 @@ a {
     left: 0;
     z-index: 1; }
 
+.menuTop {
+  display: block; }
+
 .line {
   margin: 1.5rem 0;
   position: relative; }
@@ -197,7 +200,7 @@ a {
   top: 0;
   max-width: 100%;
   justify-content: center;
-  transition: all .125s ease-in-out;
+  transition: height .125s ease-in-out;
   z-index: 999; }
   .mainNav ul {
     display: flex;
@@ -235,9 +238,6 @@ a {
         @media only screen and (min-width: 48em) {
           .mainNav.is-top ul a {
             padding: 1.5rem; } }
-
-.menuTop {
-  display: block; }
 
 .avatar--wrapper {
   display: flex;

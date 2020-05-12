@@ -61,7 +61,10 @@
     }
   }
 }
-
+.menuTop{
+  // Trigger to switch class for main menu
+  display: block;
+}
 .line{
   margin: $component-space 0;
   position: relative;

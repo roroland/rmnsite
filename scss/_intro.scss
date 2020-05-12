@@ -1,6 +1,9 @@
 // Avatar
 
-
+.menuTop{
+  // Trigger to switch class for main menu
+  display: block;
+}
 .avatar--wrapper{  
   display: flex;
   color: setcolor(brand, dark);

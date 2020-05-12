@@ -80,46 +80,30 @@ let imgObs = new IntersectionObserver((images) => {
 })
 
 
-// const navWrapper = document.querySelector('.intro');
-const menuTopHook = document.querySelectorAll('.menuTop');
-const navWrapper = document.querySelector('.mainNav');
-let addtopObs = new IntersectionObserver((addtops) => {
-  addtops.forEach(addtop => {
-    if (addtop.intersectionRatio === 0) {
-      navWrapper.classList.add('is-top');
-      console.log('add class');
+const navWrapper = document.querySelector('.menuTop');
+const navWrapperMenu = document.querySelector('.mainNav');
+
+const options = {
+  root: document.body.main, 
+  threshold: 0
+}
+function handleIntersection(entries) {
+
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      navWrapperMenu.classList.remove('is-top');
+      console.log('in');
+
+    } else {
+      navWrapperMenu.classList.add('is-top');
+      console.log('out');
     }
-    else {
-      navWrapper.classList.remove('is-top');
-      console.log('remove class');
+  });
+}
 
-      // gotoObs.unobserve(topItem.target);
-    }
-  })
-});
+const menuobserver = new IntersectionObserver(handleIntersection, options);
+menuobserver.observe(navWrapper);
 
-menuTopHook.forEach(addTop => {
-  addtopObs.observe(addTop);
-});
-// const options = {
-//   root: null, // sets the framing element to the viewport
-//   threshold: 0.5
-// }
-// function handleIntersection(entries) {
-
-//   entries.map((entry) => {
-//     if (entry.isIntersecting) {
-//       navWrapperDest.classList.add('is-top');
-//     } else {
-//       navWrapperDest.classList.remove('is-top');
-//       console.log('out');
-//     }
-//   });
-// }
-
-// const menuobserver = new IntersectionObserver(handleIntersection, options);
-// menuobserver.observe(navWrapper);
- 
 
 imgLazy.forEach(item => {
   imgObs.observe(item);

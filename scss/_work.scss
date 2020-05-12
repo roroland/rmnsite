@@ -55,7 +55,6 @@
   .brand{
     display: flex;
     border: 0;
-    filter: saturate(0);
     position: sticky;
     top: $component-space;
     width: 100%;
@@ -75,15 +74,17 @@
 
     }
     img{
-      align-self: flex-start;
-      border: 0;
-      max-width: 120px;
-      position: sticky;
-      left: .75rem;
-      top: $component-space;
       opacity: 1;
+      position: sticky;
+      border: 0;
       transform: inherit;
-      @media only screen and (min-width: 48em){
+      top: $component-space;
+      @media only screen and (max-width: 48em) {
+        align-self: flex-start;
+        max-width: 120px;
+        left: .75rem;
+      }
+      @media only screen and (min-width: 48.01em){
         left: 0;
         max-width: 200px;
       }

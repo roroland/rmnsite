@@ -1,8 +1,5 @@
 // Home
 .about{
-  background: url('../images/deco-top.svg') no-repeat;
-  background-size: 100%;
-  background-position-y: -1px;
   @media only screen and (max-width: 48em){
     padding: 0;
   }
@@ -13,6 +10,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
     @media only screen and (min-width: 87em){
       max-width: 80vw;
     }
@@ -22,7 +21,7 @@
     grid-column: 1 / -1;
     align-self: flex-start;
     padding: 0 $component-space;
-    margin-bottom: $component-space;
+    margin-top: $component-space;
     h1{
       color: white;
       @media only screen and (max-width: 48em){

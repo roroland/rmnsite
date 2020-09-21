@@ -8,29 +8,17 @@
   a:hover{
     color: setcolor(brand, palered);
   }
-  &::after{
-    content: '';
-    background-image: url('../images/wave.svg');
-    background-size: cover;
-    background-repeat: repeat-x;
-    position: absolute;
+  .test{
     width: 100%;
-    min-height: 50px;
-    bottom: -1px;
+    min-height: 384px;
+    position: absolute;
     left: 0;
-    z-index: 1;
-    animation: wave 8s ease-in-out infinite;
-  }
-
-  @keyframes wave {
-    0%{
-      background-position-x: 0;
-    }
-    50%{
-      background-position-x: -300%;
-    }
-    100%{
-      background-position-x: 0%;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+    #middle{
+      transform-origin: center;
     }
   }
   &.intro{

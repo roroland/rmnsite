@@ -62,7 +62,11 @@ let generic = new IntersectionObserver((genitems) => {
   genitems.forEach(genitem => {
     if (genitem.intersectionRatio > 0) {
       tlm.resume();
-      generic.unobserve(genitem.target);
+      console.log('enter');
+    }
+    else {
+      console.log('exit');
+      tlm.pause();
     }
   })
 });
@@ -245,18 +249,22 @@ function subRun() {
 
 // Gsap interactions
 const tlm = gsap.timeline({});
-const usa = document.querySelector('.lines .usa');
-const city = document.querySelector('.city');
-const usa2 = document.querySelector('.lines .usa_2');
-const spain = document.querySelector('.lines .spain');
+const decomiddle = document.querySelector('#middle');
+const decogrey = document.querySelector('#grey');
+const decoredtop = document.querySelector('#redtop');
+const decoblue = document.querySelector('#blue');
+
 tlm.pause();
 
-tlm.to(".world", { duration: 3, opacity:1, translateX: 0, translateY: 0, scale:1, ease: 'power2.out'}, 0);
-tlm.to(".worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
-tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
-tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
-tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
-tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+tlm.to(decomiddle, { duration: 5, repeat: -1, translateX: -500, ease: 'none', yoyo: true}, 0);
+tlm.to(decogrey, { duration: 3, repeat: -1, translateX: -500, ease: 'power2.inOut', yoyo: true}, 1.5);
+tlm.to(decoredtop, { duration: 3, repeat: -1, translateX: -500, ease: 'power4.inOut', yoyo: true}, 1.5);
+tlm.to(decoblue, { duration: 4, repeat: -1, translateX: -500, ease: 'none', yoyo: true}, 1.5);
+// tlm.to(".worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
+// tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
+// tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+// tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
+// tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 
 const introLm = gsap.timeline({});
 const hero = document.querySelector('.heroText');

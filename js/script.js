@@ -256,10 +256,10 @@ const decoblue = document.querySelector('#blue');
 
 tlm.pause();
 
-tlm.to(decomiddle, { duration: 5, repeat: -1, translateX: -500, ease: 'none', yoyo: true}, 0);
-tlm.to(decogrey, { duration: 3, repeat: -1, translateX: -500, ease: 'power2.inOut', yoyo: true}, 1.5);
-tlm.to(decoredtop, { duration: 3, repeat: -1, translateX: -500, ease: 'power4.inOut', yoyo: true}, 1.5);
-tlm.to(decoblue, { duration: 4, repeat: -1, translateX: -500, ease: 'none', yoyo: true}, 1.5);
+tlm.to(decomiddle, { duration: 10, repeat: -1, translateX: -400, ease: 'power3.inOut', yoyo: true}, 0);
+tlm.from(decogrey, { duration: 8, repeat: -1, translateX: -600, ease: 'power4.inOut', yoyo: true}, 1);
+tlm.to(decoredtop, { duration: 7, repeat: -1, translateX: -550, ease: 'none', yoyo: true}, -.5);
+tlm.from(decoblue, { duration: 8, repeat: -1, translateX: -500, ease: 'power1.inOut', yoyo: true}, 1.5);
 // tlm.to(".worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
 // tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
 // tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });

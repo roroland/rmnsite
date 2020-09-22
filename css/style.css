@@ -137,12 +137,13 @@ a {
     flex-flow: column nowrap;
     justify-content: space-between;
     padding: 0;
-    min-height: 90vh; }
+    min-height: 80vh; }
     @media only screen and (min-width: 48em) {
       .container.intro {
         padding: inherit; } }
     @media only screen and (min-width: 100em) {
       .container.intro {
+        min-height: 90vh;
         justify-content: center; } }
   .container.featurebtm--three::after {
     content: '';
@@ -699,7 +700,7 @@ a {
   grid-column: 1 / -1;
   align-self: flex-start;
   padding: 0 1.5rem;
-  margin-top: 1.5rem; }
+  margin-top: 6rem; }
   .about header h1 {
     color: white;
     font-size: 2.441rem; }
@@ -712,10 +713,10 @@ a {
   grid-column: 1 / -1;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1.5rem;
-  padding: 6em 0 1.5rem 0; }
+  padding: 5em 0 1.5rem 0; }
   @media only screen and (min-width: 90em) {
     .about .aboutSummary {
-      padding: 8em 0 1.5rem 0; } }
+      padding: 4em 0 1.5rem 0; } }
   .about .aboutSummary .introAbout {
     grid-column: 1 / -1; }
     @media only screen and (min-width: 48em) {

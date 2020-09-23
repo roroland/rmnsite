@@ -25,26 +25,8 @@
     color: currentColor;
     display: block;
     text-decoration: none;
-    @media only screen and (min-width: 48em){
-      top: -3rem;
-    }
   }
 
-  .avatar{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    img{
-      transform: scale(.65);
-      transform-origin: center;
-      @media only screen and (min-width: 48em){
-        transform: scale(.75);
-      }
-    }
-  }
   .heroText{
     border-radius: 5px;
     border: 1pt solid transparent;
@@ -169,7 +151,7 @@
       display: none;
     }
     @media only screen and (min-width: 48em){
-      top: -$component-space*1.5;
+      top: $component-space*3;
     }
     @media only screen and (min-width: 100em){
       top: -$component-space;
@@ -193,41 +175,7 @@
       }
     }
   }
-  .avatar-img{
-    display: flex;
-    position: relative;
-    backface-visibility: hidden;
-    justify-content: center;
-    z-index: 0;
-    overflow: hidden;
-    top: 0;
-    opacity: 0;
-    // fx blur
-    @media only screen and (min-width: 48em){
-      &::after,
-      &::before{
-        content: '';
-        display: block;
-        border-radius: 40%;
-        position: absolute;
-        bottom: -75%;
-        width: 100%;
-        height: 100%;
-        background: setcolor(gray, lighter);
-        transform-origin: 45% center;
-        filter: blur(8px);
-      }
-      &::after{
-        right: -20%;
-        animation: rotate 30s ease-in-out infinite;
-      }
-      &::before{
-        left: 0%;
-        animation: rotate 35s linear infinite reverse;
-        z-index: 1;
-      }
-    }
-  }
+
   .submask{
     max-width: 100%;
     width: 100%;
@@ -253,7 +201,7 @@
       h4{
         top: -$component-space-small*4;
         @media only screen and (min-width: 48em){
-          top: -2.75rem;
+          top: $component-space-small;
         }
       }
       .heroText{

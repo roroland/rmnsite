@@ -4,7 +4,7 @@ const itemAnim = document.querySelectorAll('.animatable');
 const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
-const itemGeneric = document.querySelectorAll('.generic');
+const itemDecoAnim = document.querySelectorAll('.itemDecoAnim');
 
 let cover = '';
 let coverActive = '';
@@ -43,9 +43,14 @@ itemNav.forEach(function (item) {
   });
 });
 
+// UI blocks IO
+let uiAnimOptions = {
+  threshold: 0,
+  rootMargin: '-150px 0px'
+};
 let uiAnim = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
+    if (entry.isIntersecting) {
       entry.target.style.animation = `${entry.target.dataset.anim} .75s ${entry.target.dataset.delay} ease-out forwards`;
       if(entry.target.dataset.duration != null){
         entry.target.style.animation = `${entry.target.dataset.anim} ${entry.target.dataset.duration} ${entry.target.dataset.delay} ease-out forwards`;
@@ -54,36 +59,57 @@ let uiAnim = new IntersectionObserver((entries) => {
     }
     else {
       entry.target.style.animation = 'none';
+      return;
     }
   })
+}, uiAnimOptions);
+itemAnim.forEach(itm => {
+  uiAnim.observe(itm)
 });
+// end
 
-let generic = new IntersectionObserver((genitems) => {
-  genitems.forEach(genitem => {
-    if (genitem.intersectionRatio > 0) {
+// Main deco IO
+let decoAnimOptions = {
+  threshold: 0.10
+}
+let decoAnim = new IntersectionObserver((decoitems) => {
+  decoitems.forEach(decoitem => {
+    if (decoitem.isIntersecting) {
       tlm.resume();
-      console.log('enter');
     }
     else {
-      console.log('exit');
       tlm.pause();
+      return;
     }
   })
+}, decoAnimOptions);
+itemDecoAnim.forEach(decoItem => {
+  decoAnim.observe(decoItem)
 });
+// end
 
-let imgObs = new IntersectionObserver((images) => {
-  images.forEach(image => { 
-    if (image.intersectionRatio > 0) {
+// Portfolio images IO
+let imgAnimOptions = {
+  threshold: 0,
+  rootMargin: '50px 0px'
+};
+let imgAnimObs = new IntersectionObserver((images) => {
+  images.forEach(image => {
+    if (image.isIntersecting) {
       let obsSrc = image.target.dataset.source;
       image.target.src = obsSrc;
       imgSrc = obsSrc;
       image.target.classList.add('is-active');
-      imgObs.unobserve(image.target);
-    }
+      imgAnimObs.unobserve(image.target);
+    } 
   })
-})
+}, imgAnimOptions);
+imgLazy.forEach(item => {
+  imgAnimObs.observe(item);
+});
+// end
 
-
+// Menu wrapper IO
 const navWrapper = document.querySelector('.menuTop');
 const navWrapperMenu = document.querySelector('.mainNav');
 
@@ -92,34 +118,20 @@ const options = {
   threshold: 0
 }
 function handleIntersection(entries) {
-
   entries.map((entry) => {
     if (entry.isIntersecting) {
       navWrapperMenu.classList.remove('is-top');
-      console.log('in');
-
+      // console.log('in');
     } else {
       navWrapperMenu.classList.add('is-top');
-      console.log('out');
+      // console.log('out');
     }
   });
 }
 
 const menuobserver = new IntersectionObserver(handleIntersection, options);
 menuobserver.observe(navWrapper);
-
-
-imgLazy.forEach(item => {
-  imgObs.observe(item);
-});
-
-itemAnim.forEach(itm => {
-  uiAnim.observe(itm)
-});
-
-itemGeneric.forEach(itmgen => {
-  generic.observe(itmgen)
-});
+// end
 
 
 // Open feature
@@ -269,7 +281,6 @@ tlm.from(decoblue, { duration: 8, repeat: -1, translateX: -500, ease: 'power1.in
 const introLm = gsap.timeline({});
 const hero = document.querySelector('.heroText');
 const subMask = document.querySelector('.submask');
-const avatarImg = document.querySelector('.avatar-img');
 const avatarLines = document.querySelector('.avatar--wrapper h3');
 const avatarText = document.querySelector('.avatar--wrapper h4');
 const mainNav = document.querySelector('.mainNav');
@@ -278,7 +289,6 @@ if (window.matchMedia("(min-width: 48em)").matches) {
   introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
   introLm.to(hero, { duration: 1.5, translateY: -150, ease: 'power2.out' }, "+=4.75");
   introLm.to(avatarLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
-  introLm.to(avatarImg, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
   introLm.to(avatarText, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
   introLm.to(mainNav, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
   introLm.to(hero, { duration: 1.5, translateY: -150, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");

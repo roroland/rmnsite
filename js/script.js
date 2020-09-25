@@ -5,6 +5,8 @@ const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const itemDecoAnim = document.querySelectorAll('.itemDecoAnim');
+const itemPlanet = document.querySelector('.world--container');
+
 
 let cover = '';
 let coverActive = '';
@@ -67,6 +69,20 @@ itemAnim.forEach(itm => {
   uiAnim.observe(itm)
 });
 // end
+
+// // Planet observer
+// let planetOptions = {
+//   threshold: 0
+// };
+// let planetAnim = new IntersectionObserver((planets) => {
+//   planets.forEach(planet => {
+//     if (planet.isIntersecting) {
+//       itemPlanet.querySelector('.world').classList.add('is-active');
+//     }
+//   })
+// }, planetOptions);
+// planetAnim.observe(itemPlanet);
+// // end
 
 // Main deco IO
 let decoAnimOptions = {

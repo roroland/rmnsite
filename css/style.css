@@ -702,9 +702,12 @@ a {
     @media only screen and (min-width: 48em) {
       .about .aboutSummary .moreAbout {
         grid-column: 4 / 7;
-        grid-row: 2; } }
+        grid-row: 2;
+        margin-top: 3rem; } }
   .about .aboutSummary .world--container {
-    align-self: center;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
     border-radius: 50%;
     padding: 2.25rem 0;
     position: relative;
@@ -713,31 +716,44 @@ a {
     height: 100%; }
     @media only screen and (min-width: 48em) {
       .about .aboutSummary .world--container {
-        padding: 2.25rem 1rem;
+        padding: 1rem 1rem;
         grid-column: 4 / -1; } }
-  .about .aboutSummary .world {
-    display: block;
-    margin: 0 auto;
-    height: 250px;
-    max-width: 100%;
-    opacity: 0;
-    transform: scale(0.5) translateX(-300px) translateY(-100px);
-    width: 95%; }
-    @media only screen and (min-width: 48em) {
-      .about .aboutSummary .world {
-        transform: scale(0.25) translateX(-1500px) translateY(-500px);
-        height: 350px;
-        width: 440px; } }
-    .about .aboutSummary .world .worldVector path {
-      fill: #9CB0BE; }
-    .about .aboutSummary .world .city {
-      transform: scale(0); }
-    .about .aboutSummary .world .lines .usa,
-    .about .aboutSummary .world .lines .usa_2,
-    .about .aboutSummary .world .lines .spain {
-      opacity: 0;
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300; }
+    .about .aboutSummary .world--container h3 {
+      color: #505050;
+      opacity: .75;
+      font-size: 2.25rem;
+      writing-mode: tb;
+      text-align: center; }
+    .about .aboutSummary .world--container ul {
+      display: grid;
+      grid-template-columns: 1fr 30% min-content;
+      justify-items: space-around;
+      grid-column-gap: 0.5rem;
+      grid-auto-flow: dense;
+      margin: auto; }
+      .about .aboutSummary .world--container ul .highlighted {
+        color: #bdbdbd;
+        font-weight: 600;
+        font-size: 2rem;
+        grid-column: span 2; }
+      .about .aboutSummary .world--container ul li {
+        color: #E5E5E5;
+        font-size: 1.25rem;
+        line-height: 1;
+        display: grid;
+        letter-spacing: -0.025em;
+        place-self: center; }
+      .about .aboutSummary .world--container ul li:nth-child(3n+1) {
+        font-size: .95rem;
+        writing-mode: vertical-lr; }
+      .about .aboutSummary .world--container ul li:first-child {
+        color: #bdbdbd;
+        font-size: 1.5rem;
+        font-weight: 600;
+        writing-mode: horizontal-tb; }
+      .about .aboutSummary .world--container ul li:last-child {
+        font-size: .95rem;
+        grid-column: span 2; }
   .about .aboutSummary .timeline {
     grid-column: 1 / -1;
     display: none; }

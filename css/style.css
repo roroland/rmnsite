@@ -742,7 +742,8 @@ a {
         line-height: 1;
         display: grid;
         letter-spacing: -0.025em;
-        place-self: center; }
+        place-self: center;
+        opacity: 0; }
       .about .aboutSummary .world--container ul li:nth-child(3n+1) {
         font-size: .95rem;
         writing-mode: vertical-lr; }
@@ -1493,6 +1494,9 @@ _::-webkit-full-page-media, _:future, :root .showFeature::before {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         justify-items: initial;
         padding: 0; } }
+    @media only screen and (min-width: 100em) {
+      .workGallery .workGallery-items {
+        min-height: 200px; } }
   .workGallery .super {
     grid-column: 1 / -1; }
   .workGallery .normal {
@@ -1558,6 +1562,7 @@ ul {
     max-width: 14px; }
 
 footer {
+  align-items: center;
   display: flex;
   justify-content: flex-end;
   background: url("../images/deco-btm.svg") no-repeat;
@@ -1571,7 +1576,7 @@ footer {
       background-size: 100%; } }
   footer p {
     background: rgba(78, 89, 98, 0.75);
-    margin: 3rem 1.5rem 1rem;
+    margin: 3rem 0 1rem;
     flex: 1 50%;
     font-weight: 300;
     color: white;
@@ -1579,8 +1584,7 @@ footer {
     padding: 1.5rem; }
     @media only screen and (min-width: 64em) {
       footer p {
-        flex: 0 50%;
-        margin: auto 0 1.5rem;
-        padding: 0.25em 0.5em 0 1.5rem; } }
+        flex: 0 45%;
+        padding: 1.5rem; } }
     footer p a {
       color: #9CB0BE; }

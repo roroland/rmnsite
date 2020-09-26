@@ -6,7 +6,7 @@ const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const itemDecoAnim = document.querySelectorAll('.itemDecoAnim');
 const itemPlanet = document.querySelector('.world--container');
-
+const itemPlanetContent = document.querySelectorAll('.world--container ul li');
 
 let cover = '';
 let coverActive = '';
@@ -22,9 +22,9 @@ more.addEventListener('click', function (e) {
   let moreAbout = document.querySelector('.moreAbout');
   let timeline = document.querySelector('.timeline');
   moreAbout.classList.add('is-open');
-  window.scrollTo({
-    top: moreAbout.offsetTop * 2,
-    behavior: 'smooth',
+  this.scrollIntoView({
+    block: 'start',
+    behavior: 'smooth'
   })
   this.style.setProperty('display', 'none');
   setTimeout(timeline.classList.add('is-open'), 3000);
@@ -70,19 +70,29 @@ itemAnim.forEach(itm => {
 });
 // end
 
-// // Planet observer
-// let planetOptions = {
-//   threshold: 0
-// };
-// let planetAnim = new IntersectionObserver((planets) => {
-//   planets.forEach(planet => {
-//     if (planet.isIntersecting) {
-//       itemPlanet.querySelector('.world').classList.add('is-active');
-//     }
-//   })
-// }, planetOptions);
-// planetAnim.observe(itemPlanet);
-// // end
+// Country UI
+
+
+let planetAnimOptions = {
+  threshold: 0,
+  rootMargin: '50px 0px'
+}
+
+let planetAnim = new IntersectionObserver((mispaises, self) => {
+  let paises = mispaises.map(pais => {
+    if (pais.isIntersecting) {
+      self.unobserve(pais.target);
+      console.log(pais.target);
+      return pais.target;
+    }
+  });
+  let tlmPlanet = gsap.timeline({});
+  tlmPlanet.fromTo(paises, {opacity: 0, scale: .25, rotation: 20, x: 100}, { duration: 1, opacity: 1, scale: 1, rotation: 0, x: 0, ease: 'power1.out', stagger: 0.3 }, 0);
+}, planetAnimOptions);
+
+itemPlanetContent.forEach((paises) => {
+  planetAnim.observe(paises);
+})
 
 // Main deco IO
 let decoAnimOptions = {
@@ -288,11 +298,6 @@ tlm.to(decomiddle, { duration: 10, repeat: -1, translateX: -400, ease: 'power3.i
 tlm.from(decogrey, { duration: 8, repeat: -1, translateX: -600, ease: 'power4.inOut', yoyo: true}, 1);
 tlm.to(decoredtop, { duration: 7, repeat: -1, translateX: -550, ease: 'none', yoyo: true}, -.5);
 tlm.from(decoblue, { duration: 8, repeat: -1, translateX: -500, ease: 'power1.inOut', yoyo: true}, 1.5);
-// tlm.to(".worldVector", { duration: 4, scale:1, translateX: -910, ease: 'power1.out' }, 0);
-// tlm.to(city, { duration: 1, scale: 1, ease: 'power3.out' });
-// tlm.to(usa, { duration: 1, opacity: 1, strokeDashoffset: 0 });
-// tlm.to(usa2, { duration: 1, opacity: 1, strokeDashoffset: 0 });
-// tlm.to(spain, { duration: 1, opacity: 1, strokeDashoffset: 0 });
 
 const introLm = gsap.timeline({});
 const hero = document.querySelector('.heroText');

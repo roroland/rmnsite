@@ -117,7 +117,9 @@
           display: grid;
           letter-spacing: -0.025em;
           place-self: center;
+          opacity: 0;
         }
+        
         li:nth-child(3n+1){
           font-size: .95rem;
           writing-mode: vertical-lr;

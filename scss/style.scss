@@ -66,6 +66,7 @@ ul{
 }
 
 footer{
+  align-items: center;
   display: flex;
   justify-content: flex-end;
   background: url('../images/deco-btm.svg') no-repeat;
@@ -80,16 +81,15 @@ footer{
   p{
     @extend .h4;
     background: rgba(setcolor(brand, dark), .75);
-    margin: $component-space*2 $component-space $component-space-small;
+    margin: $component-space*2 0 $component-space-small;
     flex: 1 50%;
     font-weight: 300;
     color: white;
     display: inline-block;
     padding: $component-space;
     @media only screen and (min-width: 64em){
-      flex: 0 50%;
-      margin: auto 0 $component-space;
-      padding: .25em .5em 0 $component-space;
+      flex: 0 45%;
+      padding: $component-space;
     }
     a{
       color: setcolor(brand, blue);

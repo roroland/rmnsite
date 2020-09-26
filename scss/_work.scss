@@ -104,6 +104,9 @@
       justify-items: initial;
       padding: 0;
     }
+    @media only screen and (min-width: 100em){
+      min-height: 200px;
+    }
   }
   .super{
     grid-column: 1 / -1;

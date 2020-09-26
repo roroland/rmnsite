@@ -53,7 +53,7 @@
     transform: translate(0, 0) rotate(0) scale(inherit);
     opacity: 1; } }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, li {
   font-family: 'Nunito', sans-serif; }
 
 h1,
@@ -669,7 +669,8 @@ a {
   grid-column: 1 / -1;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1.5rem;
-  padding: 5em 0 1.5rem 0; }
+  padding: 5em 0 1.5rem 0;
+  overflow: hidden; }
   @media only screen and (min-width: 90em) {
     .about .aboutSummary {
       padding: 4em 0 1.5rem 0; } }
@@ -726,8 +727,7 @@ a {
       text-align: center; }
     .about .aboutSummary .world--container ul {
       display: grid;
-      grid-template-columns: 1fr 30% min-content;
-      justify-items: space-around;
+      grid-template-columns: 1fr 40% min-content;
       grid-column-gap: 0.5rem;
       grid-auto-flow: dense;
       margin: auto; }
@@ -739,18 +739,19 @@ a {
       .about .aboutSummary .world--container ul li {
         color: #E5E5E5;
         font-size: 1.25rem;
+        font-weight: 700;
         line-height: 1;
         display: grid;
         letter-spacing: -0.025em;
         place-self: center;
         opacity: 0; }
       .about .aboutSummary .world--container ul li:nth-child(3n+1) {
-        font-size: .95rem;
+        font-size: 1rem;
         writing-mode: vertical-lr; }
       .about .aboutSummary .world--container ul li:first-child {
         color: #bdbdbd;
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
         writing-mode: horizontal-tb; }
       .about .aboutSummary .world--container ul li:last-child {
         font-size: .95rem;

@@ -87,7 +87,8 @@ let planetAnim = new IntersectionObserver((mispaises, self) => {
     }
   });
   let tlmPlanet = gsap.timeline({});
-  tlmPlanet.fromTo(paises, {opacity: 0, scale: .25, rotation: 20, x: 100}, { duration: 1, opacity: 1, scale: 1, rotation: 0, x: 0, ease: 'power1.out', stagger: 0.3 }, 0);
+  tlmPlanet.fromTo(paises, { opacity: 0, scale: .25, rotation: 20, x: 100 }, { duration: 1, opacity: 1, scale: 1, rotation: 0, x: 0, ease: 'power1.out', stagger: 0.5 }, 2);
+  tlmPlanet.to(paises, { opacity: .5, scale: .85, duration: 2, ease: 'sine.inOut', stagger: .5, yoyo: true, repeat: 10 }, "-=.5");
 }, planetAnimOptions);
 
 itemPlanetContent.forEach((paises) => {

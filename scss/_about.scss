@@ -36,6 +36,7 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: $component-space;
     padding: 5em 0 $component-space 0;
+    overflow: hidden;
     @media only screen and (min-width: 90em){
       padding: 4em 0 $component-space 0;
     }
@@ -99,8 +100,7 @@
       }
       ul{
         display: grid;
-        grid-template-columns: 1fr 30% min-content;
-        justify-items: space-around;
+        grid-template-columns: 1fr 40% min-content;
         grid-column-gap: $component-space-tiny;
         grid-auto-flow: dense;
         margin: auto;
@@ -113,6 +113,7 @@
         li{
           color: setcolor(gray, normal);
           font-size: 1.25rem;
+          font-weight: 700;
           line-height: 1;
           display: grid;
           letter-spacing: -0.025em;
@@ -121,13 +122,13 @@
         }
         
         li:nth-child(3n+1){
-          font-size: .95rem;
+          font-size: 1rem;
           writing-mode: vertical-lr;
         }
         li:first-child{
           color: setcolor(gray, pale);
           font-size: 1.5rem;
-          font-weight: 600;
+          font-weight: 700;
           writing-mode: horizontal-tb;
         }
         li:last-child{

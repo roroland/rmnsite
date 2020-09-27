@@ -1,6 +1,6 @@
 .mainNav{
-  background-color: rgba(setcolor(gray, lighter), .85);
-  border-bottom: 1px solid rgba(setcolor(gray, lighter), .85);
+  background-color: rgba(setcolor(gray, lighter), .75);
+  border-bottom: 1px solid rgba(setcolor(gray, normal), .85);
   backdrop-filter: blur(2px);
   display: flex;
   flex-flow: row wrap;
@@ -10,7 +10,7 @@
   top: 0;
   max-width: 100%;
   justify-content: center;
-  transition: height .125s ease-in-out;
+  transition: height .125s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out;
   z-index: 999;
   ul{
     display: flex;
@@ -25,11 +25,12 @@
       font-size: .75rem;
     }
     a{
-      color: setcolor(brand, dark);
+      color: rgba(setcolor(gray, dark), .5);
       text-decoration: none;
     }
   }
   &.is-top{
+    background-color: rgba(setcolor(gray, lighter), .85);
     border-bottom: 1px solid setcolor(gray, normal);
     border-top: 0;
     max-width: 100%;
@@ -48,7 +49,7 @@
         }
       }
       a{
-        color: setcolor(brand, darkblue);
+        color: setcolor(brand, blue);
         padding: $component-space-tiny;
         @media only screen and (min-width: 48em){
           padding: $component-space;
@@ -58,7 +59,14 @@
   }
   
   &:hover{
-    ul li{
+    background-color: rgba(setcolor(gray, lighter), .85);
+    ul li {
+      a{
+        color: setcolor(brand, darkblue);
+      }
+      a:hover{
+        color: setcolor(brand, palered);
+      }
     }
   }
   

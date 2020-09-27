@@ -181,8 +181,8 @@ a {
     top: var(--data-works); }
 
 .mainNav {
-  background-color: rgba(247, 249, 249, 0.85);
-  border-bottom: 1px solid rgba(247, 249, 249, 0.85);
+  background-color: rgba(247, 249, 249, 0.75);
+  border-bottom: 1px solid rgba(229, 229, 229, 0.85);
   backdrop-filter: blur(2px);
   display: flex;
   flex-flow: row wrap;
@@ -192,7 +192,7 @@ a {
   top: 0;
   max-width: 100%;
   justify-content: center;
-  transition: height .125s ease-in-out;
+  transition: height .125s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out;
   z-index: 999; }
   .mainNav ul {
     display: flex;
@@ -206,9 +206,10 @@ a {
     .mainNav ul li {
       font-size: .75rem; }
     .mainNav ul a {
-      color: #4E5962;
+      color: rgba(80, 80, 80, 0.5);
       text-decoration: none; }
   .mainNav.is-top {
+    background-color: rgba(247, 249, 249, 0.85);
     border-bottom: 1px solid #E5E5E5;
     border-top: 0;
     max-width: 100%;
@@ -225,11 +226,17 @@ a {
           .mainNav.is-top ul li {
             font-size: .9rem; } }
       .mainNav.is-top ul a {
-        color: #52768d;
+        color: #9CB0BE;
         padding: 0.5rem; }
         @media only screen and (min-width: 48em) {
           .mainNav.is-top ul a {
             padding: 1.5rem; } }
+  .mainNav:hover {
+    background-color: rgba(247, 249, 249, 0.85); }
+    .mainNav:hover ul li a {
+      color: #52768d; }
+    .mainNav:hover ul li a:hover {
+      color: #b9506e; }
 
 .avatar--wrapper {
   display: flex;

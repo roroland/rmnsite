@@ -1,0 +1,130 @@
+// Feature placeholder structure
+
+.placeholder {
+  display: none;
+  overflow: hidden;
+  @media only screen and (min-width: 64em){
+    display: grid;
+    background-color: setcolor(brand, palered);
+    background-position: var(--xpos) var(--ypos);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    font-family: sans-serif;
+    min-width: 50%;
+    min-height: 75vh;
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  @media only screen and (min-width: 100em){
+    min-height: 80vh;
+  }
+  
+  &.is-active span {
+    @for $i from 1 to 17 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * .065s;
+        animation-name: flip;
+        animation-timing-function: cubic-bezier(.02, .53, .62, 1.21);
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  
+  span {
+    grid-column: span 1;
+    grid-row: span 1;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    &::after {
+      background: setcolor(brand, palered);
+      z-index: 5;
+    }
+    
+    &::before {
+      background: setcolor(brand, red);
+      backface-visibility: hidden;
+      z-index: 10;
+    }
+    
+    @keyframes flip {
+      0% {
+        transform: rotate3d(1, 0, 0, 0);
+      }
+      
+      100% {
+        transform: rotate3d(1, 0, 0, 90deg);
+      }
+    }
+  }
+  &::after{
+    content: '';
+    pointer-events: none;
+    background: rgba(setcolor(brand, palered), .35);
+    backdrop-filter: saturate(70%) blur(2px);
+    border-radius: 50%;
+    position: absolute;
+    transition: all .3s ease-out;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+  &::before{
+    content: 'Hover Me';
+    position: absolute;
+    color: #fff;
+    left: 0;
+    transform: translate(-50% -50%);
+    text-shadow: 0 2px setcolor(brand, palered);
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    height: 200px;
+    z-index: 10;
+  }
+  &:hover{
+    cursor: move;
+    &::after{
+      content: '';
+      background: rgba(setcolor(brand, palered), 0);
+      backdrop-filter: saturate(100%) blur(0);
+    }
+    &::before{
+      display: none;
+    }
+    .subMenu{
+      display: flex;
+    }
+  }
+}
+
+.placeholder-static {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  
+  img {
+    max-width: 100%;
+  }
+}

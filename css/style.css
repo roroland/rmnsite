@@ -122,13 +122,16 @@ a {
     color: #b9506e; }
   .container .test {
     width: 100%;
-    min-height: 384px;
+    min-height: 284px;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     overflow: hidden;
     z-index: 0; }
+    @media only screen and (min-width: 48em) {
+      .container .test {
+        min-height: 384px; } }
     .container .test #middle {
       transform-origin: center; }
   .container.intro {
@@ -238,7 +241,7 @@ a {
     .mainNav:hover ul li a:hover {
       color: #b9506e; }
 
-.avatar--wrapper {
+.intro--wrapper {
   display: flex;
   color: #4E5962;
   flex-flow: row wrap;
@@ -249,7 +252,7 @@ a {
   height: 100vh;
   width: 100%; }
   @media only screen and (min-width: 48em) {
-    .avatar--wrapper {
+    .intro--wrapper {
       align-items: center;
       flex-flow: column nowrap;
       justify-content: space-around;
@@ -257,13 +260,13 @@ a {
       height: 100%;
       width: auto; } }
   @media only screen and (min-width: 100em) {
-    .avatar--wrapper {
+    .intro--wrapper {
       top: 0; } }
-  .avatar--wrapper a {
+  .intro--wrapper a {
     color: currentColor;
     display: block;
     text-decoration: none; }
-  .avatar--wrapper .heroText {
+  .intro--wrapper .heroText {
     border-radius: 5px;
     border: 1pt solid transparent;
     padding: 0.5rem 1.5rem;
@@ -276,225 +279,225 @@ a {
     transition: top .25s ease-in-out;
     z-index: 20; }
     @media only screen and (max-width: 47.99em) {
-      .avatar--wrapper .heroText {
+      .intro--wrapper .heroText {
         border: 0;
         padding: 1.5rem 0 0;
         width: 85%; } }
     @media only screen and (min-width: 48em) {
-      .avatar--wrapper .heroText {
+      .intro--wrapper .heroText {
         top: 8.5rem; } }
     @media only screen and (min-width: 100em) {
-      .avatar--wrapper .heroText {
+      .intro--wrapper .heroText {
         top: 5.925rem; } }
-    .avatar--wrapper .heroText path {
+    .intro--wrapper .heroText path {
       stroke-dasharray: 100;
       stroke-dashoffset: 100; }
-      .avatar--wrapper .heroText path:nth-child(1) {
-        animation-delay: 0.16s;
+      .intro--wrapper .heroText path:nth-child(1) {
+        animation-delay: 0.12s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(2) {
-        animation-delay: 0.32s;
+      .intro--wrapper .heroText path:nth-child(2) {
+        animation-delay: 0.24s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(3) {
+      .intro--wrapper .heroText path:nth-child(3) {
+        animation-delay: 0.36s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(4) {
         animation-delay: 0.48s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(4) {
-        animation-delay: 0.64s;
+      .intro--wrapper .heroText path:nth-child(5) {
+        animation-delay: 0.6s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(5) {
-        animation-delay: 0.8s;
+      .intro--wrapper .heroText path:nth-child(6) {
+        animation-delay: 0.72s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(6) {
+      .intro--wrapper .heroText path:nth-child(7) {
+        animation-delay: 0.84s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(8) {
         animation-delay: 0.96s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(7) {
-        animation-delay: 1.12s;
+      .intro--wrapper .heroText path:nth-child(9) {
+        animation-delay: 1.08s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(8) {
-        animation-delay: 1.28s;
+      .intro--wrapper .heroText path:nth-child(10) {
+        animation-delay: 1.2s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(9) {
+      .intro--wrapper .heroText path:nth-child(11) {
+        animation-delay: 1.32s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(12) {
         animation-delay: 1.44s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(10) {
-        animation-delay: 1.6s;
+      .intro--wrapper .heroText path:nth-child(13) {
+        animation-delay: 1.56s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(11) {
-        animation-delay: 1.76s;
+      .intro--wrapper .heroText path:nth-child(14) {
+        animation-delay: 1.68s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(12) {
+      .intro--wrapper .heroText path:nth-child(15) {
+        animation-delay: 1.8s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(16) {
         animation-delay: 1.92s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(13) {
-        animation-delay: 2.08s;
+      .intro--wrapper .heroText path:nth-child(17) {
+        animation-delay: 2.04s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(14) {
-        animation-delay: 2.24s;
+      .intro--wrapper .heroText path:nth-child(18) {
+        animation-delay: 2.16s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(15) {
+      .intro--wrapper .heroText path:nth-child(19) {
+        animation-delay: 2.28s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(20) {
         animation-delay: 2.4s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(16) {
-        animation-delay: 2.56s;
+      .intro--wrapper .heroText path:nth-child(21) {
+        animation-delay: 2.52s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(17) {
-        animation-delay: 2.72s;
+      .intro--wrapper .heroText path:nth-child(22) {
+        animation-delay: 2.64s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(18) {
+      .intro--wrapper .heroText path:nth-child(23) {
+        animation-delay: 2.76s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(24) {
         animation-delay: 2.88s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(19) {
-        animation-delay: 3.04s;
+      .intro--wrapper .heroText path:nth-child(25) {
+        animation-delay: 3s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(20) {
-        animation-delay: 3.2s;
+      .intro--wrapper .heroText path:nth-child(26) {
+        animation-delay: 3.12s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(21) {
+      .intro--wrapper .heroText path:nth-child(27) {
+        animation-delay: 3.24s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(28) {
         animation-delay: 3.36s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(22) {
-        animation-delay: 3.52s;
+      .intro--wrapper .heroText path:nth-child(29) {
+        animation-delay: 3.48s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(23) {
-        animation-delay: 3.68s;
+      .intro--wrapper .heroText path:nth-child(30) {
+        animation-delay: 3.6s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(24) {
+      .intro--wrapper .heroText path:nth-child(31) {
+        animation-delay: 3.72s;
+        animation-name: dash;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        animation-fill-mode: forwards; }
+      .intro--wrapper .heroText path:nth-child(32) {
         animation-delay: 3.84s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(25) {
-        animation-delay: 4s;
+      .intro--wrapper .heroText path:nth-child(33) {
+        animation-delay: 3.96s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(26) {
-        animation-delay: 4.16s;
+      .intro--wrapper .heroText path:nth-child(34) {
+        animation-delay: 4.08s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(27) {
-        animation-delay: 4.32s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(28) {
-        animation-delay: 4.48s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(29) {
-        animation-delay: 4.64s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(30) {
-        animation-delay: 4.8s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(31) {
-        animation-delay: 4.96s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(32) {
-        animation-delay: 5.12s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(33) {
-        animation-delay: 5.28s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(34) {
-        animation-delay: 5.44s;
-        animation-name: dash;
-        animation-timing-function: ease-in;
-        animation-duration: .6s;
-        animation-fill-mode: forwards; }
-      .avatar--wrapper .heroText path:nth-child(35) {
-        animation-delay: 5.6s;
+      .intro--wrapper .heroText path:nth-child(35) {
+        animation-delay: 4.2s;
         animation-name: dash;
         animation-timing-function: ease-in;
         animation-duration: .6s;
@@ -517,18 +520,18 @@ a {
     stroke-dashoffset: 100; }
   to {
     stroke-dashoffset: 0; } }
-  .avatar--wrapper .heroText,
-  .avatar--wrapper h3,
-  .avatar--wrapper h4 {
+  .intro--wrapper .heroText,
+  .intro--wrapper h3,
+  .intro--wrapper h4 {
     transition: top .25s ease-in-out;
     position: relative;
     text-align: center;
     font-weight: 300; }
-  .avatar--wrapper h3 {
+  .intro--wrapper h3 {
     display: none;
     opacity: 0; }
     @media only screen and (min-width: 48em) {
-      .avatar--wrapper h3 {
+      .intro--wrapper h3 {
         z-index: 10;
         color: #F7F9F9;
         display: block;
@@ -536,7 +539,7 @@ a {
         padding: 0 1.5rem;
         top: 2rem;
         width: auto; }
-        .avatar--wrapper h3::after, .avatar--wrapper h3::before {
+        .intro--wrapper h3::after, .intro--wrapper h3::before {
           content: '';
           width: 200px;
           height: 200px;
@@ -546,94 +549,47 @@ a {
           display: block;
           opacity: 0;
           animation: fade 1s ease-out forwards; }
-        .avatar--wrapper h3::after {
+        .intro--wrapper h3::after {
           background: url("../images/path-left.svg") no-repeat;
           left: -12.5%; }
-        .avatar--wrapper h3::before {
+        .intro--wrapper h3::before {
           content: '';
           background: url("../images/path-right.svg") no-repeat;
           right: -34%; } }
     @media only screen and (min-width: 48em) and (orientation: portrait) {
-      .avatar--wrapper h3::after {
+      .intro--wrapper h3::after {
         background: url("../images/path-left.svg") no-repeat;
         left: -10.5%; }
-      .avatar--wrapper h3::before {
+      .intro--wrapper h3::before {
         right: -32%; } }
     @media only screen and (min-width: 100em) {
-      .avatar--wrapper h3 {
+      .intro--wrapper h3 {
         top: 1rem; } }
-  .avatar--wrapper h4 {
+  .intro--wrapper h4 {
     opacity: 0;
     z-index: 10; }
     @media only screen and (max-width: 47.99em) and (orientation: landscape) {
-      .avatar--wrapper h4 {
+      .intro--wrapper h4 {
         display: none; } }
     @media only screen and (min-width: 48em) {
-      .avatar--wrapper h4 {
+      .intro--wrapper h4 {
         top: 4.5rem; } }
     @media only screen and (min-width: 100em) {
-      .avatar--wrapper h4 {
+      .intro--wrapper h4 {
         top: -1.5rem; } }
-    .avatar--wrapper h4 > span {
+    .intro--wrapper h4 > span {
       font-weight: 400;
       text-decoration: underline; }
-    .avatar--wrapper h4 small {
+    .intro--wrapper h4 small {
       display: block;
       color: #505050;
       margin-top: 0.5rem;
       text-align: center; }
-      .avatar--wrapper h4 small span {
+      .intro--wrapper h4 small span {
         opacity: 0;
         animation: fade 1s ease-out 2.5s forwards;
         text-decoration: none;
         color: #4E5962; }
-  .avatar--wrapper .submask {
-    max-width: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 5;
-    transition: bottom .25s ease-out, top .25s ease-out; }
-    .avatar--wrapper .submask-top {
-      top: 0; }
-  @media (hover: hover) {
-    .avatar--wrapper:hover {
-      cursor: pointer;
-      color: currentColor;
-      transform-origin: center; } }
-  @media only screen and (hover: hover) and (min-width: 48em) {
-    .avatar--wrapper:hover {
-      height: 100%; } }
-  @media (hover: hover) {
-      .avatar--wrapper:hover h3 {
-        top: 0; }
-      .avatar--wrapper:hover h4 {
-        top: -4rem; } }
-    @media only screen and (hover: hover) and (min-width: 48em) {
-      .avatar--wrapper:hover h4 {
-        top: 1rem; } }
-  @media (hover: hover) {
-      .avatar--wrapper:hover .heroText {
-        top: 6.5rem; } }
-    @media only screen and (hover: hover) and (min-width: 100em) {
-      .avatar--wrapper:hover .heroText {
-        top: 5rem; } }
-  @media (hover: hover) {
-      .avatar--wrapper:hover img {
-        transition: transform .25s ease-out;
-        transform: scale(0.8); }
-      .avatar--wrapper:hover .submask-top {
-        top: -25%; } }
-    @media only screen and (hover: hover) and (min-width: 100em) {
-      .avatar--wrapper:hover .submask-top {
-        top: -4.5rem; } }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0) translateX(-10%); }
-  50% {
-    transform: rotate(360deg) translateX(10%); }
-  100% {
-    transform: rotate(0) translateX(-10%); } }
 
 @keyframes fade {
   0% {

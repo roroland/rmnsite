@@ -10,14 +10,16 @@
   }
   .test{
     width: 100%;
-    min-height: 384px;
+    min-height: 284px;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     overflow: hidden;
     z-index: 0;
-
+    @media only screen and (min-width: 48em) {
+      min-height: 384px;
+    }
     #middle{
       transform-origin: center;
     }

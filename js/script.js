@@ -5,15 +5,10 @@ const imgAll = document.querySelectorAll('img');
 const imgLazy = document.querySelectorAll('.lazy');
 const showFeature = document.querySelector('.showFeature');
 const itemDecoAnim = document.querySelectorAll('.itemDecoAnim');
-const itemPlanet = document.querySelector('.world--container');
-const itemPlanetContent = document.querySelectorAll('.world--container ul li');
+const itemCountry = document.querySelector('.world--container');
+const itemCountryContent = document.querySelectorAll('.world--container ul li');
 
-let cover = '';
-let coverActive = '';
-let root = document.documentElement;
-let initX = root.style.setProperty('--xpos', 150);
-let initY = root.style.setProperty('--ypos', 350);
-let imgSrc = '';
+
 
 // More about
 const more = document.querySelector('#more');
@@ -40,7 +35,6 @@ itemNav.forEach(function (item) {
       item.classList.remove('is-active');
     });
     item.classList.toggle('is-active');
-    console.log(itemNavId);
     getFeature(itemNavId);
   });
 });
@@ -72,13 +66,12 @@ itemAnim.forEach(itm => {
 
 // Country UI
 
-
-let planetAnimOptions = {
+let countryAnimOptions = {
   threshold: 0,
   rootMargin: '50px 0px'
 }
 
-let planetAnim = new IntersectionObserver((mispaises, self) => {
+let countryAnim = new IntersectionObserver((mispaises, self) => {
   let paises = mispaises.map(pais => {
     if (pais.isIntersecting) {
       self.unobserve(pais.target);
@@ -86,13 +79,13 @@ let planetAnim = new IntersectionObserver((mispaises, self) => {
       return pais.target;
     }
   });
-  let tlmPlanet = gsap.timeline({});
-  tlmPlanet.fromTo(paises, { opacity: 0, scale: .25, rotation: 20, x: 100 }, { duration: 1, opacity: 1, scale: 1, rotation: 0, x: 0, ease: 'power1.out', stagger: 0.5 }, 2);
-  tlmPlanet.to(paises, { opacity: .5, scale: .85, duration: 2, ease: 'sine.inOut', stagger: .5, yoyo: true, repeat: 10 }, "-=.5");
-}, planetAnimOptions);
+  let tlmCountry = gsap.timeline({});
+  tlmCountry.fromTo(paises, { opacity: 0, scale: .25, rotation: 20, x: 100 }, { duration: 1, opacity: 1, scale: 1, rotation: 0, x: 0, ease: 'power1.out', stagger: 0.5 }, 2);
+  tlmCountry.to(paises, { opacity: .5, scale: .85, duration: 2, ease: 'sine.inOut', stagger: .5, yoyo: true, repeat: 10 }, "-=.5");
+}, countryAnimOptions);
 
-itemPlanetContent.forEach((paises) => {
-  planetAnim.observe(paises);
+itemCountryContent.forEach((paises) => {
+  countryAnim.observe(paises);
 })
 
 // Main deco IO
@@ -161,7 +154,14 @@ menuobserver.observe(navWrapper);
 // end
 
 
-// Open feature
+// Feature
+let cover = '';
+let coverActive = '';
+let root = document.documentElement;
+let initX = root.style.setProperty('--xpos', 150);
+let initY = root.style.setProperty('--ypos', 350);
+let imgSrc = '';
+
 function getFeature(itemNavId) {
   const closeLink = document.querySelector('.close');
   if (itemNavId === 'layout') {
@@ -232,7 +232,7 @@ let featureUI = function (itemNavId, closeLink) {
     if (cover !== null) {
       cover.classList.add('is-active');
     }
-    if (coverActive == false) {
+    if (coverActive === false && itemNavId !== 'music' && itemNavId !== 'css') {
       clearTimeout(time);
       move(itemNavId);
       console.log('cleared');
@@ -247,8 +247,8 @@ function move(itemNavId) {
   let listener = placeholder.addEventListener(('mouseenter', 'mousemove'), e => {
     if (!wait) {
       wait = true;
-        root.style.setProperty('--xpos', -e.clientX + (screen.width - placeholder.offsetWidth)  + "px");
-        root.style.setProperty('--ypos', -e.clientY + (screen.height - placeholder.offsetHeight )  + "px");
+      root.style.setProperty('--xpos', -e.clientX + (screen.width - placeholder.offsetWidth)  + "px");
+      root.style.setProperty('--ypos', -e.clientY + (screen.height - placeholder.offsetHeight )  + "px");
       setTimeout(function () { wait = false; }, 25);
     }
   })
@@ -286,7 +286,7 @@ function subRun() {
   })
 }
 
-// Gsap interactions
+// Gsap interactions - swirl decoration
 const tlm = gsap.timeline({});
 const decomiddle = document.querySelector('#middle');
 const decogrey = document.querySelector('#grey');
@@ -300,28 +300,28 @@ tlm.from(decogrey, { duration: 8, repeat: -1, translateX: -600, ease: 'power4.in
 tlm.to(decoredtop, { duration: 7, repeat: -1, translateX: -550, ease: 'none', yoyo: true}, -.5);
 tlm.from(decoblue, { duration: 8, repeat: -1, translateX: -500, ease: 'power1.inOut', yoyo: true}, 1.5);
 
+
+// Gsap interactions intro anim
 const introLm = gsap.timeline({});
 const hero = document.querySelector('.heroText');
-const subMask = document.querySelector('.submask');
-const avatarLines = document.querySelector('.avatar--wrapper h3');
-const avatarText = document.querySelector('.avatar--wrapper h4');
+const introLines = document.querySelector('.intro--wrapper h3');
+const introText = document.querySelector('.intro--wrapper h4');
 const mainNav = document.querySelector('.mainNav');
 
 if (window.matchMedia("(min-width: 48em)").matches) {
   introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
-  introLm.to(hero, { duration: 1.5, translateY: -150, ease: 'power2.out' }, "+=4.75");
-  introLm.to(avatarLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
-  introLm.to(avatarText, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
-  introLm.to(mainNav, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
-  introLm.to(hero, { duration: 1.5, translateY: -150, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
+  introLm.to(hero, { duration: 1.5, translateY: -150, ease: 'power2.out' }, "+=3.75");
+  introLm.to(introLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
+  introLm.to(introText, { duration: 2, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(mainNav, { duration: 1, opacity: 1, ease: 'power2.out' }, "-=.5");
+  introLm.to(hero, { duration: 1, translateY: -150, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
 } else {
   introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
-  introLm.to(hero, { duration: 1.5, translateY: 0, ease: 'power2.out' }, "+=4.75");
-  introLm.to(avatarLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
-  introLm.to(avatarImg, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
-  introLm.to(avatarText, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
-  introLm.to(mainNav, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=2");
-  introLm.to(hero, { duration: 1.5, translateY: 0, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
+  introLm.to(hero, { duration: 1.5, translateY: 0, ease: 'power2.out' }, "+=3.75");
+  introLm.to(introLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
+  introLm.to(introText, { duration: 2, opacity: 1, ease: 'power2.out' }, "-=2");
+  introLm.to(mainNav, { duration: 1, opacity: 1, ease: 'power2.out' }, "-=.5");
+  introLm.to(hero, { duration: 1, translateY: 0, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
 }
 
 

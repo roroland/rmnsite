@@ -1,6 +1,6 @@
 // Avatar
 
-.avatar--wrapper{  
+.intro--wrapper{  
   display: flex;
   color: setcolor(brand, dark);
   flex-flow: row wrap;
@@ -56,7 +56,7 @@
       stroke-dashoffset: 100;
       @for $i from 1 to 36 {
         &:nth-child(#{$i}) {
-          animation-delay: $i * .16s;
+          animation-delay: $i * .12s;
           animation-name: dash;
           animation-timing-function: ease-in;
           animation-duration: .6s;
@@ -176,66 +176,6 @@
     }
   }
 
-  .submask{
-    max-width: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 5;
-    transition: bottom .25s ease-out, top .25s ease-out;
-    
-    &-top{
-      top: 0;
-    }
-  }
-  &:hover{
-    @media (hover: hover) {
-      cursor: pointer;
-      color: currentColor;
-      transform-origin: center;
-      @media only screen and (min-width: 48em){
-        height: 100%;
-      }
-      h3{
-        top: 0;
-      }
-      h4{
-        top: -$component-space-small*4;
-        @media only screen and (min-width: 48em){
-          top: $component-space-small;
-        }
-      }
-      .heroText{
-        top: 6.5rem;
-        @media only screen and (min-width: 100em){
-          top: 5rem;
-        }
-      }
-      img{
-        transition: transform .25s ease-out;
-        transform: scale(.8);
-      }
-      
-      .submask-top{
-        top: -25%;
-        @media only screen and (min-width: 100em){
-          top: -4.5rem;
-        }
-      }
-    }
-    
-  }
-  
-  @keyframes rotate{
-    0%{
-      transform: rotate(0) translateX(-10%);
-    }
-    50%{
-      transform: rotate(360deg) translateX(10%);
-    }
-    100%{
-      transform: rotate(0) translateX(-10%);
-    }
-  }
   @keyframes fade {
     0%{
       opacity: 0;

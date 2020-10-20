@@ -21,9 +21,9 @@
     grid-column: 1 / -1;
     align-self: flex-start;
     padding: 0 $component-space;
-    margin-top: $component-space*4;
+    margin-top: -$component-space*4;
     h1{
-      color: white;
+      color: setcolor(gray, pale);
       @media only screen and (max-width: 48em){
         font-size: 1.563rem;
       }
@@ -35,10 +35,10 @@
     grid-column: 1 / -1;
     grid-template-columns: repeat(6, 1fr);
     column-gap: $component-space;
-    padding: 5em 0 $component-space 0;
+    padding: 0 0 $component-space 0;
     overflow: hidden;
     @media only screen and (min-width: 90em){
-      padding: 4em 0 $component-space 0;
+      padding: 0 0 $component-space 0;
     }
     .introAbout{
       grid-column: 1 / -1;

@@ -10,15 +10,14 @@
   }
   .test{
     width: 100%;
-    min-height: 284px;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     top: 0;
     overflow: hidden;
     z-index: 0;
     @media only screen and (min-width: 48em) {
-      min-height: 384px;
+      // min-height: 384px;
     }
     #middle{
       transform-origin: center;
@@ -27,12 +26,23 @@
   &.intro{
     align-items: center;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: 0;
-    min-height: 80vh;
+    @media only screen and (max-width: 47.99em){
+      min-height: 91vh;
+    }
+    @media only screen and (max-width: 47.99em) and (orientation: landscape){
+      min-height: 82vh;
+    }
     @media only screen and (min-width: 48em){
+      flex-flow: column nowrap;
+      justify-content: center;
+      min-height: 91vh;
       padding: inherit;
+    }
+    @media only screen and (min-width: 64em){
+      min-height: 85vh;
     }
     @media only screen and (min-width: 100em){
       min-height: 90vh;

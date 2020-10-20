@@ -43,10 +43,12 @@
         font-size: .8rem;
       }
       @media only screen and (min-width: 48em){
-        flex: 0 1 50%;
         li{
           font-size: .9rem;
         }
+      }
+      @media only screen and (min-width: 64em){
+        flex: 0 1 50%;
       }
       a{
         color: setcolor(brand, blue);

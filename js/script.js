@@ -310,18 +310,18 @@ const mainNav = document.querySelector('.mainNav');
 
 if (window.matchMedia("(min-width: 48em)").matches) {
   introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
-  introLm.to(hero, { duration: 1.5, translateY: -150, ease: 'power2.out' }, "+=3.75");
+  introLm.to(hero, { duration: 1.5, translateY: -50, ease: 'power2.out' }, "+=3.75");
   introLm.to(introLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
   introLm.to(introText, { duration: 2, opacity: 1, ease: 'power2.out' }, "-=2");
   introLm.to(mainNav, { duration: 1, opacity: 1, ease: 'power2.out' }, "-=.5");
-  introLm.to(hero, { duration: 1, translateY: -150, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
+  introLm.to(hero, { duration: 1, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
 } else {
   introLm.to(hero, { duration: 1, opacity: 1, translateY: 0, ease: 'power2.out' }, 0);
   introLm.to(hero, { duration: 1.5, translateY: 0, ease: 'power2.out' }, "+=3.75");
   introLm.to(introLines, { duration: 3, opacity: 1, ease: 'power2.out' }, "-=1");
   introLm.to(introText, { duration: 2, opacity: 1, ease: 'power2.out' }, "-=2");
   introLm.to(mainNav, { duration: 1, opacity: 1, ease: 'power2.out' }, "-=.5");
-  introLm.to(hero, { duration: 1, translateY: 0, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
+  introLm.to(hero, { duration: 1, css: { borderColor: "#E5E5E5" }, ease: 'power2.out' }, "-=2");
 }
 
 

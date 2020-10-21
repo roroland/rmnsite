@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600&font-display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&font-display=swap");
 :root {
   --xpos: 0;
   --ypos: 0;
@@ -54,20 +54,24 @@
     opacity: 1; } }
 
 h1, h2, h3, h4, h5, h6, p, a, li {
-  font-family: 'Nunito', sans-serif; }
+  font-family: 'Nunito', sans-serif;
+  font-weight: normal; }
 
 h1,
 .h1 {
-  font-size: 2.441rem; }
+  font-size: 2.441rem;
+  font-weight: 600; }
 
 h2,
 .h2 {
-  font-size: 1.953rem; }
+  font-size: 1.953rem;
+  font-weight: 600; }
 
 h3,
 .h3,
 .about .aboutSummary p > span {
-  font-size: 1.563rem; }
+  font-size: 1.563rem;
+  font-weight: 600; }
 
 h4,
 .h4,
@@ -118,6 +122,9 @@ a {
   margin: 0 auto;
   padding: 1rem 0;
   position: relative; }
+  @media only screen and (min-width: 48em) {
+    .container {
+      min-height: auto; } }
   .container a:hover {
     color: #b9506e; }
   .container .test {
@@ -579,17 +586,29 @@ a {
       max-width: 80vw; } }
 
 .about header {
-  max-width: 80vw;
   grid-column: 1 / -1;
   align-self: flex-start;
-  padding: 0 1.5rem;
-  margin-top: -6rem; }
+  padding: 0 1.5rem; }
+  @media only screen and (min-width: 48em) {
+    .about header {
+      max-width: 80vw; } }
   .about header h1 {
-    color: #bdbdbd;
-    font-size: 2.441rem; }
-    @media only screen and (max-width: 48em) {
+    font-size: 2.441rem;
+    font-weight: normal; }
+    @media only screen and (max-width: 47.99em) {
       .about header h1 {
-        font-size: 1.563rem; } }
+        color: #505050;
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.953rem; } }
+    @media only screen and (min-width: 48em) {
+      .about header h1 {
+        color: rgba(247, 249, 249, 0.85);
+        margin-top: -15vw; } }
+    .about header h1 strong {
+      color: currentColor;
+      font-weight: 700;
+      padding: 0; }
 
 .about .aboutSummary {
   display: grid;
@@ -666,7 +685,7 @@ a {
       .about .aboutSummary .world--container ul li {
         color: #E5E5E5;
         font-size: 1.25rem;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1;
         display: grid;
         letter-spacing: -0.025em;
@@ -678,7 +697,7 @@ a {
       .about .aboutSummary .world--container ul li:first-child {
         color: #bdbdbd;
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: 600;
         writing-mode: horizontal-tb; }
       .about .aboutSummary .world--container ul li:last-child {
         font-size: .95rem;

@@ -17,17 +17,30 @@
     }
   }
   header{
-    max-width: 80vw;
     grid-column: 1 / -1;
     align-self: flex-start;
     padding: 0 $component-space;
-    margin-top: -$component-space*4;
+    @media only screen and (min-width: 48em){
+      max-width: 80vw;
+    }
     h1{
-      color: setcolor(gray, pale);
-      @media only screen and (max-width: 48em){
-        font-size: 1.563rem;
-      }
       font-size: 2.441rem;
+      font-weight: normal;
+      @media only screen and (max-width: 47.99em){
+        color: setcolor(gray, dark);
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.953rem;
+      }
+      @media only screen and (min-width: 48em){
+        color: rgba(setcolor(gray, lighter), .85);
+        margin-top: -15vw;
+      }
+      strong{
+        color: currentColor;
+        font-weight: 700;
+        padding: 0;
+      }
     }
   }
   .aboutSummary{
@@ -113,7 +126,7 @@
         li{
           color: setcolor(gray, normal);
           font-size: 1.25rem;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1;
           display: grid;
           letter-spacing: -0.025em;
@@ -128,7 +141,7 @@
         li:first-child{
           color: setcolor(gray, pale);
           font-size: 1.5rem;
-          font-weight: 700;
+          font-weight: 600;
           writing-mode: horizontal-tb;
         }
         li:last-child{

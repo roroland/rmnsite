@@ -5,7 +5,8 @@
   --data-what: -20rem;
   --data-about: -10rem;
   --data-works: -5rem;
-  --data-contact: 0; }
+  --data-contact: 0;
+  --deco-width: 1636px; }
 
 .animatable {
   opacity: 0; }
@@ -135,6 +136,11 @@ a {
     top: 0;
     overflow: hidden;
     z-index: 0; }
+    @media only screen and (max-width: 48em) {
+      .container .test {
+        --deco-width: 1236px;
+        min-height: 320px;
+        width: var(--deco-width); } }
     .container .test #middle {
       transform-origin: center; }
   .container.intro {
@@ -145,7 +151,7 @@ a {
     padding: 0; }
     @media only screen and (max-width: 47.99em) {
       .container.intro {
-        min-height: 91vh; } }
+        min-height: 60vh; } }
     @media only screen and (max-width: 47.99em) and (orientation: landscape) {
       .container.intro {
         min-height: 82vh; } }
@@ -570,6 +576,7 @@ a {
 
 @media only screen and (max-width: 48em) {
   .about {
+    overflow: hidden;
     padding: 0; } }
 
 .about::after {
@@ -1514,6 +1521,7 @@ footer {
   justify-content: flex-end;
   background: url("../images/deco-btm.svg") no-repeat;
   background-position-x: right;
+  background-position-y: bottom;
   background-size: cover;
   margin-top: 4.5rem;
   min-height: 15rem; }

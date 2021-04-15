@@ -1,31 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&font-display=swap');
-@import 
-'colors',
-'variables',
-'typography',
-'containers',
-'mainNav',
-'intro',
-'about',
-'skills',
-'feature',
-'feature-content',
-'feature-placeholder',
-'work';
+@use 'abstracts' as *;
+@use 'components' as *;
+
+// @import 
+// 'variables',
+// 'typography',
+// 'containers',
+// 'mainNav',
+// 'intro',
+// 'about',
+// 'skills',
+// 'feature',
+// 'feature-content',
+// 'feature-placeholder',
+// 'work';
 
 
-*,
-*::after,
-*::before{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
-*:focus,
-*:active{
-  outline: 0;
-}
 
 html{
   font-size: 100%;

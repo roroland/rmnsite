@@ -1,4 +1,5 @@
 // Avatar
+@use '../abstracts/' as a;
 
 .intro--wrapper{  
   display: flex;
@@ -27,7 +28,7 @@
   .heroText{
     border-radius: 5px;
     border: 1pt solid transparent;
-    padding: $component-space-tiny $component-space;
+    padding: a.$component-space-tiny a.$component-space;
     display: block;
     position: relative;
     z-index: 99999;
@@ -39,7 +40,7 @@
     @media only screen and (max-width: 47.99em) {
       border: 0;
       padding: 0;
-      margin-bottom: $component-space;
+      margin-bottom: a.$component-space;
       width: 85%;
     }
     @media only screen and (min-width: 48em) {
@@ -104,7 +105,7 @@
       display: none;
     }
     @media only screen and (min-width: 100em){
-      top: -$component-space;
+      top: #{a.$component-space};
     }
     
     > span{
@@ -115,7 +116,7 @@
     small{
       display: block;
       color: setcolor(gray, dark);
-      margin-top: $component-space-tiny;
+      margin-top: a.$component-space-tiny;
       text-align: center;
       span{
         opacity: 0;

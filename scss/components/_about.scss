@@ -1,4 +1,7 @@
+@use '../abstracts/' as *;
+
 // Home
+
 .about{
   @media only screen and (max-width: 48em){
     overflow: hidden;

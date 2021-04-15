@@ -1,5 +1,7 @@
 // Feature inner content
 
+@use '../abstracts/' as *;
+
 .contentItem-text {
   grid-column: 1 / -1;
   column-count: 1;

@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 .mainNav{
   background-color: rgba(setcolor(gray, lighter), .75);
   border-bottom: 1px solid rgba(setcolor(gray, normal), .85);

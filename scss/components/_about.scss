@@ -37,7 +37,7 @@
         font-size: 1.953rem;
       }
       @media only screen and (min-width: 48em){
-        color: rgba(var(--lighter-a), .85);
+        color: rgba(var(--lightest-a), .85);
         margin-top: -15vw;
       }
       strong{
@@ -128,7 +128,7 @@
           grid-column: span 2;
         }
         li{
-          color: $normal;
+          color: $light;
           font-size: 1.25rem;
           font-weight: 600;
           line-height: 1;
@@ -183,7 +183,7 @@
             animation-duration: 1.5s;
             animation-fill-mode: forwards;
             p{
-              border-right: 2px solid rgba(var(--palered-a), calc(.15 * #{$i}));
+              border-right: 2px solid rgba(var(--darkred-a), calc(.15 * #{$i}));
             }
           }
         }

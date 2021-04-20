@@ -1,8 +1,8 @@
 @use '../abstracts/' as *;
 
 .mainNav{
-  background-color: rgba(var(--lighter-a), .75);
-  border-bottom: 1px solid rgba(var(--normal-a), .85);
+  background-color: rgba(var(--lightest-a), .75);
+  border-bottom: 1px solid rgba(var(--light-a), .85);
   backdrop-filter: blur(2px);
   display: flex;
   flex-flow: row wrap;
@@ -32,8 +32,8 @@
     }
   }
   &.is-top{
-    background-color: rgba(var(--lighter-a), .85);
-    border-bottom: 1px solid $normal;
+    background-color: rgba(var(--lightest-a), .85);
+    border-bottom: 1px solid $light;
     border-top: 0;
     max-width: 100%;
     padding: $component-space-small 0;
@@ -63,13 +63,13 @@
   }
   
   &:hover{
-    background-color: rgba(var(--lighter), .85);
+    background-color: rgba(var(--lightest), .85);
     ul li {
       a{
         color: $darkblue;
       }
       a:hover{
-        color: $palered;
+        color: $darkred;
       }
     }
   }

@@ -7,7 +7,7 @@
   overflow: hidden;
   @media only screen and (min-width: 64em){
     display: grid;
-    background-color: $palered;
+    background-color: $darkred;
     background-position: var(--xpos) var(--ypos);
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -57,12 +57,12 @@
     }
     
     &::after {
-      background: $palered;
+      background: $darkred;
       z-index: 5;
     }
     
     &::before {
-      background: $red;
+      background: $accent;
       backface-visibility: hidden;
       z-index: 10;
     }
@@ -80,7 +80,7 @@
   &::after{
     content: '';
     pointer-events: none;
-    background: rgba(var(--palered-a), .35);
+    background: rgba(var(--darkred-a), .35);
     backdrop-filter: saturate(70%) blur(2px);
     border-radius: 50%;
     position: absolute;
@@ -99,7 +99,7 @@
     color: #fff;
     left: 0;
     transform: translate(-50% -50%);
-    text-shadow: 0 2px $palered;
+    text-shadow: 0 2px $darkred;
     text-align: center;
     top: 50%;
     width: 100%;
@@ -110,7 +110,7 @@
     cursor: move;
     &::after{
       content: '';
-      background: rgba(var(--palered-a), 0);
+      background: rgba(var(--darkred-a), 0);
       backdrop-filter: saturate(100%) blur(0);
     }
     &::before{

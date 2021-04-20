@@ -52,7 +52,7 @@
   position: relative;
   padding: 1rem;
   color: white;
-  background: setcolor(brand, red);
+  background: $red;
   align-items: flex-start;
   justify-content: center;
   min-height: 60vh;
@@ -85,7 +85,7 @@
   li{
     list-style: none;
     .is-active{
-      color: rgba(setcolor(gray, light), .5);
+      color: rgba(var(--lighter-a), .5);
       cursor: pointer;
       pointer-events: none;
     }
@@ -93,7 +93,7 @@
   a{
     padding: $component-space-tiny;
     color: #fff;
-    background: setcolor(brand, red);
+    background: $red;
     text-decoration: none;
     font-size: .65em;
   }

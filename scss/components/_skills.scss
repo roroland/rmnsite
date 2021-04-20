@@ -67,12 +67,12 @@
         position: relative;
         width: 100%;
         &.is-active p{
-          color: setcolor(brand, blue);
+          color: $blue;
         }
       }
       p{
         @extend .h4;
-        color: setcolor(gray, dark);
+        color: $dark;
         position: relative;
         transition: 3s all ease-out;
         top: $component-space;
@@ -87,7 +87,7 @@
           transform: translateY(-$component-space-small);
         }
         p{
-          color: setcolor(brand, palered);
+          color: $palered;
         }
       }
       .img-item{

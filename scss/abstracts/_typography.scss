@@ -1,3 +1,4 @@
+@use 'colors' as *;
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&font-display=swap');
 
 h1, h2, h3, h4, h5, h6, p, a, li{
@@ -25,7 +26,7 @@ h4,
   font-size: 1.25rem;
 }
 strong {
-  color: setcolor(brand, darkblue);
+  color: $darkblue;
   padding: 0 .15em;
   display: inline-block;
   position: relative;
@@ -41,11 +42,11 @@ h5,
   font-size: 1rem;
 }
 a{
-  color: setcolor(brand, darkblue);
+  color: $darkblue;
   transition: color .3s ease-out;
   position: relative;
   &:hover{
-    color: setcolor(brand, blue);
+    color: $blue;
   }
   &:focus::after,
   &:active::after{

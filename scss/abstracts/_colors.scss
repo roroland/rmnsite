@@ -1,21 +1,31 @@
-$colorsmap: (
-   gray: (
-     lighter: #F7F9F9,
-     light: #F5F5F5,
-     normal: #E5E5E5,
-     pale: #bdbdbd,
-     dark: #505050
-   ),
-   brand: (
-     red: #EA507C,
-     palered: #b9506e,
-     darkred: #400717,
-     blue: #9CB0BE,
-     darkblue: #52768d,
-     dark: #4E5962
-   )
-);
-
-@function setcolor($scheme, $swatch: dark) {
-  @return map-get(map-get($colorsmap, $scheme), $swatch);
+@function hex2Rgba($hex){
+  @return red($hex), green($hex), blue($hex);
 };
+
+$lighter: #F7F9F9;
+$normal: #E5E5E5;
+$pale: #bdbdbd;
+$dark: #505050;
+$red: #ea507c;
+$palered: #b9506e;
+$blue: #9CB0BE;
+$darkblue: #52768d;
+
+:root{
+  --lighter: #{$lighter};
+  --lighter-a: #{hex2Rgba($lighter)};
+  --normal: #{$normal};
+  --normal-a: #{hex2Rgba($normal)};
+  --pale:  #{$pale};
+  --pale-a:  #{hex2Rgba($pale)};
+  --dark:  #{$dark};
+  --dark-a:  #{hex2Rgba($dark)};
+  --red: #{$red};
+  --red-a: #{hex2Rgba($red)};
+  --palered: #{$palered};
+  --palered-a: #{hex2Rgba($palered)};
+  --blue:  #{$blue};
+  --blue-a:  #{hex2Rgba($blue)};
+  --darkblue: #{$blue};
+  --darkblue-a: #{hex2Rgba($darkblue)};
+}

@@ -1,9 +1,9 @@
 // Avatar
-@use '../abstracts/' as a;
+@use '../abstracts/' as *;
 
 .intro--wrapper{  
   display: flex;
-  color: setcolor(brand, dark);
+  color: $dark;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
@@ -28,7 +28,7 @@
   .heroText{
     border-radius: 5px;
     border: 1pt solid transparent;
-    padding: a.$component-space-tiny a.$component-space;
+    padding: $component-space-tiny $component-space;
     display: block;
     position: relative;
     z-index: 99999;
@@ -40,7 +40,7 @@
     @media only screen and (max-width: 47.99em) {
       border: 0;
       padding: 0;
-      margin-bottom: a.$component-space;
+      margin-bottom: $component-space;
       width: 85%;
     }
     @media only screen and (min-width: 48em) {
@@ -66,7 +66,7 @@
       background-color: transparent;
     }
     to{
-      background-color: setcolor(gray, light);
+      background-color: $lighter;
     }
   }
   @keyframes borderColor {
@@ -74,7 +74,7 @@
       border: 1pt solid transparent;
     }
     to{
-      border: 1pt solid setcolor(gray, normal);
+      border: 1pt solid $normal;
     }
   }
   @keyframes dash {
@@ -105,7 +105,7 @@
       display: none;
     }
     @media only screen and (min-width: 100em){
-      top: #{a.$component-space};
+      top: #{$component-space};
     }
     
     > span{
@@ -115,14 +115,14 @@
     
     small{
       display: block;
-      color: setcolor(gray, dark);
-      margin-top: a.$component-space-tiny;
+      color: $dark;
+      margin-top: $component-space-tiny;
       text-align: center;
       span{
         opacity: 0;
         animation: fade 1s ease-out 2.5s forwards;
         text-decoration: none;
-        color: setcolor(brand, dark);
+        color: $dark;
       }
     }
   }

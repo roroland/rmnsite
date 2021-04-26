@@ -1682,6 +1682,10 @@ _::-webkit-full-page-media, _:future, :root .showFeature::before {
     min-height: 80vh;
   }
 }
+.placeholder.is-active span {
+  perspective: 1000px;
+  perspective-origin: center center;
+}
 .placeholder.is-active span:nth-child(1) {
   animation-delay: 0.065s;
   animation-name: flip;

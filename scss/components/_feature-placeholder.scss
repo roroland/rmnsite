@@ -23,8 +23,9 @@
   @media only screen and (min-width: 100em){
     min-height: 80vh;
   }
-  
   &.is-active span {
+    perspective: 1000px;
+    perspective-origin: center center;
     @for $i from 1 to 17 {
       &:nth-child(#{$i}) {
         animation-delay: $i * .065s;

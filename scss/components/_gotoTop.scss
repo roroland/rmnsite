@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+.gotoTop{
+  color: $dark;
+  display: none;
+  background-color: rgba(255, 255, 255, .75);
+  backdrop-filter: blur(3px);
+  border-radius: 3px 0 0 3px;
+  padding: 0 $component-space-small;
+  position: fixed;
+  bottom: $component-space-small;
+  right: 0;
+  z-index: 99;
+  @media only screen and (min-width: 48em){
+    display: none;
+  }
+  img{
+    max-width: 14px;
+  }
+}

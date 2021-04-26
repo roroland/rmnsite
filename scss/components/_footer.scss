@@ -1,0 +1,34 @@
+@use '../abstracts' as *;
+
+footer{
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  background: url('../images/deco-btm.svg') no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: cover;
+  margin-top: $component-space*3;
+  min-height: 15rem;
+  @media only screen and (min-width: 64em){
+    margin-top: 0;
+    background-size: 100%;
+  }
+  p{
+    @extend .h4;
+    background: rgba(var(--dark-a), .75);
+    margin: $component-space*2 0 $component-space-small;
+    flex: 1 50%;
+    font-weight: 300;
+    color: white;
+    display: inline-block;
+    padding: $component-space;
+    @media only screen and (min-width: 64em){
+      flex: 0 45%;
+      padding: $component-space;
+    }
+    a{
+      color: $blue;
+    }
+  }
+}
